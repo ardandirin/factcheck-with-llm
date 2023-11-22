@@ -1,0 +1,2605 @@
+{
+    "bleu": [
+        {
+            "bleu": 0.21744817033820035,
+            "precisions": [
+                0.6986301369863014,
+                0.36363636363636365,
+                0.15254237288135594,
+                0.057692307692307696
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1587301587301588,
+            "translation_length": 73,
+            "reference_length": 63
+        },
+        {
+            "bleu": 0.16356164524984942,
+            "precisions": [
+                0.5555555555555556,
+                0.26666666666666666,
+                0.10144927536231885,
+                0.047619047619047616
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.35,
+            "translation_length": 81,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.36065573770491804,
+                0.03636363636363636,
+                0.0,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2708333333333333,
+            "translation_length": 61,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.31674151351104085,
+            "precisions": [
+                0.7051282051282052,
+                0.4246575342465753,
+                0.23529411764705882,
+                0.14285714285714285
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3,
+            "translation_length": 78,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.5160108778561839,
+            "precisions": [
+                0.7941176470588235,
+                0.5555555555555556,
+                0.4482758620689655,
+                0.3584905660377358
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.511111111111111,
+            "translation_length": 68,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.2161123074270203,
+            "precisions": [
+                0.5238095238095238,
+                0.26804123711340205,
+                0.1797752808988764,
+                0.08641975308641975
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.640625,
+            "translation_length": 105,
+            "reference_length": 64
+        },
+        {
+            "bleu": 0.44900616673066834,
+            "precisions": [
+                0.8524590163934426,
+                0.5178571428571429,
+                0.35294117647058826,
+                0.2608695652173913
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1090909090909091,
+            "translation_length": 61,
+            "reference_length": 55
+        },
+        {
+            "bleu": 0.36060812113629886,
+            "precisions": [
+                0.66,
+                0.41304347826086957,
+                0.2619047619047619,
+                0.23684210526315788
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3888888888888888,
+            "translation_length": 50,
+            "reference_length": 36
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5492957746478874,
+                0.27692307692307694,
+                0.1016949152542373,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3148148148148149,
+            "translation_length": 71,
+            "reference_length": 54
+        },
+        {
+            "bleu": 0.20845867488442152,
+            "precisions": [
+                0.5891472868217055,
+                0.2601626016260163,
+                0.17094017094017094,
+                0.07207207207207207
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7916666666666667,
+            "translation_length": 129,
+            "reference_length": 72
+        },
+        {
+            "bleu": 0.1735563921468438,
+            "precisions": [
+                0.7413793103448276,
+                0.35185185185185186,
+                0.16,
+                0.021739130434782608
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.45,
+            "translation_length": 58,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.13375942424759069,
+            "precisions": [
+                0.5967741935483871,
+                0.2413793103448276,
+                0.1111111111111111,
+                0.02
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.5833333333333335,
+            "translation_length": 62,
+            "reference_length": 24
+        },
+        {
+            "bleu": 0.28396604013221016,
+            "precisions": [
+                0.7341772151898734,
+                0.4166666666666667,
+                0.23076923076923078,
+                0.11864406779661017
+            ],
+            "brevity_penalty": 0.9386701501888537,
+            "length_ratio": 0.9404761904761905,
+            "translation_length": 79,
+            "reference_length": 84
+        },
+        {
+            "bleu": 0.1280753127103269,
+            "precisions": [
+                0.5285714285714286,
+                0.1746031746031746,
+                0.07142857142857142,
+                0.04081632653061224
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0,
+            "translation_length": 70,
+            "reference_length": 70
+        },
+        {
+            "bleu": 0.3174227984087635,
+            "precisions": [
+                0.5571428571428572,
+                0.3333333333333333,
+                0.26785714285714285,
+                0.20408163265306123
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6666666666666667,
+            "translation_length": 70,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.3093449626639024,
+            "precisions": [
+                0.6071428571428571,
+                0.3291139240506329,
+                0.24324324324324326,
+                0.18840579710144928
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2923076923076924,
+            "translation_length": 84,
+            "reference_length": 65
+        },
+        {
+            "bleu": 0.5800200297548729,
+            "precisions": [
+                0.8392857142857143,
+                0.6415094339622641,
+                0.52,
+                0.40425531914893614
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.3333333333333335,
+            "translation_length": 56,
+            "reference_length": 24
+        },
+        {
+            "bleu": 0.11547005383792518,
+            "precisions": [
+                0.5,
+                0.2,
+                0.08,
+                0.022222222222222223
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7142857142857142,
+            "translation_length": 60,
+            "reference_length": 35
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5384615384615384,
+                0.1111111111111111,
+                0.0,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1818181818181819,
+            "translation_length": 39,
+            "reference_length": 33
+        },
+        {
+            "bleu": 0.12874481019096295,
+            "precisions": [
+                0.7121212121212122,
+                0.2,
+                0.09259259259259259,
+                0.020833333333333332
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.375,
+            "translation_length": 66,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.43562500418552885,
+            "precisions": [
+                0.6631578947368421,
+                0.4772727272727273,
+                0.38271604938271603,
+                0.2972972972972973
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.507936507936508,
+            "translation_length": 95,
+            "reference_length": 63
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5125,
+                0.14864864864864866,
+                0.058823529411764705,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.9047619047619047,
+            "translation_length": 80,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.32983742511766956,
+            "precisions": [
+                0.6491228070175439,
+                0.3333333333333333,
+                0.26666666666666666,
+                0.20512820512820512
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3571428571428572,
+            "translation_length": 57,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.25778261313841344,
+            "precisions": [
+                0.7985074626865671,
+                0.312,
+                0.1724137931034483,
+                0.102803738317757
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.8611111111111112,
+            "translation_length": 134,
+            "reference_length": 72
+        },
+        {
+            "bleu": 0.4841652158666938,
+            "precisions": [
+                0.7611940298507462,
+                0.5,
+                0.41509433962264153,
+                0.34782608695652173
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1964285714285714,
+            "translation_length": 67,
+            "reference_length": 56
+        },
+        {
+            "bleu": 0.12810961975328225,
+            "precisions": [
+                0.6101694915254238,
+                0.2037037037037037,
+                0.10204081632653061,
+                0.022727272727272728
+            ],
+            "brevity_penalty": 0.9831936762627184,
+            "length_ratio": 0.9833333333333333,
+            "translation_length": 59,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.6318774340335527,
+            "precisions": [
+                0.8051948051948052,
+                0.6986301369863014,
+                0.5942028985507246,
+                0.47692307692307695
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6041666666666667,
+            "translation_length": 77,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.5141219362127646,
+            "precisions": [
+                0.8367346938775511,
+                0.6666666666666666,
+                0.4634146341463415,
+                0.2702702702702703
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3611111111111112,
+            "translation_length": 49,
+            "reference_length": 36
+        },
+        {
+            "bleu": 0.34120958597755296,
+            "precisions": [
+                0.7142857142857143,
+                0.43103448275862066,
+                0.2641509433962264,
+                0.16666666666666666
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1454545454545455,
+            "translation_length": 63,
+            "reference_length": 55
+        },
+        {
+            "bleu": 0.18811361615627417,
+            "precisions": [
+                0.6027397260273972,
+                0.2647058823529412,
+                0.12698412698412698,
+                0.06896551724137931
+            ],
+            "brevity_penalty": 0.9729746405665401,
+            "length_ratio": 0.9733333333333334,
+            "translation_length": 73,
+            "reference_length": 75
+        },
+        {
+            "bleu": 0.33038762865055926,
+            "precisions": [
+                0.8202247191011236,
+                0.5487804878048781,
+                0.36,
+                0.07352941176470588
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.155844155844156,
+            "translation_length": 89,
+            "reference_length": 77
+        },
+        {
+            "bleu": 0.2757654619692283,
+            "precisions": [
+                0.6341463414634146,
+                0.3026315789473684,
+                0.21428571428571427,
+                0.140625
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7083333333333333,
+            "translation_length": 82,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.23359098334693373,
+            "precisions": [
+                0.5526315789473685,
+                0.28169014084507044,
+                0.16666666666666666,
+                0.11475409836065574
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6888888888888889,
+            "translation_length": 76,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.18698575139222137,
+            "precisions": [
+                0.7647058823529411,
+                0.3829787234042553,
+                0.16279069767441862,
+                0.02564102564102564
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0625,
+            "translation_length": 51,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.41829031480722706,
+            "precisions": [
+                0.7441860465116279,
+                0.575,
+                0.40540540540540543,
+                0.17647058823529413
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4333333333333333,
+            "translation_length": 43,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5,
+                0.08974358974358974,
+                0.013888888888888888,
+                0.0
+            ],
+            "brevity_penalty": 0.751477293075286,
+            "length_ratio": 0.7777777777777778,
+            "translation_length": 84,
+            "reference_length": 108
+        },
+        {
+            "bleu": 0.7881510498419972,
+            "precisions": [
+                0.8714285714285714,
+                0.7878787878787878,
+                0.7580645161290323,
+                0.7413793103448276
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.9444444444444444,
+            "translation_length": 70,
+            "reference_length": 36
+        },
+        {
+            "bleu": 0.22967672334827197,
+            "precisions": [
+                0.6458333333333334,
+                0.29545454545454547,
+                0.175,
+                0.08333333333333333
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2,
+            "translation_length": 48,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.49663087426516067,
+            "precisions": [
+                0.7567567567567568,
+                0.4927536231884058,
+                0.4375,
+                0.3728813559322034
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2333333333333334,
+            "translation_length": 74,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.6865671641791045,
+                0.3709677419354839,
+                0.14035087719298245,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2181818181818183,
+            "translation_length": 67,
+            "reference_length": 55
+        },
+        {
+            "bleu": 0.5893560246189355,
+            "precisions": [
+                0.881578947368421,
+                0.6338028169014085,
+                0.5606060606060606,
+                0.47540983606557374
+            ],
+            "brevity_penalty": 0.9487294800164372,
+            "length_ratio": 0.95,
+            "translation_length": 76,
+            "reference_length": 80
+        },
+        {
+            "bleu": 0.4919763202386329,
+            "precisions": [
+                0.7317073170731707,
+                0.5675675675675675,
+                0.45454545454545453,
+                0.3103448275862069
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.28125,
+            "translation_length": 41,
+            "reference_length": 32
+        },
+        {
+            "bleu": 0.1518448899170162,
+            "precisions": [
+                0.550561797752809,
+                0.2926829268292683,
+                0.16,
+                0.057971014492753624
+            ],
+            "brevity_penalty": 0.7722654303974711,
+            "length_ratio": 0.7946428571428571,
+            "translation_length": 89,
+            "reference_length": 112
+        },
+        {
+            "bleu": 0.19119346573179485,
+            "precisions": [
+                0.5066666666666667,
+                0.22857142857142856,
+                0.13846153846153847,
+                0.08333333333333333
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6666666666666667,
+            "translation_length": 75,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.43337288402291274,
+            "precisions": [
+                0.8571428571428571,
+                0.6333333333333333,
+                0.3508771929824561,
+                0.18518518518518517
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4,
+            "translation_length": 63,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.36323271096701865,
+            "precisions": [
+                0.7037037037037037,
+                0.40816326530612246,
+                0.29545454545454547,
+                0.20512820512820512
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.8,
+            "translation_length": 54,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.3884053600390731,
+            "precisions": [
+                0.8070175438596491,
+                0.49019607843137253,
+                0.33695652173913043,
+                0.17073170731707318
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0555555555555556,
+            "translation_length": 114,
+            "reference_length": 108
+        },
+        {
+            "bleu": 0.8317765309208891,
+            "precisions": [
+                0.9761904761904762,
+                0.8918918918918919,
+                0.78125,
+                0.7037037037037037
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4,
+            "translation_length": 42,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.44444123117817047,
+            "precisions": [
+                0.7792207792207793,
+                0.5416666666666666,
+                0.3582089552238806,
+                0.25806451612903225
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4,
+            "translation_length": 77,
+            "reference_length": 55
+        },
+        {
+            "bleu": 0.6629664670975194,
+            "precisions": [
+                0.9285714285714286,
+                0.6923076923076923,
+                0.5833333333333334,
+                0.5151515151515151
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 3.5,
+            "translation_length": 42,
+            "reference_length": 12
+        },
+        {
+            "bleu": 0.4781714403092637,
+            "precisions": [
+                0.7413793103448276,
+                0.5471698113207547,
+                0.3958333333333333,
+                0.32558139534883723
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.288888888888889,
+            "translation_length": 58,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.13745769813281164,
+            "precisions": [
+                0.647887323943662,
+                0.24615384615384617,
+                0.11864406779661017,
+                0.018867924528301886
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3148148148148149,
+            "translation_length": 71,
+            "reference_length": 54
+        },
+        {
+            "bleu": 0.36695275611246536,
+            "precisions": [
+                0.7083333333333334,
+                0.43283582089552236,
+                0.3064516129032258,
+                0.19298245614035087
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0285714285714285,
+            "translation_length": 72,
+            "reference_length": 70
+        },
+        {
+            "bleu": 0.6554687383037896,
+            "precisions": [
+                0.8585858585858586,
+                0.7127659574468085,
+                0.6179775280898876,
+                0.4880952380952381
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.65,
+            "translation_length": 99,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.5138411566923484,
+            "precisions": [
+                0.78,
+                0.6222222222222222,
+                0.5,
+                0.42857142857142855
+            ],
+            "brevity_penalty": 0.9048374180359595,
+            "length_ratio": 0.9090909090909091,
+            "translation_length": 50,
+            "reference_length": 55
+        },
+        {
+            "bleu": 0.23048052309462733,
+            "precisions": [
+                0.8095238095238095,
+                0.3333333333333333,
+                0.1568627450980392,
+                0.06666666666666667
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5,
+            "translation_length": 63,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.17313514597488178,
+            "precisions": [
+                0.6231884057971014,
+                0.328125,
+                0.11864406779661017,
+                0.037037037037037035
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5333333333333334,
+            "translation_length": 69,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.4894119305963698,
+            "precisions": [
+                0.7317073170731707,
+                0.5769230769230769,
+                0.43243243243243246,
+                0.3142857142857143
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.28125,
+            "translation_length": 82,
+            "reference_length": 64
+        },
+        {
+            "bleu": 0.19062610693834867,
+            "precisions": [
+                0.6981132075471698,
+                0.3877551020408163,
+                0.2,
+                0.024390243902439025
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1041666666666667,
+            "translation_length": 53,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5227272727272727,
+                0.1282051282051282,
+                0.029411764705882353,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4666666666666666,
+            "translation_length": 44,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.1804577996615875,
+            "precisions": [
+                0.5135135135135135,
+                0.16417910447761194,
+                0.13333333333333333,
+                0.09433962264150944
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3214285714285714,
+            "translation_length": 74,
+            "reference_length": 56
+        },
+        {
+            "bleu": 0.39969162158453575,
+            "precisions": [
+                0.7341772151898734,
+                0.47368421052631576,
+                0.3424657534246575,
+                0.21428571428571427
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.1944444444444446,
+            "translation_length": 79,
+            "reference_length": 36
+        },
+        {
+            "bleu": 0.14305848652394315,
+            "precisions": [
+                0.6515151515151515,
+                0.22950819672131148,
+                0.07142857142857142,
+                0.0392156862745098
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.8857142857142857,
+            "translation_length": 66,
+            "reference_length": 35
+        },
+        {
+            "bleu": 0.5671276403520978,
+            "precisions": [
+                0.8181818181818182,
+                0.5641025641025641,
+                0.5,
+                0.4482758620689655
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2571428571428571,
+            "translation_length": 44,
+            "reference_length": 35
+        },
+        {
+            "bleu": 0.3528750718138032,
+            "precisions": [
+                0.734375,
+                0.5166666666666667,
+                0.30357142857142855,
+                0.1346153846153846
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7777777777777777,
+            "translation_length": 64,
+            "reference_length": 36
+        },
+        {
+            "bleu": 0.5511643773023891,
+            "precisions": [
+                0.6451612903225806,
+                0.5517241379310345,
+                0.5185185185185185,
+                0.5
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.2142857142857144,
+            "translation_length": 62,
+            "reference_length": 28
+        },
+        {
+            "bleu": 0.18806611961770286,
+            "precisions": [
+                0.5507246376811594,
+                0.20634920634920634,
+                0.14035087719298245,
+                0.0784313725490196
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4375,
+            "translation_length": 69,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.23338358565158676,
+            "precisions": [
+                0.5370370370370371,
+                0.27,
+                0.17391304347826086,
+                0.11764705882352941
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2272727272727273,
+            "translation_length": 108,
+            "reference_length": 88
+        },
+        {
+            "bleu": 0.10827983997718922,
+            "precisions": [
+                0.569620253164557,
+                0.1232876712328767,
+                0.05970149253731343,
+                0.03278688524590164
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3166666666666667,
+            "translation_length": 79,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.19938013430768226,
+            "precisions": [
+                0.5522388059701493,
+                0.20634920634920634,
+                0.15254237288135594,
+                0.09090909090909091
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2884615384615385,
+            "translation_length": 67,
+            "reference_length": 52
+        },
+        {
+            "bleu": 0.36447196548564254,
+            "precisions": [
+                0.6538461538461539,
+                0.3958333333333333,
+                0.2727272727272727,
+                0.25
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3,
+            "translation_length": 52,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.4802397117565494,
+            "precisions": [
+                0.8048780487804879,
+                0.5405405405405406,
+                0.3939393939393939,
+                0.3103448275862069
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.28125,
+            "translation_length": 41,
+            "reference_length": 32
+        },
+        {
+            "bleu": 0.32738982902484903,
+            "precisions": [
+                0.6883116883116883,
+                0.3611111111111111,
+                0.23880597014925373,
+                0.1935483870967742
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.2,
+            "translation_length": 77,
+            "reference_length": 35
+        },
+        {
+            "bleu": 0.369811189424927,
+            "precisions": [
+                0.7162162162162162,
+                0.43795620437956206,
+                0.2857142857142857,
+                0.20869565217391303
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.494949494949495,
+            "translation_length": 148,
+            "reference_length": 99
+        },
+        {
+            "bleu": 0.186451842582523,
+            "precisions": [
+                0.5952380952380952,
+                0.26582278481012656,
+                0.17567567567567569,
+                0.043478260869565216
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.1,
+            "translation_length": 84,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.24909740525691806,
+            "precisions": [
+                0.5789473684210527,
+                0.34285714285714286,
+                0.1875,
+                0.10344827586206896
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.8095238095238095,
+            "translation_length": 38,
+            "reference_length": 21
+        },
+        {
+            "bleu": 0.12972387398608015,
+            "precisions": [
+                0.8064516129032258,
+                0.25,
+                0.08,
+                0.022727272727272728
+            ],
+            "brevity_penalty": 0.9375209928337671,
+            "length_ratio": 0.9393939393939394,
+            "translation_length": 62,
+            "reference_length": 66
+        },
+        {
+            "bleu": 0.17090684699334918,
+            "precisions": [
+                0.684931506849315,
+                0.29850746268656714,
+                0.11475409836065574,
+                0.03636363636363636
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2166666666666666,
+            "translation_length": 73,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.1362271132421224,
+            "precisions": [
+                0.5333333333333333,
+                0.2318840579710145,
+                0.07936507936507936,
+                0.03508771929824561
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.25,
+            "translation_length": 75,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.6442835258055789,
+            "precisions": [
+                0.8269230769230769,
+                0.6938775510204082,
+                0.5869565217391305,
+                0.5116279069767442
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7333333333333334,
+            "translation_length": 52,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.28566131493734725,
+            "precisions": [
+                0.5915492957746479,
+                0.3384615384615385,
+                0.22033898305084745,
+                0.1509433962264151
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3148148148148149,
+            "translation_length": 71,
+            "reference_length": 54
+        },
+        {
+            "bleu": 0.6262305361854461,
+            "precisions": [
+                0.8541666666666666,
+                0.7045454545454546,
+                0.575,
+                0.4444444444444444
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5,
+            "translation_length": 48,
+            "reference_length": 32
+        },
+        {
+            "bleu": 0.26194204240465924,
+            "precisions": [
+                0.5,
+                0.27941176470588236,
+                0.20967741935483872,
+                0.16071428571428573
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3703703703703705,
+            "translation_length": 74,
+            "reference_length": 54
+        },
+        {
+            "bleu": 0.3341388424978607,
+            "precisions": [
+                0.671875,
+                0.3793103448275862,
+                0.25,
+                0.1956521739130435
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5238095238095237,
+            "translation_length": 64,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.20484793898933287,
+            "precisions": [
+                0.6962025316455697,
+                0.2465753424657534,
+                0.13432835820895522,
+                0.09836065573770492
+            ],
+            "brevity_penalty": 0.9386701501888537,
+            "length_ratio": 0.9404761904761905,
+            "translation_length": 79,
+            "reference_length": 84
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5306122448979592,
+                0.20454545454545456,
+                0.0,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6333333333333333,
+            "translation_length": 49,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.5366354636943451,
+            "precisions": [
+                0.7241379310344828,
+                0.5471698113207547,
+                0.5,
+                0.4186046511627907
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.288888888888889,
+            "translation_length": 58,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.3082231153365709,
+            "precisions": [
+                0.7088607594936709,
+                0.4444444444444444,
+                0.27692307692307694,
+                0.10344827586206896
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4107142857142858,
+            "translation_length": 79,
+            "reference_length": 56
+        },
+        {
+            "bleu": 0.20104745031705243,
+            "precisions": [
+                0.6707317073170732,
+                0.3108108108108108,
+                0.15151515151515152,
+                0.05172413793103448
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.28125,
+            "translation_length": 82,
+            "reference_length": 64
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.7571428571428571,
+                0.390625,
+                0.15517241379310345,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4583333333333333,
+            "translation_length": 70,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.28416488255097166,
+            "precisions": [
+                0.6575342465753424,
+                0.3235294117647059,
+                0.2222222222222222,
+                0.13793103448275862
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.46,
+            "translation_length": 73,
+            "reference_length": 50
+        },
+        {
+            "bleu": 0.5654200417362635,
+            "precisions": [
+                0.7692307692307693,
+                0.5694444444444444,
+                0.5,
+                0.4666666666666667
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4444444444444444,
+            "translation_length": 78,
+            "reference_length": 54
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5961538461538461,
+                0.1956521739130435,
+                0.05,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2380952380952381,
+            "translation_length": 52,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.4621188266205917,
+            "precisions": [
+                0.7058823529411765,
+                0.5079365079365079,
+                0.39655172413793105,
+                0.32075471698113206
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0461538461538462,
+            "translation_length": 68,
+            "reference_length": 65
+        },
+        {
+            "bleu": 0.12714369883261653,
+            "precisions": [
+                0.4634146341463415,
+                0.10526315789473684,
+                0.08571428571428572,
+                0.0625
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7083333333333333,
+            "translation_length": 41,
+            "reference_length": 24
+        },
+        {
+            "bleu": 0.3085070978349563,
+            "precisions": [
+                0.7088607594936709,
+                0.3918918918918919,
+                0.2318840579710145,
+                0.140625
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1285714285714286,
+            "translation_length": 79,
+            "reference_length": 70
+        },
+        {
+            "bleu": 0.7667479387299002,
+            "precisions": [
+                0.8969072164948454,
+                0.8068181818181818,
+                0.7215189873417721,
+                0.6619718309859155
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.1555555555555554,
+            "translation_length": 97,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.41818181818181815,
+                0.1568627450980392,
+                0.0425531914893617,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.2916666666666665,
+            "translation_length": 55,
+            "reference_length": 24
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.6721311475409836,
+                0.18181818181818182,
+                0.02040816326530612,
+                0.0
+            ],
+            "brevity_penalty": 0.7567755834938589,
+            "length_ratio": 0.782051282051282,
+            "translation_length": 61,
+            "reference_length": 78
+        },
+        {
+            "bleu": 0.4428480556627819,
+            "precisions": [
+                0.8307692307692308,
+                0.4576271186440678,
+                0.33962264150943394,
+                0.2978723404255319
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0833333333333333,
+            "translation_length": 65,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.39238517715499655,
+            "precisions": [
+                0.7471264367816092,
+                0.4691358024691358,
+                0.3333333333333333,
+                0.2028985507246377
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.45,
+            "translation_length": 87,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.2391973067319015,
+            "precisions": [
+                0.6792452830188679,
+                0.375,
+                0.16279069767441862,
+                0.07894736842105263
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5142857142857142,
+            "translation_length": 53,
+            "reference_length": 35
+        },
+        {
+            "bleu": 0.27782897135328377,
+            "precisions": [
+                0.6851851851851852,
+                0.42,
+                0.21739130434782608,
+                0.09523809523809523
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6875,
+            "translation_length": 54,
+            "reference_length": 32
+        },
+        {
+            "bleu": 0.12383492709548422,
+            "precisions": [
+                0.5657894736842105,
+                0.2571428571428571,
+                0.09375,
+                0.017241379310344827
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.533333333333333,
+            "translation_length": 76,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.345532055183223,
+            "precisions": [
+                0.75,
+                0.43636363636363634,
+                0.28,
+                0.15555555555555556
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3333333333333333,
+            "translation_length": 60,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.5127050875827704,
+            "precisions": [
+                0.7341772151898734,
+                0.5342465753424658,
+                0.44776119402985076,
+                0.39344262295081966
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.880952380952381,
+            "translation_length": 79,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.3531304125089116,
+            "precisions": [
+                0.6744186046511628,
+                0.425,
+                0.28378378378378377,
+                0.19117647058823528
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7916666666666667,
+            "translation_length": 86,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.48717948717948717,
+                0.08571428571428572,
+                0.0,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.625,
+            "translation_length": 39,
+            "reference_length": 24
+        },
+        {
+            "bleu": 0.24367418533676363,
+            "precisions": [
+                0.5625,
+                0.24444444444444444,
+                0.16666666666666666,
+                0.15384615384615385
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.6666666666666665,
+            "translation_length": 48,
+            "reference_length": 18
+        },
+        {
+            "bleu": 0.28544173607127726,
+            "precisions": [
+                0.8095238095238095,
+                0.3793103448275862,
+                0.20754716981132076,
+                0.10416666666666667
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4,
+            "translation_length": 63,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.27061289360291996,
+            "precisions": [
+                0.7017543859649122,
+                0.37254901960784315,
+                0.2,
+                0.10256410256410256
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3571428571428572,
+            "translation_length": 57,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5157894736842106,
+                0.16853932584269662,
+                0.03614457831325301,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4393939393939394,
+            "translation_length": 95,
+            "reference_length": 66
+        },
+        {
+            "bleu": 0.2159605140816501,
+            "precisions": [
+                0.6166666666666667,
+                0.2962962962962963,
+                0.16666666666666666,
+                0.07142857142857142
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.25,
+            "translation_length": 60,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.6,
+                0.28,
+                0.0,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1,
+            "translation_length": 55,
+            "reference_length": 50
+        },
+        {
+            "bleu": 0.31431954055793054,
+            "precisions": [
+                0.7666666666666667,
+                0.4074074074074074,
+                0.1875,
+                0.16666666666666666
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.25,
+            "translation_length": 60,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.16782657064849102,
+            "precisions": [
+                0.5625,
+                0.2972972972972973,
+                0.14705882352941177,
+                0.03225806451612903
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4814814814814814,
+            "translation_length": 80,
+            "reference_length": 54
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.4827586206896552,
+                0.1509433962264151,
+                0.020833333333333332,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.45,
+            "translation_length": 58,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.38727383796992615,
+            "precisions": [
+                0.6956521739130435,
+                0.4461538461538462,
+                0.29508196721311475,
+                0.24561403508771928
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.9166666666666667,
+            "translation_length": 69,
+            "reference_length": 36
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5147058823529411,
+                0.04918032786885246,
+                0.0,
+                0.0
+            ],
+            "brevity_penalty": 0.9710165517924371,
+            "length_ratio": 0.9714285714285714,
+            "translation_length": 68,
+            "reference_length": 70
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.640625,
+                0.15,
+                0.03571428571428571,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6,
+            "translation_length": 64,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.0891778470115708,
+            "precisions": [
+                0.4880952380952381,
+                0.14285714285714285,
+                0.05714285714285714,
+                0.015873015873015872
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7142857142857142,
+            "translation_length": 84,
+            "reference_length": 49
+        },
+        {
+            "bleu": 0.22011605015746225,
+            "precisions": [
+                0.7380952380952381,
+                0.35064935064935066,
+                0.14285714285714285,
+                0.06349206349206349
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5,
+            "translation_length": 84,
+            "reference_length": 56
+        },
+        {
+            "bleu": 0.3917315067978396,
+            "precisions": [
+                0.6790123456790124,
+                0.4342105263157895,
+                0.3380281690140845,
+                0.2878787878787879
+            ],
+            "brevity_penalty": 0.9518167844230893,
+            "length_ratio": 0.9529411764705882,
+            "translation_length": 81,
+            "reference_length": 85
+        },
+        {
+            "bleu": 0.26332551336264814,
+            "precisions": [
+                0.5833333333333334,
+                0.3090909090909091,
+                0.24,
+                0.1111111111111111
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3333333333333333,
+            "translation_length": 60,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.329829597122884,
+            "precisions": [
+                0.7647058823529411,
+                0.40625,
+                0.26666666666666666,
+                0.14285714285714285
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.4285714285714284,
+            "translation_length": 68,
+            "reference_length": 28
+        },
+        {
+            "bleu": 0.18143225351809755,
+            "precisions": [
+                0.7592592592592593,
+                0.40816326530612246,
+                0.13636363636363635,
+                0.02564102564102564
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2,
+            "translation_length": 54,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.08614066523086719,
+            "precisions": [
+                0.46296296296296297,
+                0.10204081632653061,
+                0.045454545454545456,
+                0.02564102564102564
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.35,
+            "translation_length": 54,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.47619047619047616,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.575,
+            "translation_length": 63,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.4627858090601475,
+            "precisions": [
+                0.8153846153846154,
+                0.5666666666666667,
+                0.38181818181818183,
+                0.26
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.625,
+            "translation_length": 65,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.2839506172839506,
+                0.03896103896103896,
+                0.0136986301369863,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.8409090909090908,
+            "translation_length": 81,
+            "reference_length": 44
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.72,
+                0.2765957446808511,
+                0.06818181818181818,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.8518518518518519,
+            "translation_length": 50,
+            "reference_length": 27
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.7592592592592593,
+                0.26,
+                0.043478260869565216,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6875,
+            "translation_length": 54,
+            "reference_length": 32
+        },
+        {
+            "bleu": 0.3596057996333419,
+            "precisions": [
+                0.7162162162162162,
+                0.45714285714285713,
+                0.2878787878787879,
+                0.1774193548387097
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.85,
+            "translation_length": 74,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.14878108028405132,
+            "precisions": [
+                0.5964912280701754,
+                0.22641509433962265,
+                0.08163265306122448,
+                0.044444444444444446
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5833333333333333,
+            "translation_length": 57,
+            "reference_length": 36
+        },
+        {
+            "bleu": 0.12668001017998437,
+            "precisions": [
+                0.6534653465346535,
+                0.2903225806451613,
+                0.10588235294117647,
+                0.01282051282051282
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.578125,
+            "translation_length": 101,
+            "reference_length": 64
+        },
+        {
+            "bleu": 0.17921315412431388,
+            "precisions": [
+                0.6056338028169014,
+                0.24242424242424243,
+                0.13114754098360656,
+                0.05357142857142857
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.3666666666666667,
+            "translation_length": 71,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.1493223190572069,
+            "precisions": [
+                0.7848101265822784,
+                0.3698630136986301,
+                0.1044776119402985,
+                0.01639344262295082
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0972222222222223,
+            "translation_length": 79,
+            "reference_length": 72
+        },
+        {
+            "bleu": 0.14295229073667212,
+            "precisions": [
+                0.5135135135135135,
+                0.11764705882352941,
+                0.0967741935483871,
+                0.07142857142857142
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3703703703703705,
+            "translation_length": 37,
+            "reference_length": 27
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5833333333333334,
+                0.18181818181818182,
+                0.06,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0909090909090908,
+            "translation_length": 60,
+            "reference_length": 55
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.4909090909090909,
+                0.12,
+                0.022222222222222223,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2222222222222223,
+            "translation_length": 55,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.06783757953694106,
+            "precisions": [
+                0.5,
+                0.07352941176470588,
+                0.03225806451612903,
+                0.017857142857142856
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5416666666666667,
+            "translation_length": 74,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.15660043499014786,
+            "precisions": [
+                0.7058823529411765,
+                0.1746031746031746,
+                0.08620689655172414,
+                0.05660377358490566
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2363636363636363,
+            "translation_length": 68,
+            "reference_length": 55
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.4533333333333333,
+                0.04285714285714286,
+                0.0,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1538461538461537,
+            "translation_length": 75,
+            "reference_length": 65
+        },
+        {
+            "bleu": 0.1438000895863643,
+            "precisions": [
+                0.6521739130434783,
+                0.24390243902439024,
+                0.08333333333333333,
+                0.03225806451612903
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0222222222222221,
+            "translation_length": 46,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5754716981132075,
+                0.16831683168316833,
+                0.041666666666666664,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.12,
+            "translation_length": 106,
+            "reference_length": 50
+        },
+        {
+            "bleu": 0.43233043870948457,
+            "precisions": [
+                0.7735849056603774,
+                0.4791666666666667,
+                0.32558139534883723,
+                0.2894736842105263
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7666666666666666,
+            "translation_length": 53,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.20480798779186146,
+            "precisions": [
+                0.6515151515151515,
+                0.3333333333333333,
+                0.12962962962962962,
+                0.0625
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5714285714285714,
+            "translation_length": 66,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.24013304818972067,
+            "precisions": [
+                0.6818181818181818,
+                0.3793103448275862,
+                0.18,
+                0.07142857142857142
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.65,
+            "translation_length": 66,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.23190192577025864,
+            "precisions": [
+                0.765625,
+                0.3333333333333333,
+                0.19642857142857142,
+                0.057692307692307696
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.0,
+            "translation_length": 64,
+            "reference_length": 32
+        },
+        {
+            "bleu": 0.09384940128211197,
+            "precisions": [
+                0.5333333333333333,
+                0.16363636363636364,
+                0.04,
+                0.022222222222222223
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2,
+            "translation_length": 60,
+            "reference_length": 50
+        },
+        {
+            "bleu": 0.3880516125337663,
+            "precisions": [
+                0.9019607843137255,
+                0.6222222222222222,
+                0.3333333333333333,
+                0.12121212121212122
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7,
+            "translation_length": 51,
+            "reference_length": 30
+        },
+        {
+            "bleu": 0.6843386717286649,
+            "precisions": [
+                0.9,
+                0.72,
+                0.6285714285714286,
+                0.5384615384615384
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.0,
+            "translation_length": 80,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.5790250969010559,
+            "precisions": [
+                0.8095238095238095,
+                0.6052631578947368,
+                0.5294117647058824,
+                0.43333333333333335
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.05,
+            "translation_length": 84,
+            "reference_length": 80
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.39080459770114945,
+                0.05063291139240506,
+                0.013888888888888888,
+                0.0
+            ],
+            "brevity_penalty": 0.9885715536772978,
+            "length_ratio": 0.9886363636363636,
+            "translation_length": 87,
+            "reference_length": 88
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.6610169491525424,
+                0.2545454545454545,
+                0.0784313725490196,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3409090909090908,
+            "translation_length": 59,
+            "reference_length": 44
+        },
+        {
+            "bleu": 0.49058905379684303,
+            "precisions": [
+                0.8235294117647058,
+                0.5957446808510638,
+                0.4186046511627907,
+                0.28205128205128205
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.59375,
+            "translation_length": 51,
+            "reference_length": 32
+        },
+        {
+            "bleu": 0.1010685723131823,
+            "precisions": [
+                0.43636363636363634,
+                0.16666666666666666,
+                0.04878048780487805,
+                0.029411764705882353
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3095238095238095,
+            "translation_length": 55,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.2462103010166031,
+            "precisions": [
+                0.55,
+                0.25333333333333335,
+                0.17142857142857143,
+                0.15384615384615385
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.7777777777777777,
+            "translation_length": 80,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.4150953334537616,
+            "precisions": [
+                0.7910447761194029,
+                0.532258064516129,
+                0.3333333333333333,
+                0.21153846153846154
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.488888888888889,
+            "translation_length": 67,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5285714285714286,
+                0.16666666666666666,
+                0.06451612903225806,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3461538461538463,
+            "translation_length": 70,
+            "reference_length": 52
+        },
+        {
+            "bleu": 0.1129080869500371,
+            "precisions": [
+                0.5111111111111111,
+                0.17857142857142858,
+                0.0641025641025641,
+                0.027777777777777776
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.142857142857143,
+            "translation_length": 90,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.2412701224892191,
+            "precisions": [
+                0.6166666666666667,
+                0.3090909090909091,
+                0.2,
+                0.08888888888888889
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3333333333333333,
+            "translation_length": 60,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.7420080686818508,
+            "precisions": [
+                0.9230769230769231,
+                0.7777777777777778,
+                0.6666666666666666,
+                0.6333333333333333
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.625,
+            "translation_length": 78,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.6757202855978389,
+            "precisions": [
+                0.8225806451612904,
+                0.7241379310344828,
+                0.6481481481481481,
+                0.54
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.55,
+            "translation_length": 62,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.24385022941449486,
+            "precisions": [
+                0.72,
+                0.3235294117647059,
+                0.16393442622950818,
+                0.09259259259259259
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0714285714285714,
+            "translation_length": 75,
+            "reference_length": 70
+        },
+        {
+            "bleu": 0.3012093892488087,
+            "precisions": [
+                0.5774647887323944,
+                0.390625,
+                0.22807017543859648,
+                0.16
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6904761904761905,
+            "translation_length": 71,
+            "reference_length": 42
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.6190476190476191,
+                0.29333333333333333,
+                0.16666666666666666,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5555555555555556,
+            "translation_length": 84,
+            "reference_length": 54
+        },
+        {
+            "bleu": 0.11362339338493603,
+            "precisions": [
+                0.65,
+                0.2702702702702703,
+                0.058823529411764705,
+                0.016129032258064516
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.2222222222222223,
+            "translation_length": 80,
+            "reference_length": 36
+        },
+        {
+            "bleu": 0.12481665330150084,
+            "precisions": [
+                0.6265060240963856,
+                0.19230769230769232,
+                0.0684931506849315,
+                0.029411764705882353
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.3714285714285714,
+            "translation_length": 83,
+            "reference_length": 35
+        },
+        {
+            "bleu": 0.4945653768579953,
+            "precisions": [
+                0.8289473684210527,
+                0.5147058823529411,
+                0.45,
+                0.38461538461538464
+            ],
+            "brevity_penalty": 0.9487294800164372,
+            "length_ratio": 0.95,
+            "translation_length": 76,
+            "reference_length": 80
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.3516483516483517,
+                0.023529411764705882,
+                0.0,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.5277777777777777,
+            "translation_length": 91,
+            "reference_length": 36
+        },
+        {
+            "bleu": 0.24062366707466595,
+            "precisions": [
+                0.5866666666666667,
+                0.34285714285714286,
+                0.2,
+                0.08333333333333333
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5,
+            "translation_length": 75,
+            "reference_length": 50
+        },
+        {
+            "bleu": 0.3696201212723736,
+            "precisions": [
+                0.6781609195402298,
+                0.4146341463414634,
+                0.2987012987012987,
+                0.2222222222222222
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.74,
+            "translation_length": 87,
+            "reference_length": 50
+        },
+        {
+            "bleu": 0.15267322669395053,
+            "precisions": [
+                0.6363636363636364,
+                0.21568627450980393,
+                0.0851063829787234,
+                0.046511627906976744
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.375,
+            "translation_length": 55,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.203676037178283,
+            "precisions": [
+                0.5180722891566265,
+                0.23684210526315788,
+                0.14492753623188406,
+                0.0967741935483871
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.1857142857142857,
+            "translation_length": 83,
+            "reference_length": 70
+        },
+        {
+            "bleu": 0.09396670638187822,
+            "precisions": [
+                0.36065573770491804,
+                0.14035087719298245,
+                0.07547169811320754,
+                0.02040816326530612
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 3.05,
+            "translation_length": 61,
+            "reference_length": 20
+        },
+        {
+            "bleu": 0.2978758411707116,
+            "precisions": [
+                0.6888888888888889,
+                0.375,
+                0.22857142857142856,
+                0.13333333333333333
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.8,
+            "translation_length": 45,
+            "reference_length": 25
+        },
+        {
+            "bleu": 0.12811147782193819,
+            "precisions": [
+                0.5392156862745098,
+                0.09574468085106383,
+                0.08139534883720931,
+                0.0641025641025641
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.275,
+            "translation_length": 102,
+            "reference_length": 80
+        },
+        {
+            "bleu": 0.6175556308641602,
+            "precisions": [
+                0.8529411764705882,
+                0.6825396825396826,
+                0.5517241379310345,
+                0.4528301886792453
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.9428571428571428,
+            "translation_length": 68,
+            "reference_length": 35
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.6213592233009708,
+                0.4166666666666667,
+                0.056179775280898875,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.8392857142857142,
+            "translation_length": 103,
+            "reference_length": 56
+        },
+        {
+            "bleu": 0.5062402283209644,
+            "precisions": [
+                0.8518518518518519,
+                0.56,
+                0.41304347826086957,
+                0.3333333333333333
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2272727272727273,
+            "translation_length": 54,
+            "reference_length": 44
+        },
+        {
+            "bleu": 0.1034526387427308,
+            "precisions": [
+                0.5227272727272727,
+                0.13580246913580246,
+                0.05405405405405406,
+                0.029850746268656716
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 3.142857142857143,
+            "translation_length": 88,
+            "reference_length": 28
+        },
+        {
+            "bleu": 0.06860896057904807,
+            "precisions": [
+                0.5072463768115942,
+                0.06349206349206349,
+                0.03508771929824561,
+                0.0196078431372549
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.2777777777777777,
+            "translation_length": 69,
+            "reference_length": 54
+        },
+        {
+            "bleu": 0.1475117181598202,
+            "precisions": [
+                0.5714285714285714,
+                0.2692307692307692,
+                0.13541666666666666,
+                0.022727272727272728
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5555555555555556,
+            "translation_length": 112,
+            "reference_length": 72
+        },
+        {
+            "bleu": 0.29247111032679535,
+            "precisions": [
+                0.6716417910447762,
+                0.3548387096774194,
+                0.22807017543859648,
+                0.1346153846153846
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.488888888888889,
+            "translation_length": 67,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.21386489572643597,
+            "precisions": [
+                0.43,
+                0.2127659574468085,
+                0.17045454545454544,
+                0.13414634146341464
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6666666666666667,
+            "translation_length": 100,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.19397158544829732,
+            "precisions": [
+                0.584070796460177,
+                0.2830188679245283,
+                0.13131313131313133,
+                0.06521739130434782
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4675324675324675,
+            "translation_length": 113,
+            "reference_length": 77
+        },
+        {
+            "bleu": 0.2611026525123613,
+            "precisions": [
+                0.5526315789473685,
+                0.2714285714285714,
+                0.203125,
+                0.15254237288135594
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.5833333333333333,
+            "translation_length": 76,
+            "reference_length": 48
+        },
+        {
+            "bleu": 0.6770138594061887,
+            "precisions": [
+                0.8985507246376812,
+                0.7,
+                0.6037735849056604,
+                0.5531914893617021
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0952380952380953,
+            "translation_length": 69,
+            "reference_length": 63
+        },
+        {
+            "bleu": 0.2725573692825596,
+            "precisions": [
+                0.7142857142857143,
+                0.3275862068965517,
+                0.18867924528301888,
+                0.125
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4,
+            "translation_length": 63,
+            "reference_length": 45
+        },
+        {
+            "bleu": 0.12493058421687304,
+            "precisions": [
+                0.3793103448275862,
+                0.16363636363636364,
+                0.09615384615384616,
+                0.04081632653061224
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.4166666666666665,
+            "translation_length": 58,
+            "reference_length": 24
+        },
+        {
+            "bleu": 0.789830236318767,
+            "precisions": [
+                0.8791208791208791,
+                0.813953488372093,
+                0.7654320987654321,
+                0.7105263157894737
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4,
+            "translation_length": 91,
+            "reference_length": 65
+        },
+        {
+            "bleu": 0.15243395241545696,
+            "precisions": [
+                0.6111111111111112,
+                0.20408163265306123,
+                0.09090909090909091,
+                0.05128205128205128
+            ],
+            "brevity_penalty": 0.9816518956846597,
+            "length_ratio": 0.9818181818181818,
+            "translation_length": 54,
+            "reference_length": 55
+        },
+        {
+            "bleu": 0.4071560166213374,
+            "precisions": [
+                0.775,
+                0.4383561643835616,
+                0.3181818181818182,
+                0.2542372881355932
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4285714285714286,
+            "translation_length": 80,
+            "reference_length": 56
+        },
+        {
+            "bleu": 0.34179527413779537,
+            "precisions": [
+                0.7068965517241379,
+                0.41509433962264153,
+                0.25,
+                0.18604651162790697
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.6571428571428573,
+            "translation_length": 58,
+            "reference_length": 35
+        },
+        {
+            "bleu": 0.0,
+            "precisions": [
+                0.5147058823529411,
+                0.14516129032258066,
+                0.017857142857142856,
+                0.0
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.0303030303030303,
+            "translation_length": 68,
+            "reference_length": 66
+        },
+        {
+            "bleu": 0.1902901500837473,
+            "precisions": [
+                0.5714285714285714,
+                0.23076923076923078,
+                0.14583333333333334,
+                0.06818181818181818
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4,
+            "translation_length": 56,
+            "reference_length": 40
+        },
+        {
+            "bleu": 0.15972339814486508,
+            "precisions": [
+                0.6923076923076923,
+                0.2876712328767123,
+                0.10294117647058823,
+                0.031746031746031744
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.3,
+            "translation_length": 78,
+            "reference_length": 60
+        },
+        {
+            "bleu": 0.18242509751772568,
+            "precisions": [
+                0.671875,
+                0.26666666666666666,
+                0.10714285714285714,
+                0.057692307692307696
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 1.4545454545454546,
+            "translation_length": 64,
+            "reference_length": 44
+        },
+        {
+            "bleu": 0.2055529704715912,
+            "precisions": [
+                0.5076923076923077,
+                0.19672131147540983,
+                0.15789473684210525,
+                0.11320754716981132
+            ],
+            "brevity_penalty": 1.0,
+            "length_ratio": 2.03125,
+            "translation_length": 65,
+            "reference_length": 32
+        }
+    ],
+    "average": 0.2627598440971721
+}
