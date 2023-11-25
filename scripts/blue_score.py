@@ -41,6 +41,8 @@ for i in range(len(data)):
 
 bleu = evaluate.load("bleu")
 
+print(examples[1]['subquestions'])
+
 
 def compute_bleu_scores(examples):
     scores = []
@@ -63,9 +65,9 @@ def calc_average_bleu_score(scores):
 bleu_scores = compute_bleu_scores(examples)
 output_file_path = 'bleu_scores.json'
 
-print(len(bleu_scores))
+# print(len(bleu_scores))
 average_bleu = calc_average_bleu_score(bleu_scores)
-print(average_bleu)
+# print(average_bleu)
 
 output_data = {
         'bleu': bleu_scores,
@@ -78,7 +80,7 @@ output_data = {
 
 
 scores_list = [ score['bleu'] for score in bleu_scores ]
-print(scores_list)
+# print(scores_list)
 
 # Plotting the distribution of mean_scores
 plt.figure(figsize=(10, 6))
@@ -88,6 +90,6 @@ plt.xlabel('BLEU Score')
 plt.ylabel('Frequency')
 
 # Save the plot
-plt.savefig('bleu_dist.png', dpi=300)  # Saves the plot as a PNG file
+# plt.savefig('dne.png', dpi=300)  # Saves the plot as a PNG file
 
-plt.show()
+# plt.show()
