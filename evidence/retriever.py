@@ -78,7 +78,7 @@ with open(websites_file, 'r') as f:
 
 print(processed_lines)
 
-num_lines_to_process = 5
+num_lines_to_process = 25
 
 # Process the input file
 with open(subquestion_path, 'r') as f_input, open(websites_file, 'a') as f_output:
