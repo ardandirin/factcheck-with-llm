@@ -43,36 +43,42 @@ def update_params(query, end_date):
     print(params['sort'])
     return params
 
+
+
 # Function to process a line and make API calls
 def process_line(line):
-    ''' Process a line from the input file and make API calls'''
+    ''' Process a line from the input file and make API calls
+    :param line: a line from the input file
+    :return: a list of search results
+    '''
     questions_list = JsonLoader.list_returner(line)
     date = DateHelper.extract_date(line['prompt'])
-    websites = []
+    search_results = []
     for q in questions_list:
         params = update_params(q, date)
         response = requests.get(url, params=params).json()
-        print(response)
+        # print(response)
         for item in response['items']:
-            # print(item['link'])
-            # print(item['snippet'])
-            # print() 
-            websites.append(item['link'])
+            result = {
+                'question': q,
+                'url': item.get('link', 'No URL'),
+                'title': item.get('title', 'No Title'),
+                'snippet': item.get('snippet', 'No Snippet')
+            }
+            search_results.append(result)
         global api_usage_count
         api_usage_count += 1
 
-    return websites
+    return search_results
 
 
 process_lines = 0
-# Read the number of lines already processed
 with open(websites_file, 'r') as f:
     processed_lines = sum(1 for line in f)
 
 print(processed_lines)
 
-# Define the number of lines you want to process
-num_lines_to_process = 1
+num_lines_to_process = 25
 
 # Process the input file
 with open(subquestion_path, 'r') as f_input, open(websites_file, 'a') as f_output:
