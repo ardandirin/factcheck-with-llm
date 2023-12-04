@@ -57,17 +57,27 @@ def process_line(line):
     for q in questions_list:
         params = update_params(q, date)
         response = requests.get(url, params=params).json()
-        # print(response)
-        for item in response['items']:
-            result = {
-                'question': q,
-                'url': item.get('link', 'No URL'),
-                'title': item.get('title', 'No Title'),
-                'snippet': item.get('snippet', 'No Snippet')
-            }
-            search_results.append(result)
         global api_usage_count
         api_usage_count += 1
+        print(response)
+        if 'items' in response:
+            for item in response['items']:
+                result = {
+                    'question': q,
+                    'url': item.get('link', 'No URL'),
+                    'title': item.get('title', 'No Title'),
+                    'snippet': item.get('snippet', 'No Snippet')
+                }
+                search_results.append(result)
+        else:
+            print(f"No items found for query: {q}")
+            result = {
+                'question': q,
+                'url': 'No URL',
+                'title': 'No Title',
+                'snippet': 'No Snippet'
+            }
+            search_results.append(result)
 
     return search_results
 
@@ -78,7 +88,7 @@ with open(websites_file, 'r') as f:
 
 print(processed_lines)
 
-num_lines_to_process = 25
+num_lines_to_process = 150
 
 # Process the input file
 with open(subquestion_path, 'r') as f_input, open(websites_file, 'a') as f_output:

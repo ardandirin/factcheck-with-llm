@@ -2,24 +2,38 @@ import requests
 from bs4 import BeautifulSoup
 from helpers import json_loader as JsonLoader
 import certifi
+from helpers import general as General
+import json
 
 sample_url = "https://whorulesamerica.ucsc.edu/power/history_of_labor_unions.html"
+url = "https://www.hrw.org/report/2018/02/28/freezer/abusive-conditions-women-and-children-us-immigration-holding-cells"
 
-# Send a GET request to the URL
-response = requests.get(sample_url, verify=certifi.where())
+websites = '/Users/arda/thesis/factcheck-with-llm/ClaimDecomp/websites.jsonl'
+out_file = '/Users/arda/thesis/factcheck-with-llm/ClaimDecomp/deneme.jsonl'
+results = JsonLoader.json_loader(websites)
 
-# Check if the request was successful
-if response.status_code == 200:
-    # Parse the content of the request with Beautiful Soup
-    soup = BeautifulSoup(response.content, 'html.parser')
+def process_jsonl_file(jsonl_file_path, output_file_path):
+    
+    ''' Process a jsonl file and aggregate the results for each question in each line
+    :param jsonl_file_path: path to the jsonl file
+    :param output_file_path: path to the output file'''
 
-    # Now you can navigate and extract data from the soup object
-    # For example, to get all text from the page:
-    page_text = soup.get_text()
+    with open(jsonl_file_path, 'r') as file, open(output_file_path, 'w', encoding='utf-8') as out:
+        for line in file:
+            entries = json.loads(line)  # load an entry from the jsonl (websites) file
+            aggregated_results = {} # agrregate the results for each question
+            for entry in entries:
+                question = entry['question']
+                if question not in aggregated_results:
+                    aggregated_results[question] = ""
+                aggregated_results[question] += f"\n\n{(entry['url'])}"
 
-    # Or, to find a specific element, like a div with a specific class:
-    specific_div = soup.find('div', {'class': 'your-class-name'})
+            line_results = [{'question': question, 'aggregated_text': text} for question, text in aggregated_results.items()]
+            json.dump(line_results, out, ensure_ascii=False)
+            out.write('\n')
 
-    print(page_text)  # or use specific_div to do something with that specific div
-else:
-    print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
+
+process_jsonl_file(websites, out_file)
+
+
+
