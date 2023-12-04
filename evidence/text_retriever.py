@@ -4,6 +4,10 @@ from helpers import json_loader as JsonLoader
 import certifi
 from helpers import general as General
 import json
+import logging
+from logger_config import setup_logging  # This will configure the logging
+
+logger = logging.getLogger(__name__)
 
 sample_url = "https://whorulesamerica.ucsc.edu/power/history_of_labor_unions.html"
 url = "https://www.hrw.org/report/2018/02/28/freezer/abusive-conditions-women-and-children-us-immigration-holding-cells"
@@ -35,5 +39,9 @@ def process_jsonl_file(jsonl_file_path, output_file_path):
 
 process_jsonl_file(websites, out_file)
 
+def main():
+    process_jsonl_file(websites, out_file)
 
+if __name__ == "__main__":
+    main()
 
