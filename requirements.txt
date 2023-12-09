@@ -1,0 +1,7 @@
+certifi
+requests
+beautifulsoup4
+evaluate
+python-dateutil
+python-dotenv
+transformers
