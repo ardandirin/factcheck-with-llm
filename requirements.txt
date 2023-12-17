@@ -5,3 +5,6 @@ evaluate
 python-dateutil
 python-dotenv
 transformers
+rank-bm25
+nltk
+numpy
