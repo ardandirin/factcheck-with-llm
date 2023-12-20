@@ -23,6 +23,7 @@ Google allows only 100 queries per day, therefore the code was run on a span of 
 
 ### Websites Retriever
 Does Web queries using Google custom search API:
+And creates websites jsonl file as output.
 python -m evidence.web_api_retriever \
     --subquestion_path "./ClaimDecomp/subquestions_finetuned.jsonl" \
     --websites_path "./ClaimDecomp/websites.jsonl" \
@@ -33,10 +34,22 @@ python -m evidence.web_api_retriever \
 
 ### Text Retriever
 
-text_retriever.py uses BeautifulSoup to retrieve text from those websites in order to run the command the arguments must be given:
+text_retriever.py uses BeautifulSoup to retrieve text from those websites. To run the command the arguments must be given:
 
 ```
 python -m evidence.text_retriever \
     --websites_path "./ClaimDecomp/websites.jsonl"
     --output_path  "./ClaimDecomp/answers.jsonl"
 ```
+
+
+
+
+### BM25 Retriever
+
+Here we segment each answer to some number of segments (with token length 1500) and retrieve the most relavent parts of the text using BM25 ranker.
+
+python -m evidence.bm25_retriever.py \
+    --corpus_path "./ClaimDecomp/deneme.jsonl"
+    --original_test_path "./ClaimDecomp/test.jsonl"
+    --top_docs_path "./ClaimDecomp/top_docs_simple.jsonl"
