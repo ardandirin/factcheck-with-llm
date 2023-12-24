@@ -47,6 +47,12 @@ python -m evidence.text_retriever \
 
 ### BM25 Retriever
 
+Also need to download nltk
+```
+import nltk
+nltk.download('punkt')
+```
+
 Here we segment each answer to some number of segments (with token length 1500) and retrieve the most relavent parts of the text using BM25 ranker.
 
 python -m evidence.bm25_retriever.py \
