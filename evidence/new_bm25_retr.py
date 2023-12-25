@@ -7,10 +7,33 @@ from nltk.tokenize import word_tokenize
 from helpers.bm25 import BM25Retriever
 from tqdm import tqdm
 
+import nltk
+nltk.download('punkt')
+
+
+def finds_ids(top_docs_tokenized):
+    ''' Finds the ids of the segments that are identical or have an overlap. '''
+    ids_to_remove = []
+    ids_to_merge = []
+    for i in range(len(top_docs_tokenized)):
+        for j in range(i + 1, len(top_docs_tokenized)):
+            print(i, j)
+            if Segmenter.are_segments_identical(top_docs_tokenized[i], top_docs_tokenized[j]):
+                print(f"Identical segments found: Document {i} and {j}")
+                ids_to_remove.append(j)
+            else:
+                overlap = Segmenter.sequence_overlap(top_docs_tokenized[i], top_docs_tokenized[j])
+                if overlap:
+                    print(f"Overlap found between document {i} and {j}: '{overlap}'")
+                    ids_to_merge.append((i, j))
+    return ids_to_remove, ids_to_merge
+
+
+
 def main(corpus_path, original_test_path, top_docs_path):
-    with open(corpus_path, 'r', encoding='utf8') as file, open(original_test_path, 'r', encoding='utf8') as test_data:
+    with open(corpus_path, 'r', encoding='utf8') as corpus, open(original_test_path, 'r', encoding='utf8') as test_data:
         final_data = []
-        for corpus_line, test_line in tqdm(zip(file, test_data)):
+        for corpus_line, test_line in tqdm(zip(corpus, test_data)):
             data_to_write = []
             test_data = json.loads(test_line)
             corpus_data = json.loads(corpus_line)
@@ -31,35 +54,86 @@ def main(corpus_path, original_test_path, top_docs_path):
 
                 query = word_tokenize(question)
                 top_docs_tokenized, scores = bm25_retriever.get_top_n_doc(query, 4)
-
+                
                 top_docs_data = []
-                for top_doc_tokenized, score in zip(top_docs_tokenized, scores):
-                    # Match tokenized top docs with original segments
-                    match_index = next((i for i, (segment, _, _) in enumerate(segment_data) if word_tokenize(segment) == top_doc_tokenized), None)
-                    if match_index is not None:
-                        original_segment, _, response_metadata = segment_data[match_index]
-                        print("Score:", score)
-                        print("---")
-                        top_doc = {
-                            'url': response_metadata['url'],
-                            'snippet': response_metadata['snippet'],
-                            'title': response_metadata['title'],
-                            'segment': original_segment,
-                            'score': score
+                ids_to_remove, ids_to_merge = finds_ids(top_docs_tokenized)
+                                
+                print(f"Ids to remove: {ids_to_remove}")
+                print(f"Ids to merge: {ids_to_merge}") 
+                
+
+                # Merging and removing segments
+                merged_segments = []
+                merged_segments_map = {}
+                merged_indices = set()
+                for i, j in ids_to_merge:
+                    if i in merged_indices or j in merged_indices:
+                        continue
+
+                    overlap = Segmenter.sequence_overlap(top_docs_tokenized[i], top_docs_tokenized[j])
+                    if overlap:
+                        print(f"Overlap found between document {i} and {j}")
+                        merged_segment = Segmenter.merge_segments_new(top_docs_tokenized[i], top_docs_tokenized[j], overlap)
+                        # print(f"Merged segment: {merged_segment}")
+                        merged_segments.append(merged_segment)
+                        merged_indices.update([i, j])
+                        merged_segments_map[len(merged_segments) - 1] = [i, j]
+                    else:
+                        print("Error: Overlap not found in segments")
+
+                for index, segment in enumerate(top_docs_tokenized):
+                    if index not in merged_indices:
+                        merged_segments.append(segment)
+
+                filtered_top_docs_tokenized = [segment for i, segment in enumerate(merged_segments) if i not in ids_to_remove]
+                
+                print(f"Filtered top docs: {len(filtered_top_docs_tokenized)}")
+
+                # Processing segments with their metadata
+                for idx, (top_doc_tokenized, score) in enumerate(zip(filtered_top_docs_tokenized, scores)):
+                    merged_metadata = None
+                    if idx in merged_segments_map:
+                        original_indices = merged_segments_map[idx]
+                        metadata_list = []
+                        
+                        for original_idx in original_indices:
+                            corresponding_index = next((i for i, (segment, _, _) in enumerate(segment_data) if word_tokenize(segment) == top_doc_tokenized), None)
+                            if corresponding_index is not None:
+                                _, _, original_metadata = segment_data[corresponding_index]
+                                metadata_list.append(original_metadata)
+                            # Process or store this metadata as needed
+                            
+                        # Check if all metadata are the same
+                        if all(m == metadata_list[0] for m in metadata_list):
+                            merged_metadata = metadata_list[0]  # All metadata are the same, use any
+                        else:
+                            # Handle the case where metadata differs
+                            # This could be storing both, logging a warning, etc.
+                            print("Warning: Metadata differs for merged segments")
+                            merged_metadata = {"multiple_sources": metadata_list}
+                    else:
+                        for segment, span, response_metadata in segment_data:
+                            if word_tokenize(segment) == top_doc_tokenized:
+                                top_doc = {
+                                    'url': response_metadata['url'],
+                                    'snippet': response_metadata['snippet'],
+                                    'title': response_metadata['title'],
+                                    'segment': segment,
+                                    'score': score
+                                }
+                                top_docs_data.append(top_doc)
+
+                        distilled_ans = {
+                            'question': question,
+                            'top_docs': top_docs_data
                         }
-                        top_docs_data.append(top_doc)
+                        data_to_write.append(distilled_ans)
 
-                distilled_ans = {
-                    'question': question,
-                    'top_docs': top_docs_data
-                }
-                data_to_write.append(distilled_ans)
-
-            result = {
-                'example_id': example_id,
-                'text': data_to_write
-            }
-            final_data.append(result)
+                    result = {
+                        'example_id': example_id,
+                        'data': data_to_write
+                    }
+                    final_data.append(result)
 
         with open(top_docs_path, 'w') as f:
             for line in final_data:
