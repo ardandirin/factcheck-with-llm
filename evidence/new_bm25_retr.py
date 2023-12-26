@@ -49,7 +49,15 @@ def main(corpus_path, original_test_path, top_docs_path):
                         segment_data.append((segment, span, response))  # Include response metadata
 
                 # Tokenize each segment for the BM25Retriever
-                tokenized_segments = [word_tokenize(segment) for segment, _, _ in segment_data]
+                # tokenized_segments = [word_tokenize(segment) for segment, _, _ in segment_data]
+                
+                # Tokenize each segment for the BM25Retriever and keep track of original indices
+                tokenized_segments = []
+                original_indices_map = {}
+                for original_idx, (segment, _, _) in enumerate(segment_data):
+                    tokenized_segment = word_tokenize(segment)
+                    tokenized_segments.append(tokenized_segment)
+                    original_indices_map[tuple(tokenized_segment)] = original_idx
                 bm25_retriever = BM25Retriever(tokenized_segments)
 
                 query = word_tokenize(question)
@@ -90,50 +98,48 @@ def main(corpus_path, original_test_path, top_docs_path):
                 print(f"Filtered top docs: {len(filtered_top_docs_tokenized)}")
 
                 # Processing segments with their metadata
-                for idx, (top_doc_tokenized, score) in enumerate(zip(filtered_top_docs_tokenized, scores)):
+                for idx, (filtered_top_doc_token, score) in enumerate(zip(filtered_top_docs_tokenized, scores)):
                     merged_metadata = None
                     if idx in merged_segments_map:
                         original_indices = merged_segments_map[idx]
                         metadata_list = []
                         
                         for original_idx in original_indices:
-                            corresponding_index = next((i for i, (segment, _, _) in enumerate(segment_data) if word_tokenize(segment) == top_doc_tokenized), None)
+                            corresponding_index = next((i for i, (segment, _, _) in enumerate(segment_data) if word_tokenize(segment) in filtered_top_doc_token), None)
                             if corresponding_index is not None:
                                 _, _, original_metadata = segment_data[corresponding_index]
                                 metadata_list.append(original_metadata)
                             # Process or store this metadata as needed
                             
-                        # Check if all metadata are the same
-                        if all(m == metadata_list[0] for m in metadata_list):
-                            merged_metadata = metadata_list[0]  # All metadata are the same, use any
                         else:
                             # Handle the case where metadata differs
                             # This could be storing both, logging a warning, etc.
                             print("Warning: Metadata differs for merged segments")
                             merged_metadata = {"multiple_sources": metadata_list}
-                    else:
-                        for segment, span, response_metadata in segment_data:
-                            if word_tokenize(segment) == top_doc_tokenized:
-                                top_doc = {
-                                    'url': response_metadata['url'],
-                                    'snippet': response_metadata['snippet'],
-                                    'title': response_metadata['title'],
-                                    'segment': segment,
-                                    'score': score
-                                }
-                                top_docs_data.append(top_doc)
+                    
+                    for segment, span, response_metadata in segment_data:
+                        if set(word_tokenize(segment)).issubset(filtered_top_doc_token):
+                            print("Found segment: inside")
+                            top_doc = {
+                                'url': response_metadata['url'],
+                                'snippet': response_metadata['snippet'],
+                                'title': response_metadata['title'],
+                                'segment': segment,
+                                'score': score
+                            }
+                            top_docs_data.append(top_doc)
 
-                        distilled_ans = {
-                            'question': question,
-                            'top_docs': top_docs_data
-                        }
-                        data_to_write.append(distilled_ans)
+                distilled_ans = {
+                    'question': question,
+                    'top_docs': top_docs_data
+                }
+                data_to_write.append(distilled_ans)
 
-                    result = {
-                        'example_id': example_id,
-                        'data': data_to_write
-                    }
-                    final_data.append(result)
+            result = {
+                'example_id': example_id,
+                'data': data_to_write
+            }
+            final_data.append(result)
 
         with open(top_docs_path, 'w') as f:
             for line in final_data:
@@ -142,9 +148,9 @@ def main(corpus_path, original_test_path, top_docs_path):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--corpus_path', default='./ClaimDecomp/answers_subset.jsonl', type=str)
+    parser.add_argument('--corpus_path', default='./ClaimDecomp/answers2.jsonl', type=str)
     parser.add_argument('--original_test_path', default='./ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--top_docs_path', default='./ClaimDecomp/top_docs_simpl_new.jsonl', type=str)
+    parser.add_argument('--top_docs_path', default='./ClaimDecomp/top_docs_simpl2.jsonl', type=str)
     # parser.add_argument('--output_path', default='./ClaimDecomp/summaries.jsonl', type=str)
     args = parser.parse_args()
     return args
