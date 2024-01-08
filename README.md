@@ -56,3 +56,12 @@ python -m evidence.bm25_retriever.py \
     --corpus_path "./ClaimDecomp/deneme.jsonl"
     --original_test_path "./ClaimDecomp/test.jsonl"
     --top_docs_path "./ClaimDecomp/top_docs_simple.jsonl"
+
+### Summarize
+
+Summarazies the relavent parts retrieved from BM25 and stores them in summaries.jsonl
+python -m evidence.summarize \
+
+### Veracity Classifier
+
+The final step of the pipeline. Here the summaries are given to the LLM along with the claim for context as well as the subquestion to answer it with yes/no/not enough information

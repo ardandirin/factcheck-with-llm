@@ -8,7 +8,9 @@ from nltk import word_tokenize
 import difflib
 import re
 import json
+import os
 # summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+
 
 
 def postprocess_text(text):
@@ -90,11 +92,42 @@ def get_article(path, example_id):
             json_obj = json.loads(line.strip())
             if json_obj['example_id'] == example_id:
                 return json_obj['full_article']
+    print("No article found")
+    return None
+            
+def get_claim(path, example_id):
+    '''
+    :param path: the path to the test file containing the context
+    :param example_id: the id of the context to find
+    :return: the original claim of the example_id
+    '''
+    with open(path, 'r') as file:
+        for line in file:
+            json_obj = json.loads(line.strip())
+            if json_obj['example_id'] == example_id:
+                full_claim = json_obj['person'] + " " + json_obj['venue'] + " " + json_obj['claim']
+                return full_claim
+    print("No claim found")
+    return None
+
+
+def get_label(path, example_id):
+    '''
+    :param path: the path to the test file containing the context
+    :param example_id: the id of the context to find
+    :return: the final verdict of the claim (6-way classification)
+    '''
+    with open(path, 'r') as file:
+        for line in file:
+            json_obj = json.loads(line.strip())
+            if json_obj['example_id'] == example_id:
+                return json_obj['label']
+    print("No label found")
+    return None
             
 
 
 def get_summary(api_base, token, model_name, system_message, user_message):
-
     s = requests.Session()
     url = f"{api_base}/chat/completions"
     body = {
@@ -103,6 +136,7 @@ def get_summary(api_base, token, model_name, system_message, user_message):
                 {"role": "user", "content": user_message}],
     "temperature": 0.7
     }
+
 
     with s.post(url, headers={"Authorization": f"Bearer {token}"}, json=body) as resp:
         response = resp.json()
