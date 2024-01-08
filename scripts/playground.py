@@ -1,5 +1,5 @@
 import json
-from helpers import json_loader as JsonLoader
+# from helpers import json_loader as JsonLoader
 # data = []
 # generated_questions_path = '../ClaimDecomp/subquestions_finetuned.jsonl'
 
@@ -20,17 +20,20 @@ from helpers import json_loader as JsonLoader
     
 # print(examples[7][3])
 
-websites = '/Users/arda/thesis/factcheck-with-llm/ClaimDecomp/websites.jsonl'
-out_file = '/Users/arda/thesis/factcheck-with-llm/ClaimDecomp/deneme.jsonl'
-results = JsonLoader.json_loader(websites)
+websites = '../ClaimDecomp/websites.jsonl'
+out_file = '../ClaimDecomp/websites_subset.jsonl'
+# results = JsonLoader.json_loader(websites)
 
 # Load data and annotated questions
 
 # print(type(results))
 # print(results[0][2]["url"])
-for claim in results:
-    for item in claim:
-        print(item)
+
+# Open the source file and the destination file
+with open(websites, 'r') as source, open(out_file, 'w') as dest:
+    for line in source:
+        # Write each line to the destination file
+        dest.write(line)
 
 # Extracting and listing the URLs
 # urls = [item["url"] for item in results]

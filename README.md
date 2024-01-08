@@ -1,27 +1,28 @@
 # factcheck-with-llm - Thesis
 
-
-## Prerequisties 
+## Prerequisties
 
 ### Create conda environment
-```
+
+```bash
 conda create -n your_environment_name
 conda activate your_environment name
 ```
+
 Download the necessary codes
-```
+
+ ```bash
 pip install -r requirements.txt
-```
-
-
+ ```
 
 ### Evidence Retrieval
+
 The script "web_api_retrieval.py" retrieves websites via Google Custom Search API, a web api key, as well as search engine id must be acquired from Google's official API, and placed in a .env file.
 
 Google allows only 100 queries per day, therefore the code was run on a span of multiple days to acquire for 200 lines in the subquestions_finetuned.jsonl file
 
-
 ### Websites Retriever
+
 Does Web queries using Google custom search API:
 And creates websites jsonl file as output.
 python -m evidence.web_api_retriever \
@@ -29,26 +30,22 @@ python -m evidence.web_api_retriever \
     --websites_path "./ClaimDecomp/websites.jsonl" \
     --web_api_key "Your web API goes here" \
     --search_engine_id "search engine id goes here" \
-    
-
 
 ### Text Retriever
 
 text_retriever.py uses BeautifulSoup to retrieve text from those websites. To run the command the arguments must be given:
 
-```
+```bash
 python -m evidence.text_retriever \
     --websites_path "./ClaimDecomp/websites.jsonl"
     --output_path  "./ClaimDecomp/answers.jsonl"
 ```
 
-
-
-
 ### BM25 Retriever
 
 Also need to download nltk
-```
+
+```python
 import nltk
 nltk.download('punkt')
 ```
@@ -59,3 +56,12 @@ python -m evidence.bm25_retriever.py \
     --corpus_path "./ClaimDecomp/deneme.jsonl"
     --original_test_path "./ClaimDecomp/test.jsonl"
     --top_docs_path "./ClaimDecomp/top_docs_simple.jsonl"
+
+### Summarize
+
+Summarazies the relavent parts retrieved from BM25 and stores them in summaries.jsonl
+python -m evidence.summarize \
+
+### Veracity Classifier
+
+The final step of the pipeline. Here the summaries are given to the LLM along with the claim for context as well as the subquestion to answer it with yes/no/not enough information

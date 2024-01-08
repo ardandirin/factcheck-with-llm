@@ -136,3 +136,52 @@ def merge_segments(i, j, top_docs, unit2docid, docid2doc):
     # Update the top_docs list
     # top_docs[i] = merged_segment
     # top_docs.pop(j) # This is the problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def find_overlap_start_index(segment, overlap):
+        combined_text = ""
+        for i, token in enumerate(segment):
+            combined_text += token + " "
+            combined_trimmed = combined_text.strip()  # Trim any leading/trailing spaces for accurate comparison
+            if combined_trimmed == overlap:
+                print(f"Overlap found at index {i}")
+                return i + 1  # Return the exclusive end index of the overlap
+            elif combined_trimmed.endswith(overlap):
+                return i + 1  # Handle cases where overlap is at the end
+           
+        return None
+
+
+def merge_segments_new(seg1, seg2, overlap):
+    # Find the start index of the overlap in seg1 and seg2
+        start_idx_seg1 = find_overlap_start_index(seg1, overlap)
+        start_idx_seg2 = find_overlap_start_index(seg2, overlap)
+
+        if start_idx_seg1 is None or start_idx_seg2 is None:
+            print("Error: Overlap not found in segments")
+            return seg1  # Fallback
+
+        # Determine the order of the segments
+        if start_idx_seg2 > start_idx_seg1:
+            # seg1 comes after seg2, so take the beginning of seg2 and append the end of seg1
+            merged_segment = seg2[:start_idx_seg2 - len(overlap.split())] + seg1[start_idx_seg1:]
+        else:
+            # seg1 comes before seg2
+            merged_segment = seg1[:start_idx_seg1 - len(overlap.split())] + seg2[start_idx_seg2:]
+
+        return merged_segment
+
