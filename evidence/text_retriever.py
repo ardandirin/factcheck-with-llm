@@ -12,11 +12,6 @@ from tqdm import tqdm
 
 logger = logging.getLogger(__name__)
 
-# websites = '/Users/arda/thesis/factcheck-with-llm/ClaimDecomp/websites.jsonl'
-# out_file = '/Users/arda/thesis/factcheck-with-llm/ClaimDecomp/deneme.jsonl'
-# results = JsonLoader.json_loader(websites)
-
-
 no_url = 0
 no_info = 0
 responses = {
@@ -142,5 +137,5 @@ if __name__ == "__main__":
     args = parse_args()
    
     word_counts = process_jsonl_file(args.websites_path, args.output_path, args.test_path)
-    save_word_counts(word_counts, './ClaimDecomp/word_counts_new.json')
+    save_word_counts(word_counts, './ClaimDecomp/word_counts.json')
 

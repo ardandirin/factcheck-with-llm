@@ -158,7 +158,7 @@ def find_overlap_start_index(segment, overlap):
             combined_text += token + " "
             combined_trimmed = combined_text.strip()  # Trim any leading/trailing spaces for accurate comparison
             if combined_trimmed == overlap:
-                print(f"Overlap found at index {i}")
+                # print(f"Overlap found at index {i}")
                 return i + 1  # Return the exclusive end index of the overlap
             elif combined_trimmed.endswith(overlap):
                 return i + 1  # Handle cases where overlap is at the end
@@ -172,7 +172,7 @@ def merge_segments_new(seg1, seg2, overlap):
         start_idx_seg2 = find_overlap_start_index(seg2, overlap)
 
         if start_idx_seg1 is None or start_idx_seg2 is None:
-            print("Error: Overlap not found in segments")
+            # print("Error: Overlap not found in segments")
             return seg1  # Fallback
 
         # Determine the order of the segments
