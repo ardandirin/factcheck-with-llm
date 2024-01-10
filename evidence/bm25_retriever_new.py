@@ -30,12 +30,14 @@ def finds_ids(top_docs_tokenized):
 
 
 def merge_remove_segments(top_docs_tokenized, ids_to_remove, ids_to_merge, original_indices_map):
-    # Merging and removing segments
     merged_segments = []
     merged_segments_map = {}
     merged_indices = set()
-    new_original_indices_map = {}  # A new map to hold metadata for merged segments
+    new_original_indices_map = {}
+    index_mapping = {}  # Maps old indices to new indices
 
+    # Handle merging
+    new_index = 0
     for i, j in ids_to_merge:
         if i in merged_indices or j in merged_indices:
             continue
@@ -44,21 +46,36 @@ def merge_remove_segments(top_docs_tokenized, ids_to_remove, ids_to_merge, origi
         if overlap:
             print(f"Overlap found between document {i} and {j}")
             merged_segment = Segmenter.merge_segments_new(top_docs_tokenized[i], top_docs_tokenized[j], overlap)
-            # print(f"Merged segment: {merged_segment}")
             merged_segments.append(merged_segment)
             merged_indices.update([i, j])
-            merged_segments_map[len(merged_segments) - 1] = [i, j]
+            merged_segments_map[new_index] = [i, j]
+
+            # Update index mapping
+            index_mapping[i] = new_index
+            index_mapping[j] = new_index
+            new_index += 1
         else:
             print("Error: Overlap not found in segments")
 
+    # Handle unmerged segments
     for index, segment in enumerate(top_docs_tokenized):
         if index not in merged_indices:
             merged_segments.append(segment)
+            index_mapping[index] = new_index
+            new_index += 1
 
-    filtered_top_docs_tokenized = [segment for i, segment in enumerate(merged_segments) if i not in ids_to_remove]
+    # Update ids_to_remove based on index_mapping
+    updated_ids_to_remove = set()
+    for old_index in ids_to_remove:
+        if old_index in index_mapping:
+            updated_ids_to_remove.add(index_mapping[old_index])
+
+    # Filter out the segments to remove
+    filtered_top_docs_tokenized = [segment for i, segment in enumerate(merged_segments) if i not in updated_ids_to_remove]
     
+    # Get the original metadata for the filtered segments in this for loop
     for i, merged_segment in enumerate(merged_segments):
-        if i in ids_to_remove:
+        if i in updated_ids_to_remove:
             continue
 
         # Check if this segment is a result of a merge
@@ -81,17 +98,22 @@ def merge_remove_segments(top_docs_tokenized, ids_to_remove, ids_to_merge, origi
             if original_segment_tuple in original_indices_map:
                 new_original_indices_map[original_segment_tuple] = [original_indices_map[original_segment_tuple]]
 
-    return merged_segments, new_original_indices_map
     
-    print(f"Filtered top docs: {len(filtered_top_docs_tokenized)}")
+
+    return filtered_top_docs_tokenized, new_original_indices_map
+    
+    # print(f"Filtered top docs: {len(filtered_top_docs_tokenized)}")
 
 
 
 
 def main(corpus_path, original_test_path, top_docs_path):
+    
     with open(corpus_path, 'r', encoding='utf8') as corpus, open(original_test_path, 'r', encoding='utf8') as test_data:
+        # iter_count = 0
         final_data = []
         for corpus_line, test_line in tqdm(zip(corpus, test_data)):
+
             data_to_write = []
             test_data = json.loads(test_line)
             corpus_data = json.loads(corpus_line)
@@ -160,24 +182,48 @@ def main(corpus_path, original_test_path, top_docs_path):
             print(f"Ids to remove: {ids_to_remove}")
             print(f"Ids to merge: {ids_to_merge}")
 
-            print("Here now")
             print(f"Total number of segments: {len(all_corpus)}")
 
             filtered_top_docs_tokenized, new_original_indices_map = merge_remove_segments(top_docs_tokenized, ids_to_remove, ids_to_merge, original_indices_map)
 
             # Accessing the metadata for the filtered top documents
             for doc in filtered_top_docs_tokenized:
+                content = ' '.join(doc)
                 doc_tuple = tuple(doc)
                 if doc_tuple in new_original_indices_map:
                     original_metadata_list = new_original_indices_map[doc_tuple]
+                   # Use a set to track unique metadata combinations
+                    unique_metadata = set()
 
-            
-            
+                    for original_metadata in original_metadata_list:
+                        # Create a tuple of metadata values to check for uniqueness
+                        metadata_tuple = (
+                            original_metadata['question'],
+                            original_metadata['url'],
+                            original_metadata['snippet'],
+                            original_metadata['title']
+                        )
 
-        # with open(top_docs_path, 'w') as f:
-        #     for line in final_data:
-        #         json.dump(line, f)
-        #         f.write('\n')
+                    # Add to top_docs_data only if this combination hasn't been added before
+                    if metadata_tuple not in unique_metadata:
+                        unique_metadata.add(metadata_tuple)
+                        top_docs_data.append({
+                            'question': original_metadata['question'],
+                            'url': original_metadata['url'],
+                            'snippet': original_metadata['snippet'],
+                            'title': original_metadata['title'],
+                            'content': content,
+                        })
+            data_to_write.append({
+                'example_id': example_id,
+                'top_docs': top_docs_data
+            })
+            final_data.append(data_to_write)
+
+        with open(top_docs_path, 'w') as f:
+            for line in final_data:
+                json.dump(line, f)
+                f.write('\n')
 
 def parse_args():
     parser = argparse.ArgumentParser()
