@@ -1,0 +1,7 @@
+Question: Can low unemployment rates be attributed to everyone having 2 jobs?
+Answer: No
+Justification: Low unemployment rates cannot be solely attributed to everyone having two jobs. Unemployment rates are calculated based on the number of people who are actively seeking work but are unable to find it. Having multiple jobs does not influence this rate directly.
+
+Question: Do hospitals receive money for COVID patients?
+Answer: Yes
+Justification: Hospitals do receive funding for treating COVID-19 patients, primarily from government sources. This funding is designed to offset the significant costs associated with the treatment of COVID-19, including expenses for specialized equipment, medications, additional staffing, and extended patient care.
