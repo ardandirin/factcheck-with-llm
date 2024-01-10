@@ -25,11 +25,13 @@ Google allows only 100 queries per day, therefore the code was run on a span of 
 
 Does Web queries using Google custom search API:
 And creates websites jsonl file as output.
+```bash
 python -m evidence.web_api_retriever \
     --subquestion_path "./ClaimDecomp/subquestions_finetuned.jsonl" \
     --websites_path "./ClaimDecomp/websites.jsonl" \
     --web_api_key "Your web API goes here" \
     --search_engine_id "search engine id goes here" \
+```
 
 ### Text Retriever
 
@@ -52,16 +54,24 @@ nltk.download('punkt')
 
 Here we segment each answer to some number of segments (with token length 1500) and retrieve the most relavent parts of the text using BM25 ranker.
 
+```bash
 python -m evidence.bm25_retriever.py \
     --corpus_path "./ClaimDecomp/deneme.jsonl"
     --original_test_path "./ClaimDecomp/test.jsonl"
     --top_docs_path "./ClaimDecomp/top_docs_simple.jsonl"
+```
 
 ### Summarize
 
 Summarazies the relavent parts retrieved from BM25 and stores them in summaries.jsonl
+```bash
 python -m evidence.summarize \
+```
 
 ### Veracity Classifier
 
-The final step of the pipeline. Here the summaries are given to the LLM along with the claim for context as well as the subquestion to answer it with yes/no/not enough information
+The final step of the pipeline. Here the summaries are given to the LLM along with the claim for context as well as the subquestion to answer it with yes/no
+
+```bash
+python3 veracity_classifier.py 
+```
