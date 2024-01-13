@@ -30,11 +30,12 @@ export OPENAI_API_KEY="YOUR_ANYSCALE_ENDPOINT_API_KEY"
 
 The data used in this project is from this GitHub Repository [subquestions-for-fact-checking](https://github.com/jifan-chen/subquestions-for-fact-checking) by Jifan Chen
 
-### Evidence Retrieval
+## Evidence Retrieval
 
 The script "web_api_retrieval.py" retrieves websites via Google Custom Search API, a web api key, as well as search engine id must be acquired from Google's official API, and placed in a .env file.
 
 Google allows only 100 queries per day, therefore the code was run on a span of multiple days to acquire for 200 lines in the subquestions_finetuned.jsonl file
+The final version can be accessed under websites.jsonl
 
 ### Websites Retriever
 
@@ -60,6 +61,9 @@ python3 -m evidence.text_retriever \
     --websites_path "./DataProcessed/websites.jsonl" \
     --output_path  "./DataProcessed/answers.jsonl"
 ```
+
+
+The answers can be downloaded directly via [answers.jsonl](https://drive.google.com/file/d/1hyPoPh_fHpX23tH09O2w_uDrkz3GL79A/view?usp=share_link) (1GB)
 
 ### BM25 Retriever
 
