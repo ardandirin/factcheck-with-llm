@@ -2,14 +2,21 @@ from helpers import general as General
 import json
 import argparse
 import time
+import os
+from tqdm import tqdm
 
+base_url = os.environ.get('OPENAI_BASE_URL')
+api_key = os.environ.get('OPENAI_API_KEY')
 
-def main(corpus_path, test_path, api_base, token, model_name, output_path):
+print(f"Base url: {base_url}")
+print(f"Api key: {api_key}")
+
+def main(corpus_path, test_path, model_name, output_path):
     total_prompt_token = 0
     total_completion_token = 0
     one_shot_prompt = open('./prompts/one-shot-summary-prompt.txt', 'r', encoding='utf-8').read()
     with open(corpus_path, 'r', encoding='utf8') as corpus, open(output_path, 'w', encoding='utf8') as output_file:
-        for line in corpus:
+        for line in tqdm(corpus):
             print('New claim')
             claim_entry = json.loads(line)
             id = claim_entry[0]['example_id']
@@ -25,11 +32,11 @@ def main(corpus_path, test_path, api_base, token, model_name, output_path):
                 
                 prompt = one_shot_prompt + '\n'
                 prompt = f"Document: {document}\n"
-                prompt += f"Content: {content} \n\n"
-                prompt += f'\nSummarize the relevant information from the document in 1-2 sentences. Your response should provide a clear and concise summary of the relevant information contained in the document. Do not include a judgment about the claim and do not repeat any information from the claim that is not supported by the document.'
+                prompt += f"Content: {content}\n"
+                prompt += f'Summarize the relevant information from the document in 1-2 sentences. Your response should provide a clear and concise summary of the relevant information contained in the document.'
                 # print(f'The final prompt: {prompt}')
-                time.sleep(10) # Sleep for 10 seconds to avoid exceeding the quota
-                answer, prompt_token_num, completion_token_num, total_token_num = General.get_summary(api_base=api_base, token=token, model_name=model_name, system_message='You are a helpful assistant', user_message=prompt)
+                time.sleep(5) # Sleep for 5 seconds to avoid exceeding the quota
+                answer, prompt_token_num, completion_token_num, total_token_num = General.get_summary(api_base=base_url, token=api_key, model_name=model_name, system_message='You are a helpful assistant', user_message=prompt)
                 summaries['summary'].append(answer)
                 print(f"Prompt tokens: {prompt_token_num}")
                 total_prompt_token += prompt_token_num
@@ -62,17 +69,15 @@ def main(corpus_path, test_path, api_base, token, model_name, output_path):
               
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--api_base', default='https://api.endpoints.anyscale.com/v1', type=str)
-    parser.add_argument('--token', default='esecret_6ccw4he32qk9jfkabbl8br41ca', type=str)
-    parser.add_argument('--corpus_path', default='./ClaimDecomp/top_docs.jsonl', type=str)
+    parser.add_argument('--corpus_path', default='./DataProcessed/top_docs_final.jsonl', type=str)
     parser.add_argument('--test_path', default='./ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--output_path', default='./ClaimDecomp/summaries_all.jsonl', type=str)
+    parser.add_argument('--output_path', default='./DataProcessed/summaries_final.jsonl', type=str)
+    parser.add_argument('--model_name', default='meta-llama/Llama-2-70b-chat-hf', type=str)
     
     args = parser.parse_args()
     return args
                     
 if __name__ == '__main__':
     args = parse_args()
-    model_name = 'meta-llama/Llama-2-70b-chat-hf'
-    main(args.corpus_path, args.test_path, args.api_base, args.token, model_name=model_name, output_path=args.output_path)
+    main(args.corpus_path, args.test_path, model_name=args.model_name, output_path=args.output_path)
                 

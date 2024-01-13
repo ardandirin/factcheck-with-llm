@@ -3,4 +3,6 @@ output.log
 __pycache__/
 *.pyc
 .DS_Store
+code-archive/
+/scripts/playground.py
 ```
