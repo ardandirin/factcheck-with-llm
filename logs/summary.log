@@ -1,6 +1,10 @@
 Base url: https://api.endpoints.anyscale.com/v1
-Api key: esecret_6ccw4he32qk9jfkabbl8br41ca
-0it [00:00, ?it/s]1it [00:15, 15.17s/it]2it [00:45, 24.01s/it]3it [01:14, 26.17s/it]4it [01:28, 21.47s/it]New claim
+
+0it [00:00, ?it/s]
+1it [00:15, 15.17s/it]
+2it [00:45, 24.01s/it]
+3it [01:14, 26.17s/it]
+4it [01:28, 21.47s/it]New claim
 With Honor stated on September 10, 2018 in a TV ad: Says Kentucky Rep. Andy Barr "would let shady payday lenders take advantage of our troops" and that he took "$36,550 from payday lenders."
 Prompt tokens: 2806
 Completion tokens: 60
@@ -115,7 +119,11 @@ Total tokens: 1733
 Prompt tokens: 1647
 Completion tokens: 86
 Total tokens: 1733
-5it [01:50, 21.69s/it]6it [02:19, 24.13s/it]7it [02:34, 21.09s/it]8it [02:56, 21.63s/it]Answer - Summary:   According to the document, President Obama is focusing on climate change as a top priority, announcing initiatives to make renewable energy sources more affordable and highlighting the effects of global warming during a visit to Alaska's Arctic region. The president is also emphasizing the need to make infrastructure more resilient to climate change, particularly in coastal areas dealing with rising sea levels.
+
+5it [01:50, 21.69s/it]
+6it [02:19, 24.13s/it]
+7it [02:34, 21.09s/it]
+8it [02:56, 21.63s/it]Answer - Summary:   According to the document, President Obama is focusing on climate change as a top priority, announcing initiatives to make renewable energy sources more affordable and highlighting the effects of global warming during a visit to Alaska's Arctic region. The president is also emphasizing the need to make infrastructure more resilient to climate change, particularly in coastal areas dealing with rising sea levels.
 Prompt tokens: 1242
 Completion tokens: 68
 Total tokens: 1310
@@ -223,7 +231,12 @@ Prompt tokens: 1998
 Completion tokens: 95
 Total tokens: 2093
 Answer - Summary:   The document discusses the terrorist attack on the U.S. consulate in Benghazi, Libya, on September 11, 2012, and the subsequent investigation and controversy surrounding the attack. The attack resulted in the deaths of four Americans, including Ambassador J. Christopher Stevens, and raised questions about the adequacy of security measures at the consulate and the Obama administration's response to the attack.
-9it [03:20, 22.13s/it]10it [03:36, 20.42s/it]11it [03:51, 18.78s/it]12it [04:14, 20.08s/it]13it [04:38, 21.16s/it]Total prompt tokens: 51429
+
+9it [03:20, 22.13s/it]
+10it [03:36, 20.42s/it]
+11it [03:51, 18.78s/it]
+12it [04:14, 20.08s/it]
+13it [04:38, 21.16s/it]Total prompt tokens: 51429
 Total completion tokens: 2158
 New claim
 Ron Johnson stated on April 3, 2018 in a radio interview: "We have laws on the books where people can walk right up to our ports of entry, say ‘I have a credible fear of persecution,’ and we bring them in. We don’t send them back."
@@ -340,7 +353,13 @@ Total tokens: 2446
 Prompt tokens: 2348
 Completion tokens: 98
 Total tokens: 2446
-14it [05:08, 23.84s/it]15it [05:24, 21.33s/it]16it [05:46, 21.80s/it]17it [05:54, 17.50s/it]18it [06:09, 16.69s/it]19it [06:31, 18.41s/it]Answer - Summary:   Providence Mayor Jorge Elorza and city officials have announced that Providence pools will be opening on July 6, with the exception of the Davey Lopes Recreation Center Pool, which is currently undergoing construction and will reopen on a later date. The city will be offering free, frequent shuttle rides for Providence residents from Davey Lopes Recreation Center to McGrane Pool at the West End Recreation Center.
+
+14it [05:08, 23.84s/it]
+15it [05:24, 21.33s/it]
+16it [05:46, 21.80s/it]
+17it [05:54, 17.50s/it]
+18it [06:09, 16.69s/it]
+19it [06:31, 18.41s/it]Answer - Summary:   Providence Mayor Jorge Elorza and city officials have announced that Providence pools will be opening on July 6, with the exception of the Davey Lopes Recreation Center Pool, which is currently undergoing construction and will reopen on a later date. The city will be offering free, frequent shuttle rides for Providence residents from Davey Lopes Recreation Center to McGrane Pool at the West End Recreation Center.
 Total prompt tokens: 82037
 Total completion tokens: 3348
 New claim
@@ -450,7 +469,11 @@ Total tokens: 3201
 Prompt tokens: 3125
 Completion tokens: 76
 Total tokens: 3201
-20it [06:46, 17.21s/it]21it [07:09, 18.95s/it]22it [07:38, 21.98s/it]23it [07:59, 21.93s/it]Answer - Summary:   The document discusses the movement to "defund the police" in the wake of the killing of George Floyd and other police-involved shootings of Black people. The movement has been met with criticism and resistance from police unions and some politicians, who argue that it would undermine support for law enforcement and compromise public safety.
+
+20it [06:46, 17.21s/it]
+21it [07:09, 18.95s/it]
+22it [07:38, 21.98s/it]
+23it [07:59, 21.93s/it]Answer - Summary:   The document discusses the movement to "defund the police" in the wake of the killing of George Floyd and other police-involved shootings of Black people. The movement has been met with criticism and resistance from police unions and some politicians, who argue that it would undermine support for law enforcement and compromise public safety.
 Prompt tokens: 2300
 Completion tokens: 74
 Total tokens: 2374
@@ -557,7 +580,12 @@ Total tokens: 2275
 Prompt tokens: 2208
 Completion tokens: 67
 Total tokens: 2275
-24it [08:22, 21.96s/it]25it [08:36, 19.79s/it]26it [08:58, 20.51s/it]27it [09:06, 16.60s/it]28it [09:28, 18.34s/it]Answer - Summary:   A 6-year-old girl named Emily Grace Muth died from the flu just hours after paramedics left her home and said she would be fine. Emily's parents are now planning to get their other two children vaccinated, as Emily did not receive the flu shot this season.
+
+24it [08:22, 21.96s/it]
+25it [08:36, 19.79s/it]
+26it [08:58, 20.51s/it]
+27it [09:06, 16.60s/it]
+28it [09:28, 18.34s/it]Answer - Summary:   A 6-year-old girl named Emily Grace Muth died from the flu just hours after paramedics left her home and said she would be fine. Emily's parents are now planning to get their other two children vaccinated, as Emily did not receive the flu shot this season.
 Prompt tokens: 2112
 Completion tokens: 76
 Total tokens: 2188
@@ -670,7 +698,13 @@ Completion tokens: 90
 Total tokens: 2123
 Answer - Summary:   The document discusses how Electoral College electors are chosen, explaining that the process varies by state and that electors are typically chosen by state party conventions or central committees. The Constitution does not require electors to vote according to the popular vote in their states, and some states have laws that bind electors to vote according to their state's popular vote, while others give electors the freedom to vote independently.
 Total prompt tokens: 164709
-29it [09:51, 19.53s/it]30it [09:59, 16.05s/it]31it [10:15, 16.06s/it]32it [10:37, 18.05s/it]33it [11:00, 19.40s/it]34it [11:15, 18.17s/it]Total completion tokens: 6501
+
+29it [09:51, 19.53s/it]
+30it [09:59, 16.05s/it]
+31it [10:15, 16.06s/it]
+32it [10:37, 18.05s/it]
+33it [11:00, 19.40s/it]
+34it [11:15, 18.17s/it]Total completion tokens: 6501
 New claim
 Donald Trump stated on June 18, 2016 in a Phoenix rally: Says Hillary Clinton has been given tens of millions of dollars by countries that "treat women horribly ... and countries that kill gays."
 Prompt tokens: 2190
@@ -776,7 +810,11 @@ Total tokens: 2780
 Prompt tokens: 2702
 Completion tokens: 78
 Total tokens: 2780
-35it [11:30, 17.13s/it]36it [11:59, 20.69s/it]37it [12:14, 19.02s/it]38it [12:44, 22.22s/it]Answer - Summary:   CNN's polling director, Keating Holland, explains the process of random digit dialing used by pollsters to reach a representative sample of the American public. Arianna Huffington, a syndicated columnist, argues that polls have become an alternative to political leadership and that the response rate of polled individuals is not always accurately represented.
+
+35it [11:30, 17.13s/it]
+36it [11:59, 20.69s/it]
+37it [12:14, 19.02s/it]
+38it [12:44, 22.22s/it]Answer - Summary:   CNN's polling director, Keating Holland, explains the process of random digit dialing used by pollsters to reach a representative sample of the American public. Arianna Huffington, a syndicated columnist, argues that polls have become an alternative to political leadership and that the response rate of polled individuals is not always accurately represented.
 Prompt tokens: 1826
 Completion tokens: 65
 Total tokens: 1891
@@ -885,7 +923,14 @@ Completion tokens: 83
 Total tokens: 2135
 Answer - Summary:   Milwaukee County Sheriff David Clarke has advised residents to consider taking a firearm safety course to defend themselves in a crisis as they wait for police to arrive, citing budget cuts and laid-off officers. Critics argue that this approach is dangerous and will make the city more dangerous, while some residents agree that having more people arm themselves will not make the city safer.
 Total prompt tokens: 215859
-39it [12:59, 20.15s/it]40it [13:15, 18.94s/it]41it [13:30, 17.63s/it]42it [13:37, 14.61s/it]43it [13:51, 14.40s/it]44it [14:06, 14.65s/it]45it [14:30, 17.40s/it]Total completion tokens: 8613
+
+39it [12:59, 20.15s/it]
+40it [13:15, 18.94s/it]
+41it [13:30, 17.63s/it]
+42it [13:37, 14.61s/it]
+43it [13:51, 14.40s/it]
+44it [14:06, 14.65s/it]
+45it [14:30, 17.40s/it]Total completion tokens: 8613
 New claim
 Facebook posts stated on February 3, 2021 in a Facebook post: “Pfizer and Moderna could share their design with dozens of other pharma companies who stand ready to produce their vaccines and end the pandemic.”
 Prompt tokens: 2202
@@ -998,7 +1043,12 @@ New claim
 Donald Trump stated on March 26, 2020 in a Hannity show interview: Speaking of his restriction on travel from China, “I had (Joe) Biden calling me xenophobic. … He called me a racist, because of the fact that he felt it was a racist thing to stop people from China coming in.”
 Prompt tokens: 1993
 Completion tokens: 73
-46it [14:45, 16.73s/it]47it [15:08, 18.60s/it]48it [15:23, 17.46s/it]49it [15:47, 19.28s/it]50it [16:02, 18.18s/it]Total tokens: 2066
+
+46it [14:45, 16.73s/it]
+47it [15:08, 18.60s/it]
+48it [15:23, 17.46s/it]
+49it [15:47, 19.28s/it]
+50it [16:02, 18.18s/it]Total tokens: 2066
 Prompt tokens: 1993
 Completion tokens: 73
 Total tokens: 2066
@@ -1113,7 +1163,12 @@ Total tokens: 2212
 Prompt tokens: 2097
 Completion tokens: 115
 Total tokens: 2212
-51it [16:26, 19.73s/it]52it [16:57, 23.29s/it]53it [17:20, 23.26s/it]54it [17:36, 21.02s/it]55it [17:44, 17.08s/it]Answer - Summary:   According to the document, President Trump issued a presidential proclamation on November 9, 2018, to prevent migrants who enter the country without legal permission from claiming asylum. The proclamation was challenged in court, and on November 19, 2018, U.S. District Court Judge Jon S. Tigar issued a temporary restraining order against the proclamation, ruling that it conflicted with the Immigration and Nationality Act of 1965.
+
+51it [16:26, 19.73s/it]
+52it [16:57, 23.29s/it]
+53it [17:20, 23.26s/it]
+54it [17:36, 21.02s/it]
+55it [17:44, 17.08s/it]Answer - Summary:   According to the document, President Trump issued a presidential proclamation on November 9, 2018, to prevent migrants who enter the country without legal permission from claiming asylum. The proclamation was challenged in court, and on November 19, 2018, U.S. District Court Judge Jon S. Tigar issued a temporary restraining order against the proclamation, ruling that it conflicted with the Immigration and Nationality Act of 1965.
 Prompt tokens: 2460
 Completion tokens: 88
 Total tokens: 2548
@@ -1217,7 +1272,10 @@ Total tokens: 3136
 Prompt tokens: 3027
 Completion tokens: 109
 Total tokens: 3136
-56it [18:08, 19.03s/it]57it [18:32, 20.49s/it]58it [18:54, 21.20s/it]Answer - Summary:   The article discusses the issue of municipal budget surpluses, specifically in the town of Henrietta, which has a surplus of $12.7 million, and explores the reasons why municipalities accumulate surpluses, how they use them, and the challenges of managing them. The state Comptroller's office recommends that municipalities maintain a "reasonable amount" of unappropriated funds as a surplus, but there is no specific cap on how much can be accumulated.
+
+56it [18:08, 19.03s/it]
+57it [18:32, 20.49s/it]
+58it [18:54, 21.20s/it]Answer - Summary:   The article discusses the issue of municipal budget surpluses, specifically in the town of Henrietta, which has a surplus of $12.7 million, and explores the reasons why municipalities accumulate surpluses, how they use them, and the challenges of managing them. The state Comptroller's office recommends that municipalities maintain a "reasonable amount" of unappropriated funds as a surplus, but there is no specific cap on how much can be accumulated.
 Prompt tokens: 2484
 Completion tokens: 124
 Total tokens: 2608
@@ -1313,7 +1371,12 @@ Total tokens: 1642
 Prompt tokens: 1559
 Completion tokens: 83
 Total tokens: 1642
-59it [19:25, 24.06s/it]60it [19:48, 23.73s/it]61it [20:10, 23.29s/it]62it [20:34, 23.25s/it]63it [20:56, 22.94s/it]Answer - Summary:   The document reports that the US has joined only Syria and Nicaragua in opposing the Paris climate agreement, with the latter two countries having declined to sign up due to reasons of war and principle, respectively. The US's decision to pull out of the historic accord means it joins only two other countries that have not signed up, with the rest of the world having committed to the agreement.
+
+59it [19:25, 24.06s/it]
+60it [19:48, 23.73s/it]
+61it [20:10, 23.29s/it]
+62it [20:34, 23.25s/it]
+63it [20:56, 22.94s/it]Answer - Summary:   The document reports that the US has joined only Syria and Nicaragua in opposing the Paris climate agreement, with the latter two countries having declined to sign up due to reasons of war and principle, respectively. The US's decision to pull out of the historic accord means it joins only two other countries that have not signed up, with the rest of the world having committed to the agreement.
 Total prompt tokens: 321951
 Total completion tokens: 13123
 New claim
@@ -1417,7 +1480,12 @@ Answer - Summary:   The article discusses the idea of granting prisoners the rig
 Total prompt tokens: 344497
 Total completion tokens: 14170
 New claim
-64it [21:10, 20.43s/it]65it [21:25, 18.78s/it]66it [21:33, 15.53s/it]67it [21:55, 17.42s/it]68it [22:18, 19.22s/it]Facebook posts stated on September 29, 2020 in a Facebook post: Says Joe Biden said 14,000 people died from H1N1. “Fact checking it is 574,000.”
+
+64it [21:10, 20.43s/it]
+65it [21:25, 18.78s/it]
+66it [21:33, 15.53s/it]
+67it [21:55, 17.42s/it]
+68it [22:18, 19.22s/it]Facebook posts stated on September 29, 2020 in a Facebook post: Says Joe Biden said 14,000 people died from H1N1. “Fact checking it is 574,000.”
 Prompt tokens: 1629
 Completion tokens: 73
 Total tokens: 1702
@@ -1535,7 +1603,12 @@ Total tokens: 2122
 Prompt tokens: 2032
 Completion tokens: 90
 Total tokens: 2122
-69it [22:41, 20.27s/it]70it [23:04, 20.96s/it]71it [23:26, 21.46s/it]72it [23:50, 22.22s/it]73it [24:14, 22.51s/it]Answer - Summary:   The document discusses the new curriculum for Finnish schools, which emphasizes skills such as critical thinking, interactive skills, and the ability to use technology, and teachers will become enablers who help students learn and understand, rather than just spoon-feeding facts. The curriculum also focuses on individualized learning, where students will be encouraged to set their own goals and take responsibility for their learning process.
+
+69it [22:41, 20.27s/it]
+70it [23:04, 20.96s/it]
+71it [23:26, 21.46s/it]
+72it [23:50, 22.22s/it]
+73it [24:14, 22.51s/it]Answer - Summary:   The document discusses the new curriculum for Finnish schools, which emphasizes skills such as critical thinking, interactive skills, and the ability to use technology, and teachers will become enablers who help students learn and understand, rather than just spoon-feeding facts. The curriculum also focuses on individualized learning, where students will be encouraged to set their own goals and take responsibility for their learning process.
 Total prompt tokens: 372335
 Total completion tokens: 15284
 New claim
@@ -1639,7 +1712,11 @@ Answer - Summary:   The document discusses concerns about potential voter suppre
 Total prompt tokens: 395825
 Total completion tokens: 16356
 New claim
-74it [24:36, 22.61s/it]75it [25:00, 23.02s/it]76it [25:29, 24.83s/it]77it [25:53, 24.31s/it]Facebook posts stated on July 9, 2020 in on social media: Say that according to the Los Angeles Times, “95% of warrants for murder in Los Angeles are for illegal aliens,” more than two-thirds of all births in Los Angeles County “are to illegal alien Mexicans” on Medicaid, “nearly 60% of all occupants of HUD properties are illegal,” and Nancy Pelosi “wants to put a windfall tax” on retirement fund profits.
+
+74it [24:36, 22.61s/it]
+75it [25:00, 23.02s/it]
+76it [25:29, 24.83s/it]
+77it [25:53, 24.31s/it]Facebook posts stated on July 9, 2020 in on social media: Say that according to the Los Angeles Times, “95% of warrants for murder in Los Angeles are for illegal aliens,” more than two-thirds of all births in Los Angeles County “are to illegal alien Mexicans” on Medicaid, “nearly 60% of all occupants of HUD properties are illegal,” and Nancy Pelosi “wants to put a windfall tax” on retirement fund profits.
 Prompt tokens: 3020
 Completion tokens: 76
 Total tokens: 3096
@@ -1746,7 +1823,11 @@ Answer - Summary:   The document discusses the economic benefits of extending pe
 Total prompt tokens: 424236
 Total completion tokens: 17442
 New claim
-78it [26:15, 23.83s/it]79it [26:37, 23.34s/it]80it [26:52, 20.61s/it]81it [27:21, 23.13s/it]Ted Cruz stated on April 3, 2016 in ad paid for by campaign for Ted Cruz: Says a company that got tax breaks from the state later "laid off 100 Ohioans, even as its CEO cut a half-million-dollar check to Kasich’s super PAC."
+
+78it [26:15, 23.83s/it]
+79it [26:37, 23.34s/it]
+80it [26:52, 20.61s/it]
+81it [27:21, 23.13s/it]Ted Cruz stated on April 3, 2016 in ad paid for by campaign for Ted Cruz: Says a company that got tax breaks from the state later "laid off 100 Ohioans, even as its CEO cut a half-million-dollar check to Kasich’s super PAC."
 Prompt tokens: 2795
 Completion tokens: 69
 Total tokens: 2864
@@ -1861,7 +1942,13 @@ Prompt tokens: 2126
 Completion tokens: 71
 Total tokens: 2197
 Answer - Summary:   The document discusses the importance of election integrity and the need for state-based reform to protect the integrity of the vote. It argues that HR 1, a federal election overhaul bill, is unconstitutional and would undermine the American people's confidence in the principle of "one person, one vote."
-82it [27:37, 20.93s/it]83it [27:59, 21.34s/it]84it [28:13, 19.29s/it]85it [28:39, 21.10s/it]86it [28:54, 19.47s/it]87it [29:17, 20.37s/it]Total prompt tokens: 453621
+
+82it [27:37, 20.93s/it]
+83it [27:59, 21.34s/it]
+84it [28:13, 19.29s/it]
+85it [28:39, 21.10s/it]
+86it [28:54, 19.47s/it]
+87it [29:17, 20.37s/it]Total prompt tokens: 453621
 Total completion tokens: 18579
 New claim
 Susan Shapiro stated on January 15, 2015 in a newspaper commentary: "The 2012 National Survey on Drug Use and Health found that up to half of daily marijuana smokers become addicted -- an estimated 2.7 million people in the U.S."
@@ -1975,7 +2062,12 @@ Answer - Summary:   The document provides information about the latest news and 
 Total prompt tokens: 483129
 Total completion tokens: 19737
 New claim
-88it [29:25, 16.66s/it]89it [29:40, 16.23s/it]90it [29:55, 15.74s/it]91it [30:17, 17.65s/it]92it [30:40, 19.21s/it]Tony Evers stated on September 26, 2018 in a campaign ad: "Under Scott Walker, the Department of Corrections has only 18 people tracking 25,000 sex offenders" and "there are nearly 3,000 sex offenders that are unaccounted for."
+
+88it [29:25, 16.66s/it]
+89it [29:40, 16.23s/it]
+90it [29:55, 15.74s/it]
+91it [30:17, 17.65s/it]
+92it [30:40, 19.21s/it]Tony Evers stated on September 26, 2018 in a campaign ad: "Under Scott Walker, the Department of Corrections has only 18 people tracking 25,000 sex offenders" and "there are nearly 3,000 sex offenders that are unaccounted for."
 Prompt tokens: 1496
 Completion tokens: 127
 Total tokens: 1623
@@ -2079,7 +2171,10 @@ Total tokens: 2226
 Prompt tokens: 2125
 Completion tokens: 101
 Total tokens: 2226
-93it [31:11, 22.84s/it]94it [31:26, 20.61s/it]95it [31:48, 21.07s/it]Answer - Summary:   According to the article, President Trump's administration negotiated a deal with the Taliban to withdraw all US forces from Afghanistan by May 1, 2021, in exchange for the Taliban's agreement not to kill Americans. However, the Afghan government was not included in the agreement, and the Taliban have continued to kill Afghans, including targeted murders of women, journalists, and educated people who have spoken out against them.
+
+93it [31:11, 22.84s/it]
+94it [31:26, 20.61s/it]
+95it [31:48, 21.07s/it]Answer - Summary:   According to the article, President Trump's administration negotiated a deal with the Taliban to withdraw all US forces from Afghanistan by May 1, 2021, in exchange for the Taliban's agreement not to kill Americans. However, the Afghan government was not included in the agreement, and the Taliban have continued to kill Afghans, including targeted murders of women, journalists, and educated people who have spoken out against them.
 Prompt tokens: 1905
 Completion tokens: 83
 Total tokens: 1988
@@ -2175,7 +2270,13 @@ Total tokens: 2229
 Prompt tokens: 2146
 Completion tokens: 83
 Total tokens: 2229
-96it [32:18, 23.70s/it]97it [32:43, 23.99s/it]98it [33:05, 23.50s/it]99it [33:27, 23.02s/it]100it [33:35, 18.43s/it]101it [33:49, 17.23s/it]Answer - Summary:   Two lawmakers are calling for an end to the detention of unaccompanied migrant children at a for-profit facility in Homestead, Florida, citing concerns over the facility's safety and welfare. The facility, which is operated by Comprehensive Health Services, has been criticized for its strict discipline and lack of privacy for the children.
+
+96it [32:18, 23.70s/it]
+97it [32:43, 23.99s/it]
+98it [33:05, 23.50s/it]
+99it [33:27, 23.02s/it]
+100it [33:35, 18.43s/it]
+101it [33:49, 17.23s/it]Answer - Summary:   Two lawmakers are calling for an end to the detention of unaccompanied migrant children at a for-profit facility in Homestead, Florida, citing concerns over the facility's safety and welfare. The facility, which is operated by Comprehensive Health Services, has been criticized for its strict discipline and lack of privacy for the children.
 Total prompt tokens: 529975
 Total completion tokens: 21986
 New claim
@@ -2283,7 +2384,11 @@ Answer - Summary:   UNICEF invests in girls' education through a threefold appro
 Total prompt tokens: 554949
 Total completion tokens: 22974
 New claim
-102it [34:12, 18.91s/it]103it [34:27, 17.81s/it]104it [34:57, 21.26s/it]105it [35:12, 19.45s/it]Gordon Hintz stated on November 18, 2018 in a TV interview: "One year ago, (Republicans) would not fill seats vacated for people who went to the administration because of the cost of those elections. Now, they’re talking about changing the rules to add additional elections that will cost millions of dollars of taxpayer expense."
+
+102it [34:12, 18.91s/it]
+103it [34:27, 17.81s/it]
+104it [34:57, 21.26s/it]
+105it [35:12, 19.45s/it]Gordon Hintz stated on November 18, 2018 in a TV interview: "One year ago, (Republicans) would not fill seats vacated for people who went to the administration because of the cost of those elections. Now, they’re talking about changing the rules to add additional elections that will cost millions of dollars of taxpayer expense."
 Prompt tokens: 2699
 Completion tokens: 58
 Total tokens: 2757
@@ -2390,7 +2495,11 @@ Total tokens: 2007
 Prompt tokens: 1916
 Completion tokens: 91
 Total tokens: 2007
-106it [35:35, 20.59s/it]107it [35:57, 21.10s/it]108it [36:12, 19.25s/it]109it [36:42, 22.50s/it]Answer - Summary:   In this document, President George W. Bush addresses a crowd in Columbus, Ohio, on October 29, 2004, discussing various topics such as national security, education, healthcare, and social security. He emphasizes the importance of trust and leadership in the upcoming election and encourages voters to stand with him in supporting lower taxes, high standards for public schools, and a strong national defense.
+
+106it [35:35, 20.59s/it]
+107it [35:57, 21.10s/it]
+108it [36:12, 19.25s/it]
+109it [36:42, 22.50s/it]Answer - Summary:   In this document, President George W. Bush addresses a crowd in Columbus, Ohio, on October 29, 2004, discussing various topics such as national security, education, healthcare, and social security. He emphasizes the importance of trust and leadership in the upcoming election and encourages voters to stand with him in supporting lower taxes, high standards for public schools, and a strong national defense.
 Prompt tokens: 2100
 Completion tokens: 87
 Total tokens: 2187
@@ -2501,7 +2610,12 @@ Answer - Summary:   A Wisconsin judge ordered the state to remove more than 200,
 Prompt tokens: 2132
 Completion tokens: 117
 Total tokens: 2249
-110it [37:13, 24.88s/it]111it [37:21, 19.77s/it]112it [37:45, 21.01s/it]113it [38:00, 19.29s/it]114it [38:23, 20.41s/it]Prompt tokens: 2132
+
+110it [37:13, 24.88s/it]
+111it [37:21, 19.77s/it]
+112it [37:45, 21.01s/it]
+113it [38:00, 19.29s/it]
+114it [38:23, 20.41s/it]Prompt tokens: 2132
 Completion tokens: 117
 Total tokens: 2249
 Answer - Summary:   According to the Brennan Center's analysis of data released by the federal Election Assistance Commission, voter purge rates remain high in the United States, with counties with a history of voter discrimination purging people from the rolls at elevated rates. Between 2016 and 2018, at least 17 million voters were purged nationwide, with a median purge rate 40% higher in jurisdictions previously subject to preclearance under the Voting Rights Act.
@@ -2610,7 +2724,13 @@ Total tokens: 2001
 Prompt tokens: 1939
 Completion tokens: 62
 Total tokens: 2001
-115it [38:46, 21.04s/it]116it [39:08, 21.50s/it]117it [39:30, 21.60s/it]118it [39:52, 21.84s/it]119it [40:00, 17.58s/it]120it [40:22, 18.87s/it]Answer - Summary:   The N95 mask is a valuable defense tool against poor air quality caused by wildfires, particularly for those in close proximity to the fire. It can filter out 95% of particles larger than 0.3 microns, reducing exposure to harmful pollutants.
+
+115it [38:46, 21.04s/it]
+116it [39:08, 21.50s/it]
+117it [39:30, 21.60s/it]
+118it [39:52, 21.84s/it]
+119it [40:00, 17.58s/it]
+120it [40:22, 18.87s/it]Answer - Summary:   The N95 mask is a valuable defense tool against poor air quality caused by wildfires, particularly for those in close proximity to the fire. It can filter out 95% of particles larger than 0.3 microns, reducing exposure to harmful pollutants.
 Total prompt tokens: 638944
 Total completion tokens: 26324
 New claim
@@ -2725,7 +2845,12 @@ Answer - Summary:   The document discusses the security of voting by mail in Ari
 Total prompt tokens: 667560
 Total completion tokens: 27346
 New claim
-121it [40:44, 19.77s/it]122it [41:08, 21.04s/it]123it [41:24, 19.53s/it]124it [41:39, 18.14s/it]125it [41:54, 17.18s/it]Hillary Clinton stated on March 4, 2020 in an interview: Says at polling places in Texas on Super Tuesday “the Republican side gets 25 machines, the Democratic side gets 5 machines. People were literally standing in line for seven hours.”
+
+121it [40:44, 19.77s/it]
+122it [41:08, 21.04s/it]
+123it [41:24, 19.53s/it]
+124it [41:39, 18.14s/it]
+125it [41:54, 17.18s/it]Hillary Clinton stated on March 4, 2020 in an interview: Says at polling places in Texas on Super Tuesday “the Republican side gets 25 machines, the Democratic side gets 5 machines. People were literally standing in line for seven hours.”
 Prompt tokens: 2699
 Completion tokens: 65
 Total tokens: 2764
@@ -2838,7 +2963,12 @@ Total tokens: 2643
 Prompt tokens: 2535
 Completion tokens: 108
 Total tokens: 2643
-126it [42:17, 19.14s/it]127it [42:32, 17.85s/it]128it [42:47, 16.83s/it]129it [43:08, 18.30s/it]130it [43:23, 17.11s/it]Answer - Summary:   Rex Tillerson, Trump's nominee for Secretary of State, has a financial arrangement with ExxonMobil that raises conflict of interest concerns. Under the agreement, Tillerson would cash out his non-vested stock and place the proceeds in an irrevocable trust, but the trust's payouts could be influenced by ExxonMobil's performance, creating an incentive for Tillerson to act in the company's interests while serving in the government.
+
+126it [42:17, 19.14s/it]
+127it [42:32, 17.85s/it]
+128it [42:47, 16.83s/it]
+129it [43:08, 18.30s/it]
+130it [43:23, 17.11s/it]Answer - Summary:   Rex Tillerson, Trump's nominee for Secretary of State, has a financial arrangement with ExxonMobil that raises conflict of interest concerns. Under the agreement, Tillerson would cash out his non-vested stock and place the proceeds in an irrevocable trust, but the trust's payouts could be influenced by ExxonMobil's performance, creating an incentive for Tillerson to act in the company's interests while serving in the government.
 Prompt tokens: 2165
 Completion tokens: 91
 Total tokens: 2256
@@ -2949,7 +3079,12 @@ Total tokens: 1965
 Prompt tokens: 1871
 Completion tokens: 94
 Total tokens: 1965
-131it [43:38, 16.54s/it]132it [44:00, 18.12s/it]133it [44:14, 17.14s/it]134it [44:22, 14.15s/it]135it [44:44, 16.65s/it]Answer - Summary:   The document discusses the importance of tax policy in developing countries and provides options for secure user authentication methods, such as using a password that includes a mix of characters, numbers, and upper and lowercase letters, and prohibiting the use of easily guessable passwords like birthdates or names. It also emphasizes the importance of monitoring the workplace to ensure that all regulations are being followed and recognizes the role of routine physical security in user access management.
+
+131it [43:38, 16.54s/it]
+132it [44:00, 18.12s/it]
+133it [44:14, 17.14s/it]
+134it [44:22, 14.15s/it]
+135it [44:44, 16.65s/it]Answer - Summary:   The document discusses the importance of tax policy in developing countries and provides options for secure user authentication methods, such as using a password that includes a mix of characters, numbers, and upper and lowercase letters, and prohibiting the use of easily guessable passwords like birthdates or names. It also emphasizes the importance of monitoring the workplace to ensure that all regulations are being followed and recognizes the role of routine physical security in user access management.
 Total prompt tokens: 727171
 Total completion tokens: 29659
 New claim
@@ -3053,7 +3188,13 @@ Total tokens: 1686
 Prompt tokens: 1614
 Completion tokens: 72
 Total tokens: 1686
-136it [45:06, 18.09s/it]137it [45:14, 15.07s/it]138it [45:36, 17.28s/it]139it [46:00, 19.27s/it]140it [46:15, 18.04s/it]141it [46:38, 19.46s/it]Answer - Summary:   A hoax Facebook status threatening that the company is about to reveal all of your private photos and messages has resurfaced again, but it's absolutely not true. By using Facebook, users automatically agree that the service can use their public photos and text pretty much in any way it wishes, subject to privacy and application settings.
+
+136it [45:06, 18.09s/it]
+137it [45:14, 15.07s/it]
+138it [45:36, 17.28s/it]
+139it [46:00, 19.27s/it]
+140it [46:15, 18.04s/it]
+141it [46:38, 19.46s/it]Answer - Summary:   A hoax Facebook status threatening that the company is about to reveal all of your private photos and messages has resurfaced again, but it's absolutely not true. By using Facebook, users automatically agree that the service can use their public photos and text pretty much in any way it wishes, subject to privacy and application settings.
 Total prompt tokens: 751287
 Total completion tokens: 30645
 New claim
@@ -3168,7 +3309,11 @@ Total tokens: 1894
 Prompt tokens: 1823
 Completion tokens: 71
 Total tokens: 1894
-142it [47:00, 20.18s/it]143it [47:26, 21.85s/it]144it [47:42, 20.29s/it]145it [48:05, 21.00s/it]Answer - Summary:   The St. Albans opiate treatment hub has rapidly expanded its patient rolls, with 235 patients currently being treated and 10-14 new patients being accepted per week. The clinic is capable of serving over 700 people, but demand is expected to level off at around 450 patients.
+
+142it [47:00, 20.18s/it]
+143it [47:26, 21.85s/it]
+144it [47:42, 20.29s/it]
+145it [48:05, 21.00s/it]Answer - Summary:   The St. Albans opiate treatment hub has rapidly expanded its patient rolls, with 235 patients currently being treated and 10-14 new patients being accepted per week. The clinic is capable of serving over 700 people, but demand is expected to level off at around 450 patients.
 Prompt tokens: 1478
 Completion tokens: 75
 Total tokens: 1553
@@ -3275,7 +3420,12 @@ Total tokens: 1591
 Prompt tokens: 1511
 Completion tokens: 80
 Total tokens: 1591
-146it [48:31, 22.67s/it]147it [48:47, 20.57s/it]148it [49:14, 22.45s/it]149it [49:38, 23.05s/it]150it [50:08, 25.05s/it]Answer - Summary:   A video has surfaced showing suspicious activity at a canvassing center in Georgia, where poll watchers were asked to leave the room and a woman was seen pulling out suitcases believed to be filled with ballots. In Nevada, a video shows people in pro-Biden attire offering gift cards and other items to Native Americans in exchange for proof of voting.
+
+146it [48:31, 22.67s/it]
+147it [48:47, 20.57s/it]
+148it [49:14, 22.45s/it]
+149it [49:38, 23.05s/it]
+150it [50:08, 25.05s/it]Answer - Summary:   A video has surfaced showing suspicious activity at a canvassing center in Georgia, where poll watchers were asked to leave the room and a woman was seen pulling out suitcases believed to be filled with ballots. In Nevada, a video shows people in pro-Biden attire offering gift cards and other items to Native Americans in exchange for proof of voting.
 Total prompt tokens: 803661
 Total completion tokens: 32864
 New claim
@@ -3379,7 +3529,12 @@ Answer - Summary:   According to the document, Hillary Clinton used a personal e
 Total prompt tokens: 827693
 Total completion tokens: 33904
 New claim
-151it [50:17, 20.08s/it]152it [50:32, 18.62s/it]153it [50:46, 17.33s/it]154it [51:09, 18.88s/it]155it [51:30, 19.74s/it]Tim Kaine stated on July 21, 2018 in a debate: "In December of 2017, the Prince William board of supervisors had a meeting ... (Corey Stewart) skipped that meeting to go campaign in Alabama for Roy Moore to be a U.S. senator … You haven't disavowed Roy Moore's name yet."
+
+151it [50:17, 20.08s/it]
+152it [50:32, 18.62s/it]
+153it [50:46, 17.33s/it]
+154it [51:09, 18.88s/it]
+155it [51:30, 19.74s/it]Tim Kaine stated on July 21, 2018 in a debate: "In December of 2017, the Prince William board of supervisors had a meeting ... (Corey Stewart) skipped that meeting to go campaign in Alabama for Roy Moore to be a U.S. senator … You haven't disavowed Roy Moore's name yet."
 Prompt tokens: 2128
 Completion tokens: 91
 Total tokens: 2219
@@ -3490,7 +3645,12 @@ Total tokens: 2150
 Prompt tokens: 2063
 Completion tokens: 87
 Total tokens: 2150
-156it [51:45, 18.28s/it]157it [52:08, 19.53s/it]158it [52:32, 20.86s/it]159it [52:54, 21.40s/it]160it [53:02, 17.23s/it]Answer - Summary:   The G8 is a group of eight major economies that meet annually to discuss global issues, but criticism has arisen due to its exclusivity and lack of representation for emerging economies. The G20, which includes 19 of the world's largest economies and the European Union, has become a more prominent forum for financial diplomacy and may have the potential to expand into security cooperation.
+
+156it [51:45, 18.28s/it]
+157it [52:08, 19.53s/it]
+158it [52:32, 20.86s/it]
+159it [52:54, 21.40s/it]
+160it [53:02, 17.23s/it]Answer - Summary:   The G8 is a group of eight major economies that meet annually to discuss global issues, but criticism has arisen due to its exclusivity and lack of representation for emerging economies. The G20, which includes 19 of the world's largest economies and the European Union, has become a more prominent forum for financial diplomacy and may have the potential to expand into security cooperation.
 Total prompt tokens: 854699
 Total completion tokens: 34967
 New claim
@@ -3594,7 +3754,12 @@ Total tokens: 1336
 Prompt tokens: 1240
 Completion tokens: 96
 Total tokens: 1336
-161it [53:17, 16.52s/it]162it [53:41, 18.78s/it]163it [53:56, 17.69s/it]164it [54:12, 17.17s/it]165it [54:42, 21.04s/it]Answer - Summary:   State Superintendent Tony Evers is under fire from Republicans for not revoking the teaching license of a Middleton science teacher who viewed pornography on a school computer. The teacher, Andy Harris, made sexually crude remarks about female students, which were deemed "not germane to the case" by his attorney, and Evers' agency could not substantiate the remarks, leading to their inability to revoke his license.
+
+161it [53:17, 16.52s/it]
+162it [53:41, 18.78s/it]
+163it [53:56, 17.69s/it]
+164it [54:12, 17.17s/it]
+165it [54:42, 21.04s/it]Answer - Summary:   State Superintendent Tony Evers is under fire from Republicans for not revoking the teaching license of a Middleton science teacher who viewed pornography on a school computer. The teacher, Andy Harris, made sexually crude remarks about female students, which were deemed "not germane to the case" by his attorney, and Evers' agency could not substantiate the remarks, leading to their inability to revoke his license.
 Total prompt tokens: 879744
 Total completion tokens: 36031
 New claim
@@ -3698,7 +3863,12 @@ Total tokens: 3012
 Prompt tokens: 2942
 Completion tokens: 70
 Total tokens: 3012
-166it [54:49, 16.95s/it]167it [54:57, 14.19s/it]168it [55:12, 14.53s/it]169it [55:36, 17.26s/it]170it [55:59, 19.12s/it]Answer - Summary:   Trump is echoing the NRA's stance on gun-free zones, suggesting that schools should not be gun-free and that teachers should be armed. This idea is not supported by evidence, as the majority of mass shootings have occurred in private homes, and gun-free zones have not been shown to attract shooters.
+
+166it [54:49, 16.95s/it]
+167it [54:57, 14.19s/it]
+168it [55:12, 14.53s/it]
+169it [55:36, 17.26s/it]
+170it [55:59, 19.12s/it]Answer - Summary:   Trump is echoing the NRA's stance on gun-free zones, suggesting that schools should not be gun-free and that teachers should be armed. This idea is not supported by evidence, as the majority of mass shootings have occurred in private homes, and gun-free zones have not been shown to attract shooters.
 Total prompt tokens: 904677
 Total completion tokens: 37085
 New claim
@@ -3795,7 +3965,11 @@ Total tokens: 1124
 Prompt tokens: 1030
 Completion tokens: 94
 Total tokens: 1124
-171it [56:21, 19.79s/it]172it [56:51, 22.90s/it]173it [57:05, 20.36s/it]174it [57:28, 21.13s/it]Answer - Summary:   Senator James Inhofe proposed an amendment to improve the permitting process for the expansion of existing and construction of new domestic fuels facilities, including cellulosic ethanol facilities, but it was rejected by every Democrat present. The amendment aimed to help reduce the price of gas at the pump and increase domestic production of affordable energy, but Democrats opposed it despite claiming to support cellulosic ethanol.
+
+171it [56:21, 19.79s/it]
+172it [56:51, 22.90s/it]
+173it [57:05, 20.36s/it]
+174it [57:28, 21.13s/it]Answer - Summary:   Senator James Inhofe proposed an amendment to improve the permitting process for the expansion of existing and construction of new domestic fuels facilities, including cellulosic ethanol facilities, but it was rejected by every Democrat present. The amendment aimed to help reduce the price of gas at the pump and increase domestic production of affordable energy, but Democrats opposed it despite claiming to support cellulosic ethanol.
 Prompt tokens: 2463
 Completion tokens: 56
 Total tokens: 2519
@@ -3902,7 +4076,12 @@ Total tokens: 2223
 Prompt tokens: 2121
 Completion tokens: 102
 Total tokens: 2223
-175it [57:58, 23.72s/it]176it [58:21, 23.37s/it]177it [58:36, 20.91s/it]178it [58:51, 19.05s/it]179it [59:05, 17.79s/it]Answer - Summary:   According to the Pew Research Center survey conducted in December 2008, President George W. Bush's job approval rating stood at 24%, with 64% of Americans saying that his administration will be remembered more for its failures than its accomplishments. The public's verdict on Bush's presidency is overwhelmingly negative, with only 11% saying he will be remembered as an outstanding or above-average president.
+
+175it [57:58, 23.72s/it]
+176it [58:21, 23.37s/it]
+177it [58:36, 20.91s/it]
+178it [58:51, 19.05s/it]
+179it [59:05, 17.79s/it]Answer - Summary:   According to the Pew Research Center survey conducted in December 2008, President George W. Bush's job approval rating stood at 24%, with 64% of Americans saying that his administration will be remembered more for its failures than its accomplishments. The public's verdict on Bush's presidency is overwhelmingly negative, with only 11% saying he will be remembered as an outstanding or above-average president.
 Prompt tokens: 1828
 Completion tokens: 75
 Total tokens: 1903
@@ -4008,7 +4187,12 @@ Completion tokens: 78
 Total tokens: 3336
 Answer - Summary:   Governor Jerry Brown's tax initiative, Proposition 30, is facing opposition from Molly Munger's competing tax measure, Proposition 38. Munger has spent $30 million on her campaign and has launched an attack on Brown's measure, which has led to concerns that it could hurt both propositions' chances of passing.
 Total prompt tokens: 979892
-180it [59:21, 17.22s/it]181it [59:45, 19.10s/it]182it [1:00:01, 18.36s/it]183it [1:00:24, 19.77s/it]184it [1:00:54, 22.85s/it]Total completion tokens: 40314
+
+180it [59:21, 17.22s/it]
+181it [59:45, 19.10s/it]
+182it [1:00:01, 18.36s/it]
+183it [1:00:24, 19.77s/it]
+184it [1:00:54, 22.85s/it]Total completion tokens: 40314
 New claim
 Tammy Baldwin stated on July 31, 2018 in a TV ad: "New reports show Kevin Nicholson made over $1 million advising companies that shut down Wisconsin plants and laid off 1,900 people."
 Prompt tokens: 2741
@@ -4117,7 +4301,12 @@ Total tokens: 2636
 Prompt tokens: 2559
 Completion tokens: 77
 Total tokens: 2636
-185it [1:01:16, 22.43s/it]186it [1:01:45, 24.54s/it]187it [1:02:08, 23.95s/it]188it [1:02:23, 21.39s/it]189it [1:02:38, 19.24s/it]Answer - Summary:   According to the document, Rep. Raúl M. Grijalva is opposed to cutting Social Security benefits, particularly through the use of the chained CPI, which would disproportionately harm military and veteran families. He believes that Social Security has not contributed to the current fiscal problems and should not be part of the bargaining table.
+
+185it [1:01:16, 22.43s/it]
+186it [1:01:45, 24.54s/it]
+187it [1:02:08, 23.95s/it]
+188it [1:02:23, 21.39s/it]
+189it [1:02:38, 19.24s/it]Answer - Summary:   According to the document, Rep. Raúl M. Grijalva is opposed to cutting Social Security benefits, particularly through the use of the chained CPI, which would disproportionately harm military and veteran families. He believes that Social Security has not contributed to the current fiscal problems and should not be part of the bargaining table.
 Prompt tokens: 1515
 Completion tokens: 61
 Total tokens: 1576
@@ -4228,7 +4417,12 @@ Answer - Summary:   The document discusses the differences between President Ron
 Total prompt tokens: 1033748
 Total completion tokens: 42523
 New claim
-190it [1:03:08, 22.51s/it]191it [1:03:15, 17.91s/it]192it [1:03:39, 19.70s/it]193it [1:03:54, 18.26s/it]194it [1:04:01, 15.03s/it]Lori Lightfoot stated on April 7, 2020 in remarks at a news conference: “Illinois lags way behind all of our neighbors and certainly we’re in the bottom tier of states that are doing testing."
+
+190it [1:03:08, 22.51s/it]
+191it [1:03:15, 17.91s/it]
+192it [1:03:39, 19.70s/it]
+193it [1:03:54, 18.26s/it]
+194it [1:04:01, 15.03s/it]Lori Lightfoot stated on April 7, 2020 in remarks at a news conference: “Illinois lags way behind all of our neighbors and certainly we’re in the bottom tier of states that are doing testing."
 Prompt tokens: 2191
 Completion tokens: 90
 Total tokens: 2281
@@ -4341,7 +4535,14 @@ Completion tokens: 91
 Total tokens: 1938
 Answer - Summary:   The document discusses President Obama's failure to pass the Trade Promotion Authority (TPA) bill, which is necessary for the successful completion of the Trans-Pacific Partnership and Transatlantic Trade and Investment Partnership negotiations. The bill was supported by a majority of Democrats in the Senate but was opposed by House Democrats, led by Nancy Pelosi, resulting in its defeat.
 Total prompt tokens: 1059778
-195it [1:04:16, 14.89s/it]196it [1:04:32, 15.19s/it]197it [1:05:01, 19.60s/it]198it [1:05:24, 20.62s/it]199it [1:05:38, 18.62s/it]200it [1:06:00, 19.40s/it]200it [1:06:00, 19.80s/it]
+
+195it [1:04:16, 14.89s/it]
+196it [1:04:32, 15.19s/it]
+197it [1:05:01, 19.60s/it]
+198it [1:05:24, 20.62s/it]
+199it [1:05:38, 18.62s/it]
+200it [1:06:00, 19.40s/it]
+200it [1:06:00, 19.80s/it]
 Total completion tokens: 43677
 New claim
 Rick Scott stated on January 18, 2013 in a TV interview: Says his elections proposal would allow "a potential of 168 hours (of early voting), which I think is the most we’ve ever had."
