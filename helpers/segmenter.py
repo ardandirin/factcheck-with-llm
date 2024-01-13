@@ -1,5 +1,4 @@
 from nltk.tokenize import word_tokenize
-from helpers.general import clean_text, find_close_match
 
 def segment_answer(answer: str, segment_size: int = 1500) -> dict[str: tuple[int, int]]:
     words = word_tokenize(answer)
