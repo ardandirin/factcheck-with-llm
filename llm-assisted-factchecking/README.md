@@ -8,6 +8,8 @@ See the main folder's requirements.
 
 ## A fine-tuned model is generated in OPENAI's API
 
+format_finetune.py file prepares the train and val data for finetuning.
+
 ```bash
 export OPENAI_API_KEY="your openai key"
 cd scripts
