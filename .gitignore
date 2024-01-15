@@ -1,10 +1,8 @@
 .env
-output.log
 __pycache__/
 *.pyc
 .DS_Store
 code-archive/
-/scripts/playground.py
 .vscode/launch.json
-/DataProcessed/answers.jsonl
+llm-assisted-factchecking/DataProcessed/answers.jsonl
 ```

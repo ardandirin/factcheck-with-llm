@@ -116,6 +116,6 @@ def classify_veracity(answer_list):
 
     # Handle edge case where score is exactly 1
     if veracity_score == 1:
-        return "True"
+        return "true"
 
     return "Unknown Category" # Should never happen
