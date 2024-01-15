@@ -72,7 +72,7 @@ def get_label(path, example_id):
     return None
             
 
-def get_summary(api_base, token, model_name, system_message, user_message):
+def get_answer_anyscale(api_base, token, model_name, system_message, user_message):
     s = requests.Session()
     url = f"{api_base}/chat/completions"
     body = {
@@ -96,4 +96,26 @@ def get_summary(api_base, token, model_name, system_message, user_message):
         print(f"Total tokens: {total_token_num}")
         
         return answer, prompt_token_num, completion_token_num, total_token_num
-    
+
+
+def classify_veracity(answer_list):
+    categories = {
+        "pants-fire": (0, 1/6),
+        "false": (1/6, 2/6),
+        "barely-true": (2/6, 3/6),
+        "half-true": (3/6, 4/6),
+        "mostly-true": (4/6, 5/6),
+        "true": (5/6, 1)
+    }
+
+    veracity_score = sum(1 if answer == 'yes' else 0 for answer in answer_list) / len(answer_list)
+
+    for category, (lower_bound, upper_bound) in categories.items():
+        if lower_bound <= veracity_score < upper_bound:
+            return category
+
+    # Handle edge case where score is exactly 1
+    if veracity_score == 1:
+        return "True"
+
+    return "Unknown Category" # Should never happen

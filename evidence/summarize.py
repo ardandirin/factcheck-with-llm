@@ -36,7 +36,7 @@ def main(corpus_path, test_path, model_name, output_path):
                 prompt += f'Summarize the relevant information from the document in 1-2 sentences. Your response should provide a clear and concise summary of the relevant information contained in the document.'
                 # print(f'The final prompt: {prompt}')
                 time.sleep(5) # Sleep for 5 seconds to avoid exceeding the quota
-                answer, prompt_token_num, completion_token_num, total_token_num = General.get_summary(api_base=base_url, token=api_key, model_name=model_name, system_message='You are a helpful assistant', user_message=prompt)
+                answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model_name, system_message='You are a helpful assistant', user_message=prompt)
                 summaries['summary'].append(answer)
                 print(f"Prompt tokens: {prompt_token_num}")
                 total_prompt_token += prompt_token_num

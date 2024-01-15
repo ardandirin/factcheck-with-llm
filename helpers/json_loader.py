@@ -23,3 +23,12 @@ def list_returner(json_obj):
     return subquestions
 
         
+def load_subquestions(subquestions_obj, example_id):
+    '''Given python object of subquestions, returns a list of subquestions for the given claim (id)'''
+    print("load_subquestions called")
+    for entry in subquestions_obj:
+        if entry['example_id'] == example_id:
+            print("Subquestions found")
+            return entry['subquestions'][0].split(', ')
+    print("No such id found")
+    return None 
