@@ -6,6 +6,19 @@
 
 See the main folder's requirements.
 
+## A fine-tuned model is generated in OPENAI's API
+
+```bash
+export OPENAI_API_KEY="your openai key"
+cd scripts
+```
+
+Create subquestions via:
+
+```bash
+python3 question_generation.py
+```
+
 ## Anyscales Endpoints are used in the following parts
 
 So need to set api key and base url. It can be done by registering in their [website](https://www.anyscale.com)
