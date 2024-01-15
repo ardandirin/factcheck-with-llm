@@ -1,15 +1,7 @@
 import requests
-import certifi
-from bs4 import BeautifulSoup
-import logging
 import re
-# from transformers import pipeline
-from nltk import word_tokenize
-import difflib
 import re
 import json
-import os
-# summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 
 
@@ -26,56 +18,10 @@ def postprocess_text(text):
     cleaned = re.sub(r'\s+([?.!,:;])', r'\1', cleaned)
     return cleaned
 
-    
-    
 
 def count_words(text):
     words = text.split()
     return len(words)
-
-
-
-def clean_text(text):
-    # Replace left and right curly quotes with straight quotes
-    text = re.sub(r'“', '"', text)
-    text = re.sub(r'”', '"', text)
-    text = re.sub(r'‘', "'", text)
-    text = re.sub(r'’', "'", text)
-    text = re.sub(r'`', "'", text)
-    text = re.sub(r"''", '"', text)
-    # Add more replacements as needed
-    return text
-
-
-def find_close_match(key_to_find, unit2docid):
-    '''
-    Due to encoding in the bm25, the key to find is not exactly the same as the key in the dictionary
-    :param key_to_find: the key to find in the dictionary, string
-    :param unit2docid: the dictionary to search in, dictionary
-    :return: the value (id) of the closest match'''
-    # Find the closest match in the dictionary keys
-    closest_match = difflib.get_close_matches(key_to_find, unit2docid.keys(), n=1, cutoff=0.6)
-    value = None
-    if closest_match:
-        # print(f"Closest match found: {closest_match[0]}")
-        value = unit2docid[closest_match[0]]
-        # print(f"Value: {unit2docid[closest_match[0]]}")
-    else:
-        print("No close match found")
-    return value
-    
-    
-    cleaned_key = General.clean_text(key_to_find)
-    cleaned_match = General.clean_text(closest_match[0])
-    
-    clean_key = General.clean_text(top_doc_key_j)
-    cleaned_key = unit2docid[clean_key]
-    
-    
-    if cleaned_key.__eq__(cleaned_match):
-        print("True")
-    orig = unit2docid[closest_match[0]] # This has "" around it must remove it. I believe.
-    
     
 def get_context(data):
     return data['person'] + " " + data['venue'] + " " + data['claim']
@@ -126,8 +72,7 @@ def get_label(path, example_id):
     return None
             
 
-
-def get_summary(api_base, token, model_name, system_message, user_message):
+def get_answer_anyscale(api_base, token, model_name, system_message, user_message):
     s = requests.Session()
     url = f"{api_base}/chat/completions"
     body = {
@@ -151,4 +96,26 @@ def get_summary(api_base, token, model_name, system_message, user_message):
         print(f"Total tokens: {total_token_num}")
         
         return answer, prompt_token_num, completion_token_num, total_token_num
-    
+
+
+def classify_veracity(answer_list):
+    categories = {
+        "pants-fire": (0, 1/6),
+        "false": (1/6, 2/6),
+        "barely-true": (2/6, 3/6),
+        "half-true": (3/6, 4/6),
+        "mostly-true": (4/6, 5/6),
+        "true": (5/6, 1)
+    }
+
+    veracity_score = sum(1 if answer == 'yes' else 0 for answer in answer_list) / len(answer_list)
+
+    for category, (lower_bound, upper_bound) in categories.items():
+        if lower_bound <= veracity_score < upper_bound:
+            return category
+
+    # Handle edge case where score is exactly 1
+    if veracity_score == 1:
+        return "True"
+
+    return "Unknown Category" # Should never happen

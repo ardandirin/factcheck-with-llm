@@ -1,5 +1,4 @@
 from nltk.tokenize import word_tokenize
-from helpers.general import clean_text, find_close_match
 
 def segment_answer(answer: str, segment_size: int = 1500) -> dict[str: tuple[int, int]]:
     words = word_tokenize(answer)
@@ -36,122 +35,6 @@ def sequence_overlap(segment1, segment2, window_size=100):
     return None
 
 
-# def merge_segments(seg1, seg2, original_document):
-#     """
-#     Merge two overlapping segments with reference to the original document.
-#     Each segment is a tuple: (start_index, end_index, text).
-#     Original_document is the complete text of the original document. i.e. Answer, should be the same.
-#     """
-#     # Determine the new start and end points
-#     # new_start = min(seg1[0], seg2[0])
-#     # new_end = max(seg1[1], seg2[1])
-
-#     # Find the start and end indices of the segments in the original document
-#     start_index = original_document.find(seg1[0])
-#     end_index = original_document.find(seg2[::])
-
-#     # Extract the merged text from the original document for accuracy
-#     new_text = original_document[start_index:end_index]
-
-#     return new_text
-
-
-def expand_segment(segment, span, original_text, offset):
-    start_index, end_index = span
-    # Adjust the start and end indices by the offset
-    start_index = max(0, start_index - offset)
-    end_index = min(len(original_text), end_index + offset)
-    # Extract and return the expanded segment
-    return original_text[start_index:end_index]
-def expand_segment_with_offset(segment: str, original_text: str, offset: int) -> str:
-    # Tokenize the original text
-    tokenized_original = word_tokenize(original_text)
-    tokenized_segment = word_tokenize(segment)
-
-    # Define the range for the first and last tokens to match
-    first_tokens_to_match = 10
-    last_tokens_to_match = 10
-
-    # Adjust the range if the segment is shorter
-    if len(tokenized_segment) < first_tokens_to_match + last_tokens_to_match:
-        first_tokens_to_match = last_tokens_to_match = len(tokenized_segment) // 2
-
-    # Find the start and end token index of the segment in the original text
-    for i in range(len(tokenized_original)):
-        # Check for match with the first and last tokens of the segment
-        if (tokenized_original[i:i + first_tokens_to_match] == tokenized_segment[:first_tokens_to_match] and 
-            tokenized_original[i + len(tokenized_segment) - last_tokens_to_match:i + len(tokenized_segment)] == tokenized_segment[-last_tokens_to_match:]):
-            print("Segment found as tokens")
-            start_token_index = i
-            break
-    else:
-        # Segment not found as tokens, return original segment
-        print("Segment not found as tokens, returning original segment")
-        return segment
-
-    # Calculate the start and end token indices with offset
-    start_token_index = max(0, start_token_index - offset)
-    end_token_index = min(len(tokenized_original), start_token_index + len(tokenized_segment) + offset)
-
-    # Join the tokens back to a string
-    expanded_segment = ' '.join(tokenized_original[start_token_index:end_token_index])
-
-    return expanded_segment
-
-
-
-
-
-def merge_segments(i, j, top_docs, unit2docid, docid2doc):
-    print(f"Document1 length is {len(top_docs[i])}")
-    print(f"Document2 length is {len(top_docs[j])}")
-    # print(f"Ordered overlap found between document {i} and {j}: '{overlap}'")
-    # overlap_count += 1
-    # Handle the overlap (e.g., merge segments)
-    doc1 = ' '.join(top_docs[i])
-    doc2 = ' '.join(top_docs[j])
-    id1 = None
-    id2 = None
-    try:
-        id1 = unit2docid[doc1]
-    except:
-        id1 = find_close_match(doc1, unit2docid)
-    # try:
-    #     id2 = unit2docid[doc2]
-    # except:
-    #     id2 = find_close_match(doc2, unit2docid)
-        
-    # id1 = find_close_match(doc1, unit2docid)
-    # id2 = find_close_match(doc2, unit2docid)
-    
-    answer = docid2doc[id1]
-    # print(len(answer))
-
-    merged_segment = doc1 + " " + doc2
-    merged_segment_id = id1
-    
-    return merged_segment, merged_segment_id
-    # print(f"Merged segment: {merged_segment}")
-
-    # Update the top_docs list
-    # top_docs[i] = merged_segment
-    # top_docs.pop(j) # This is the problem
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def find_overlap_start_index(segment, overlap):
         combined_text = ""
         for i, token in enumerate(segment):
@@ -185,3 +68,81 @@ def merge_segments_new(seg1, seg2, overlap):
 
         return merged_segment
 
+
+def remove_identical_segments(top_docs_tokenized, original_indices_map):
+    """ Remove identical segments and return a list of unique segments along with updated original_indices_map. """
+    unique_segments = []
+    remove_indices = set()
+    updated_original_indices_map = {}
+
+    for i, segment in enumerate(top_docs_tokenized):
+        if i in remove_indices:
+            continue  # Skip segments that are marked for removal
+
+        segment_tuple = tuple(segment)
+        unique_segments.append(segment)
+        updated_original_indices_map[segment_tuple] = original_indices_map.get(segment_tuple, [])
+
+        # Check for identical segments to mark them for removal
+        for j in range(i + 1, len(top_docs_tokenized)):
+            if are_segments_identical(segment, top_docs_tokenized[j]):
+                remove_indices.add(j)
+
+    return unique_segments, updated_original_indices_map
+
+
+def find_overlapping_segments(top_docs_tokenized):
+    """ Find indices of segments that have an overlap. """
+    ids_to_merge = []
+    for i in range(len(top_docs_tokenized)):
+        for j in range(i + 1, len(top_docs_tokenized)):
+            overlap = sequence_overlap(top_docs_tokenized[i], top_docs_tokenized[j])
+            if overlap:
+                ids_to_merge.append((i, j))
+    return ids_to_merge
+
+
+def merge_segments(top_docs_tokenized, ids_to_merge, original_indices_map):
+    merged_segments = []
+    merged_indices = set()
+    new_original_indices_map = {}
+
+    for i, j in ids_to_merge:
+        if i in merged_indices or j in merged_indices:
+            continue
+
+        overlap = sequence_overlap(top_docs_tokenized[i], top_docs_tokenized[j])
+        if overlap:
+            print(f"Overlap found between document {i} and {j}")
+            merged_segment = merge_segments_new(top_docs_tokenized[i], top_docs_tokenized[j], overlap)
+            merged_segments.append(merged_segment)
+            merged_indices.update([i, j])
+
+            # Initialize a dictionary to aggregate metadata from both original segments
+            merged_metadata = {}
+
+            for original_index in [i, j]:
+                original_segment_tuple = tuple(top_docs_tokenized[original_index])
+                if original_segment_tuple in original_indices_map:
+                    segment_metadata = original_indices_map[original_segment_tuple]
+                    if isinstance(segment_metadata, dict):
+                        # Merge dictionaries
+                        merged_metadata.update(segment_metadata)
+                    else:
+                        print(f"Warning: Metadata for segment {original_segment_tuple} is not a dictionary. It's a {type(segment_metadata)}.")
+                else:
+                    print(f"Metadata for segment {original_segment_tuple} not found in original_indices_map.")
+
+            new_original_indices_map[tuple(merged_segment)] = merged_metadata
+        else:
+            print("Error: Overlap not found in segments")
+
+    # Include unmerged segments and their metadata
+    for index, segment in enumerate(top_docs_tokenized):
+        if index not in merged_indices:
+            merged_segments.append(segment)
+            original_segment_tuple = tuple(segment)
+            if original_segment_tuple in original_indices_map:
+                new_original_indices_map[original_segment_tuple] = original_indices_map[original_segment_tuple]
+
+    return merged_segments, new_original_indices_map
