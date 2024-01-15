@@ -4,20 +4,9 @@
 
 ## Prerequisties
 
-### Create conda environment
+See the main folder's requirements.
 
-```bash
-conda create -n factcheck
-conda activate factcheck
-```
-
-Download the necessary libraries
-
- ```bash
-pip install -r requirements.txt
- ```
-
-#### Anyscales Endpoints are used in the following parts
+## Anyscales Endpoints are used in the following parts
 
 So need to set api key and base url. It can be done by registering in their [website](https://www.anyscale.com)
 
@@ -62,7 +51,6 @@ python3 -m evidence.text_retriever \
     --output_path  "./DataProcessed/answers.jsonl"
 ```
 
-
 The answers can be downloaded directly via [answers.jsonl](https://drive.google.com/file/d/1hyPoPh_fHpX23tH09O2w_uDrkz3GL79A/view?usp=share_link) (1GB)
 
 ### BM25 Retriever
@@ -83,7 +71,7 @@ python3 -m evidence.bm25_retriever.py \
     --top_docs_path "./DataProcessed/top_docs_final.jsonl"
 ```
 
-### Summarize
+## Summarize
 
 Summarazies the relavent parts retrieved from BM25 and stores them in summaries_final.jsonl
 
@@ -95,7 +83,7 @@ python3 -m evidence.summarize \
     --model_name "meta-llama/Llama-2-70b-chat-hf"
 ```
 
-### Verdict
+## Labeler
 
 Here the summaries are given to the LLM with the subquestion to answer it with yes or no.
 
@@ -106,4 +94,13 @@ python3 -m labeler \
     --subquestions_path 'ClaimDecomp/subquestions_finetuned.jsonl' \
     --output_path 'DataProcessed/labels.jsonl' \
     --model_name 'meta-llama/Llama-2-70b-chat-hf' 
+```
+
+## Final Verdict
+
+Creates confusion matrix and final classification
+
+```bash
+python3 -m final_verdict \
+    --labels_path 'DataProcessed/labels.jsonl'
 ```
