@@ -8,3 +8,5 @@ rank-bm25
 nltk
 numpy
 matplotlib
+scikit-learn
+seaborn

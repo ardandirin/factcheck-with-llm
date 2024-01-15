@@ -1,0 +1,4733 @@
+json_loader called
+0it [00:00, ?it/s]1it [00:54, 54.78s/it]2it [01:32, 44.78s/it]3it [02:19, 45.75s/it]4it [02:56, 42.16s/it]5it [03:32, 40.23s/it]6it [04:35, 47.90s/it]7it [05:13, 44.49s/it]8it [05:43, 39.89s/it]9it [06:29, 41.80s/it]10it [07:19, 44.43s/it]11it [08:20, 49.44s/it]12it [08:52, 44.28s/it]13it [09:52, 49.00s/it]14it [10:47, 50.90s/it]15it [11:40, 51.36s/it]16it [12:17, 46.97s/it]17it [12:39, 39.45s/it]18it [13:17, 39.19s/it]19it [13:39, 34.06s/it]load_subquestions called
+Subquestions found
+Prompt tokens: 403
+Completion tokens: 117
+Total tokens: 520
+Label: no
+Prompt tokens: 395
+Completion tokens: 118
+Total tokens: 513
+Label: no
+Prompt tokens: 400
+Completion tokens: 164
+Total tokens: 564
+Label: no
+Prompt tokens: 403
+Completion tokens: 153
+Total tokens: 556
+Label: no
+Prompt tokens: 396
+Completion tokens: 87
+Total tokens: 483
+Label: no
+Prompt tokens: 394
+Completion tokens: 108
+Total tokens: 502
+Label: no
+Prompt tokens: 402
+Completion tokens: 159
+Total tokens: 561
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 658
+Completion tokens: 90
+Total tokens: 748
+Label: no
+Prompt tokens: 645
+Completion tokens: 124
+Total tokens: 769
+Label: no
+Prompt tokens: 657
+Completion tokens: 93
+Total tokens: 750
+Label: no
+Prompt tokens: 644
+Completion tokens: 163
+Total tokens: 807
+Label: no
+Prompt tokens: 644
+Completion tokens: 126
+Total tokens: 770
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 526
+Completion tokens: 77
+Total tokens: 603
+Label: no
+Prompt tokens: 526
+Completion tokens: 160
+Total tokens: 686
+Label: no
+Prompt tokens: 522
+Completion tokens: 111
+Total tokens: 633
+Label: no
+Prompt tokens: 520
+Completion tokens: 106
+Total tokens: 626
+Label: no
+Prompt tokens: 523
+Completion tokens: 144
+Total tokens: 667
+Label: no
+Prompt tokens: 524
+Completion tokens: 122
+Total tokens: 646
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 414
+Completion tokens: 60
+Total tokens: 474
+Label: yes
+Prompt tokens: 424
+Completion tokens: 91
+Total tokens: 515
+Label: no
+Prompt tokens: 415
+Completion tokens: 110
+Total tokens: 525
+Label: yes
+Prompt tokens: 417
+Completion tokens: 95
+Total tokens: 512
+Label: yes
+Prompt tokens: 419
+Completion tokens: 99
+Total tokens: 518
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 510
+Completion tokens: 83
+Total tokens: 593
+Label: no
+Prompt tokens: 503
+Completion tokens: 97
+Total tokens: 600
+Label: yes
+Prompt tokens: 506
+Completion tokens: 72
+Total tokens: 578
+Label: no
+Prompt tokens: 507
+Completion tokens: 105
+Total tokens: 612
+Label: yes
+Prompt tokens: 505
+Completion tokens: 100
+Total tokens: 605
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 586
+Completion tokens: 92
+Total tokens: 678
+Label: no
+Prompt tokens: 593
+Completion tokens: 104
+Total tokens: 697
+Label: no
+Prompt tokens: 599
+Completion tokens: 85
+Total tokens: 684
+Label: no
+Prompt tokens: 599
+Completion tokens: 134
+Total tokens: 733
+Label: no
+Prompt tokens: 603
+Completion tokens: 106
+Total tokens: 709
+Label: no
+Prompt tokens: 611
+Completion tokens: 97
+Total tokens: 708
+Label: no
+Prompt tokens: 588
+Completion tokens: 87
+Total tokens: 675
+Label: no
+Prompt tokens: 590
+Completion tokens: 158
+Total tokens: 748
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 436
+Completion tokens: 82
+Total tokens: 518
+Label: no
+Prompt tokens: 443
+Completion tokens: 99
+Total tokens: 542
+Label: no
+Prompt tokens: 435
+Completion tokens: 94
+Total tokens: 529
+Label: no
+Prompt tokens: 445
+Completion tokens: 138
+Total tokens: 583
+Label: yes
+Prompt tokens: 448
+Completion tokens: 105
+Total tokens: 553
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 530
+Completion tokens: 95
+Total tokens: 625
+Label: no
+Prompt tokens: 525
+Completion tokens: 82
+Total tokens: 607
+Label: no
+Prompt tokens: 526
+Completion tokens: 97
+Total tokens: 623
+Label: no
+Prompt tokens: 523
+Completion tokens: 103
+Total tokens: 626
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 538
+Completion tokens: 79
+Total tokens: 617
+Label: no
+Prompt tokens: 541
+Completion tokens: 86
+Total tokens: 627
+Label: no
+Prompt tokens: 542
+Completion tokens: 100
+Total tokens: 642
+Label: no
+Prompt tokens: 532
+Completion tokens: 105
+Total tokens: 637
+Label: no
+Prompt tokens: 530
+Completion tokens: 94
+Total tokens: 624
+Label: no
+Prompt tokens: 530
+Completion tokens: 84
+Total tokens: 614
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 480
+Completion tokens: 207
+Total tokens: 687
+Label: no
+Prompt tokens: 463
+Completion tokens: 141
+Total tokens: 604
+Label: no
+Prompt tokens: 467
+Completion tokens: 135
+Total tokens: 602
+Label: no
+Prompt tokens: 467
+Completion tokens: 122
+Total tokens: 589
+Label: yes
+Prompt tokens: 473
+Completion tokens: 136
+Total tokens: 609
+Label: no
+Prompt tokens: 461
+Completion tokens: 134
+Total tokens: 595
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 444
+Completion tokens: 155
+Total tokens: 599
+Label: no
+Prompt tokens: 435
+Completion tokens: 129
+Total tokens: 564
+Label: no
+Prompt tokens: 433
+Completion tokens: 86
+Total tokens: 519
+Label: no
+Prompt tokens: 435
+Completion tokens: 132
+Total tokens: 567
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 523
+Completion tokens: 168
+Total tokens: 691
+Label: yes
+Prompt tokens: 528
+Completion tokens: 131
+Total tokens: 659
+Label: yes
+Prompt tokens: 532
+Completion tokens: 117
+Total tokens: 649
+Label: yes
+Prompt tokens: 536
+Completion tokens: 171
+Total tokens: 707
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 514
+Completion tokens: 183
+Total tokens: 697
+Label: no
+Prompt tokens: 504
+Completion tokens: 141
+Total tokens: 645
+Label: no
+Prompt tokens: 505
+Completion tokens: 160
+Total tokens: 665
+Label: no
+Prompt tokens: 493
+Completion tokens: 218
+Total tokens: 711
+Label: no
+Prompt tokens: 492
+Completion tokens: 126
+Total tokens: 618
+Label: no
+Prompt tokens: 503
+Completion tokens: 102
+Total tokens: 605
+Label: no
+Prompt tokens: 507
+Completion tokens: 170
+Total tokens: 677
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 618
+Completion tokens: 99
+Total tokens: 717
+Label: no
+Prompt tokens: 614
+Completion tokens: 125
+Total tokens: 739
+Label: no
+Prompt tokens: 616
+Completion tokens: 121
+Total tokens: 737
+Label: no
+Prompt tokens: 615
+Completion tokens: 178
+Total tokens: 793
+Label: no
+Prompt tokens: 614
+Completion tokens: 142
+Total tokens: 756
+Label: no
+Prompt tokens: 617
+Completion tokens: 251
+Total tokens: 868
+Label: yes
+Prompt tokens: 615
+Completion tokens: 284
+Total tokens: 899
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 470
+Completion tokens: 100
+Total tokens: 570
+Label: no
+Prompt tokens: 477
+Completion tokens: 101
+Total tokens: 578
+Label: no
+Prompt tokens: 475
+Completion tokens: 105
+Total tokens: 580
+Label: no
+Prompt tokens: 460
+Completion tokens: 156
+Total tokens: 616
+Label: no
+Prompt tokens: 470
+Completion tokens: 88
+Total tokens: 558
+Label: no
+Prompt tokens: 469
+Completion tokens: 79
+Total tokens: 548
+Label: no
+Prompt tokens: 475
+Completion tokens: 88
+Total tokens: 563
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 529
+Completion tokens: 136
+Total tokens: 665
+Label: yes
+Prompt tokens: 536
+Completion tokens: 97
+Total tokens: 633
+Label: no
+Prompt tokens: 533
+Completion tokens: 90
+Total tokens: 623
+Label: no
+Prompt tokens: 535
+Completion tokens: 117
+Total tokens: 652
+Label: no
+Prompt tokens: 533
+Completion tokens: 70
+Total tokens: 603
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 353
+Completion tokens: 105
+Total tokens: 458
+Label: no
+Prompt tokens: 352
+Completion tokens: 112
+Total tokens: 464
+Label: no
+Prompt tokens: 352
+Completion tokens: 109
+Total tokens: 461
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 440
+Completion tokens: 206
+Total tokens: 646
+Label: no
+Prompt tokens: 449
+Completion tokens: 117
+Total tokens: 566
+Label: no
+Prompt tokens: 451
+Completion tokens: 152
+Total tokens: 603
+Label: no
+Prompt tokens: 450
+Completion tokens: 121
+Total tokens: 571
+Label: no
+Prompt tokens: 443
+Completion tokens: 181
+Total tokens: 624
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 533
+Completion tokens: 128
+Total tokens: 661
+Label: yes
+Prompt tokens: 527
+Completion tokens: 81
+Total tokens: 608
+Label: yes
+Prompt tokens: 523
+Completion tokens: 130
+Total tokens: 653
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 423
+Completion tokens: 98
+Total tokens: 521
+Label: no
+Prompt tokens: 425
+Completion tokens: 237
+Total tokens: 662
+Label: no
+Prompt tokens: 417
+Completion tokens: 113
+20it [14:28, 38.43s/it]21it [15:26, 44.32s/it]22it [16:12, 44.94s/it]23it [16:57, 44.76s/it]24it [18:04, 51.65s/it]25it [18:59, 52.46s/it]26it [19:36, 47.83s/it]27it [20:04, 41.97s/it]28it [20:33, 38.05s/it]29it [21:11, 38.15s/it]30it [22:00, 41.14s/it]31it [22:56, 45.67s/it]32it [23:39, 44.90s/it]33it [24:19, 43.45s/it]34it [24:56, 41.39s/it]35it [25:19, 35.96s/it]36it [26:08, 39.80s/it]37it [26:36, 36.51s/it]38it [27:05, 34.15s/it]Total tokens: 530
+Label: no
+Prompt tokens: 420
+Completion tokens: 148
+Total tokens: 568
+Label: no
+Prompt tokens: 417
+Completion tokens: 85
+Total tokens: 502
+Label: no
+Prompt tokens: 416
+Completion tokens: 95
+Total tokens: 511
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 547
+Completion tokens: 139
+Total tokens: 686
+Label: no
+Prompt tokens: 542
+Completion tokens: 166
+Total tokens: 708
+Label: no
+Prompt tokens: 539
+Completion tokens: 125
+Total tokens: 664
+Label: no
+Prompt tokens: 540
+Completion tokens: 284
+Total tokens: 824
+Label: yes
+Prompt tokens: 541
+Completion tokens: 175
+Total tokens: 716
+Label: no
+Prompt tokens: 547
+Completion tokens: 154
+Total tokens: 701
+Label: no
+Prompt tokens: 535
+Completion tokens: 88
+Total tokens: 623
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 632
+Completion tokens: 102
+Total tokens: 734
+Label: no
+Prompt tokens: 631
+Completion tokens: 158
+Total tokens: 789
+Label: no
+Prompt tokens: 633
+Completion tokens: 117
+Total tokens: 750
+Label: no
+Prompt tokens: 630
+Completion tokens: 185
+Total tokens: 815
+Label: no
+Prompt tokens: 635
+Completion tokens: 175
+Total tokens: 810
+Label: no
+Prompt tokens: 628
+Completion tokens: 157
+Total tokens: 785
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 500
+Completion tokens: 124
+Total tokens: 624
+Label: yes
+Prompt tokens: 490
+Completion tokens: 131
+Total tokens: 621
+Label: no
+Prompt tokens: 489
+Completion tokens: 155
+Total tokens: 644
+Label: no
+Prompt tokens: 493
+Completion tokens: 79
+Total tokens: 572
+Label: no
+Prompt tokens: 492
+Completion tokens: 93
+Total tokens: 585
+Label: yes
+Prompt tokens: 494
+Completion tokens: 60
+Total tokens: 554
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 490
+Completion tokens: 110
+Total tokens: 600
+Label: no
+Prompt tokens: 496
+Completion tokens: 129
+Total tokens: 625
+Label: no
+Prompt tokens: 511
+Completion tokens: 189
+Total tokens: 700
+Label: no
+Prompt tokens: 498
+Completion tokens: 84
+Total tokens: 582
+Label: no
+Prompt tokens: 492
+Completion tokens: 51
+Total tokens: 543
+Label: no
+Prompt tokens: 500
+Completion tokens: 89
+Total tokens: 589
+Label: no
+Prompt tokens: 498
+Completion tokens: 158
+Total tokens: 656
+Label: no
+Prompt tokens: 498
+Completion tokens: 88
+Total tokens: 586
+Label: no
+Prompt tokens: 497
+Completion tokens: 130
+Total tokens: 627
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 443
+Completion tokens: 192
+Total tokens: 635
+Label: yes
+Prompt tokens: 438
+Completion tokens: 109
+Total tokens: 547
+Label: yes
+Prompt tokens: 439
+Completion tokens: 110
+Total tokens: 549
+Label: yes
+Prompt tokens: 438
+Completion tokens: 135
+Total tokens: 573
+Label: no
+Prompt tokens: 441
+Completion tokens: 114
+Total tokens: 555
+Label: yes
+Prompt tokens: 445
+Completion tokens: 82
+Total tokens: 527
+Label: yes
+Prompt tokens: 443
+Completion tokens: 127
+Total tokens: 570
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 483
+Completion tokens: 119
+Total tokens: 602
+Label: no
+Prompt tokens: 488
+Completion tokens: 107
+Total tokens: 595
+Label: no
+Prompt tokens: 483
+Completion tokens: 78
+Total tokens: 561
+Label: no
+Prompt tokens: 480
+Completion tokens: 70
+Total tokens: 550
+Label: no
+Prompt tokens: 484
+Completion tokens: 94
+Total tokens: 578
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 353
+Completion tokens: 101
+Total tokens: 454
+Label: no
+Prompt tokens: 347
+Completion tokens: 92
+Total tokens: 439
+Label: no
+Prompt tokens: 350
+Completion tokens: 83
+Total tokens: 433
+Label: no
+Prompt tokens: 355
+Completion tokens: 103
+Total tokens: 458
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 520
+Completion tokens: 107
+Total tokens: 627
+Label: no
+Prompt tokens: 518
+Completion tokens: 75
+Total tokens: 593
+Label: no
+Prompt tokens: 523
+Completion tokens: 68
+Total tokens: 591
+Label: no
+Prompt tokens: 518
+Completion tokens: 95
+Total tokens: 613
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 528
+Completion tokens: 143
+Total tokens: 671
+Label: no
+Prompt tokens: 530
+Completion tokens: 154
+Total tokens: 684
+Label: no
+Prompt tokens: 527
+Completion tokens: 91
+Total tokens: 618
+Label: no
+Prompt tokens: 534
+Completion tokens: 143
+Total tokens: 677
+Label: yes
+Prompt tokens: 525
+Completion tokens: 185
+Total tokens: 710
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 396
+Completion tokens: 143
+Total tokens: 539
+Label: no
+Prompt tokens: 392
+Completion tokens: 129
+Total tokens: 521
+Label: yes
+Prompt tokens: 392
+Completion tokens: 128
+Total tokens: 520
+Label: yes
+Prompt tokens: 397
+Completion tokens: 127
+Total tokens: 524
+Label: yes
+Prompt tokens: 400
+Completion tokens: 198
+Total tokens: 598
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 455
+Completion tokens: 140
+Total tokens: 595
+Label: no
+Prompt tokens: 458
+Completion tokens: 131
+Total tokens: 589
+Label: no
+Prompt tokens: 459
+Completion tokens: 126
+Total tokens: 585
+Label: no
+Prompt tokens: 458
+Completion tokens: 129
+Total tokens: 587
+Label: no
+Prompt tokens: 458
+Completion tokens: 152
+Total tokens: 610
+Label: no
+Prompt tokens: 461
+Completion tokens: 176
+Total tokens: 637
+Label: no
+Prompt tokens: 454
+Completion tokens: 127
+Total tokens: 581
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 485
+Completion tokens: 85
+Total tokens: 570
+Label: no
+Prompt tokens: 492
+Completion tokens: 61
+Total tokens: 553
+Label: no
+Prompt tokens: 489
+Completion tokens: 106
+Total tokens: 595
+Label: no
+Prompt tokens: 487
+Completion tokens: 60
+Total tokens: 547
+Label: no
+Prompt tokens: 487
+Completion tokens: 64
+Total tokens: 551
+Label: no
+Prompt tokens: 490
+Completion tokens: 84
+Total tokens: 574
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 547
+Completion tokens: 202
+Total tokens: 749
+Label: yes
+Prompt tokens: 538
+Completion tokens: 165
+Total tokens: 703
+Label: yes
+Prompt tokens: 534
+Completion tokens: 98
+Total tokens: 632
+Label: yes
+Prompt tokens: 545
+Completion tokens: 102
+Total tokens: 647
+Label: yes
+Prompt tokens: 531
+Completion tokens: 58
+Total tokens: 589
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 475
+Completion tokens: 162
+Total tokens: 637
+Label: no
+Prompt tokens: 476
+Completion tokens: 117
+Total tokens: 593
+Label: no
+Prompt tokens: 474
+Completion tokens: 192
+Total tokens: 666
+Label: no
+Prompt tokens: 472
+Completion tokens: 98
+Total tokens: 570
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 409
+Completion tokens: 119
+Total tokens: 528
+Label: no
+Prompt tokens: 416
+Completion tokens: 96
+Total tokens: 512
+Label: no
+Prompt tokens: 429
+Completion tokens: 163
+Total tokens: 592
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 571
+Completion tokens: 157
+Total tokens: 728
+Label: no
+Prompt tokens: 555
+Completion tokens: 108
+Total tokens: 663
+Label: no
+Prompt tokens: 557
+Completion tokens: 117
+Total tokens: 674
+Label: no
+Prompt tokens: 554
+Completion tokens: 104
+Total tokens: 658
+Label: no
+Prompt tokens: 548
+Completion tokens: 110
+Total tokens: 658
+Label: no
+Prompt tokens: 548
+Completion tokens: 126
+Total tokens: 674
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 443
+Completion tokens: 100
+Total tokens: 543
+Label: yes
+Prompt tokens: 433
+Completion tokens: 98
+Total tokens: 531
+Label: no
+Prompt tokens: 446
+Completion tokens: 95
+Total tokens: 541
+Label: yes
+Prompt tokens: 453
+Completion tokens: 83
+Total tokens: 536
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 622
+Completion tokens: 90
+Total tokens: 712
+Label: no
+Prompt tokens: 619
+Completion tokens: 134
+Total tokens: 753
+Label: no
+Prompt tokens: 611
+Completion tokens: 75
+Total tokens: 686
+Label: 
+Prompt tokens: 619
+Completion tokens: 106
+Total tokens: 725
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 455
+Completion tokens: 165
+Total tokens: 620
+Label: no
+Prompt tokens: 456
+Completion tokens: 140
+Total tokens: 596
+Label: no
+Prompt tokens: 458
+Completion tokens: 143
+Total tokens: 601
+Label: yes
+Prompt tokens: 472
+Completion tokens: 117
+Total tokens: 589
+Label: no
+Prompt tokens: 456
+Completion tokens: 110
+Total tokens: 566
+39it [27:51, 37.57s/it]40it [28:34, 39.30s/it]41it [29:10, 38.33s/it]42it [29:44, 37.15s/it]43it [30:42, 43.42s/it]44it [31:22, 42.29s/it]45it [31:47, 37.05s/it]46it [32:25, 37.46s/it]47it [33:54, 52.95s/it]48it [34:32, 48.21s/it]49it [35:09, 44.92s/it]50it [35:32, 38.25s/it]51it [36:09, 38.07s/it]52it [36:54, 40.16s/it]53it [37:33, 39.65s/it]54it [38:11, 39.14s/it]55it [38:47, 38.21s/it]56it [39:32, 40.23s/it]57it [40:12, 40.17s/it]58it [40:41, 37.03s/it]59it [41:11, 34.95s/it]Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 513
+Completion tokens: 127
+Total tokens: 640
+Label: no
+Prompt tokens: 516
+Completion tokens: 239
+Total tokens: 755
+Label: yes
+Prompt tokens: 519
+Completion tokens: 164
+Total tokens: 683
+Label: no
+Prompt tokens: 514
+Completion tokens: 98
+Total tokens: 612
+Label: no
+Prompt tokens: 503
+Completion tokens: 99
+Total tokens: 602
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 436
+Completion tokens: 106
+Total tokens: 542
+Label: no
+Prompt tokens: 436
+Completion tokens: 101
+Total tokens: 537
+Label: no
+Prompt tokens: 416
+Completion tokens: 98
+Total tokens: 514
+Label: no
+Prompt tokens: 418
+Completion tokens: 126
+Total tokens: 544
+Label: no
+Prompt tokens: 421
+Completion tokens: 84
+Total tokens: 505
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 356
+Completion tokens: 149
+Total tokens: 505
+Label: no
+Prompt tokens: 360
+Completion tokens: 133
+Total tokens: 493
+Label: no
+Prompt tokens: 358
+Completion tokens: 106
+Total tokens: 464
+Label: no
+Prompt tokens: 359
+Completion tokens: 143
+Total tokens: 502
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 398
+Completion tokens: 135
+Total tokens: 533
+Label: no
+Prompt tokens: 404
+Completion tokens: 157
+Total tokens: 561
+Label: no
+Prompt tokens: 396
+Completion tokens: 128
+Total tokens: 524
+Label: no
+Prompt tokens: 380
+Completion tokens: 115
+Total tokens: 495
+Label: no
+Prompt tokens: 385
+Completion tokens: 100
+Total tokens: 485
+Label: no
+Prompt tokens: 392
+Completion tokens: 116
+Total tokens: 508
+Label: no
+Prompt tokens: 385
+Completion tokens: 76
+Total tokens: 461
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 433
+Completion tokens: 100
+Total tokens: 533
+Label: no
+Prompt tokens: 433
+Completion tokens: 101
+Total tokens: 534
+Label: no
+Prompt tokens: 435
+Completion tokens: 107
+Total tokens: 542
+Label: no
+Prompt tokens: 423
+Completion tokens: 82
+Total tokens: 505
+Label: no
+Prompt tokens: 426
+Completion tokens: 97
+Total tokens: 523
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 627
+Completion tokens: 222
+Total tokens: 849
+Label: no
+Prompt tokens: 623
+Completion tokens: 150
+Total tokens: 773
+Label: yes
+Prompt tokens: 633
+Completion tokens: 248
+Total tokens: 881
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 450
+Completion tokens: 110
+Total tokens: 560
+Label: no
+Prompt tokens: 453
+Completion tokens: 137
+Total tokens: 590
+Label: no
+Prompt tokens: 450
+Completion tokens: 133
+Total tokens: 583
+Label: no
+Prompt tokens: 450
+Completion tokens: 124
+Total tokens: 574
+Label: no
+Prompt tokens: 451
+Completion tokens: 124
+Total tokens: 575
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 509
+Completion tokens: 130
+Total tokens: 639
+Label: no
+Prompt tokens: 505
+Completion tokens: 104
+Total tokens: 609
+Label: no
+Prompt tokens: 507
+Completion tokens: 91
+Total tokens: 598
+Label: no
+Prompt tokens: 530
+Completion tokens: 168
+Total tokens: 698
+Label: yes
+Prompt tokens: 516
+Completion tokens: 135
+Total tokens: 651
+Label: no
+Prompt tokens: 521
+Completion tokens: 78
+Total tokens: 599
+Label: no
+Prompt tokens: 516
+Completion tokens: 123
+Total tokens: 639
+Label: no
+Prompt tokens: 522
+Completion tokens: 108
+Total tokens: 630
+Label: no
+Prompt tokens: 518
+Completion tokens: 103
+Total tokens: 621
+Label: no
+Prompt tokens: 519
+Completion tokens: 108
+Total tokens: 627
+Label: no
+Prompt tokens: 521
+Completion tokens: 100
+Total tokens: 621
+Label: no
+Prompt tokens: 521
+Completion tokens: 102
+Total tokens: 623
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 420
+Completion tokens: 67
+Total tokens: 487
+Label: yes
+Prompt tokens: 420
+Completion tokens: 110
+Total tokens: 530
+Label: yes
+Prompt tokens: 424
+Completion tokens: 110
+Total tokens: 534
+Label: no
+Prompt tokens: 420
+Completion tokens: 67
+Total tokens: 487
+Label: yes
+Prompt tokens: 421
+Completion tokens: 69
+Total tokens: 490
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 528
+Completion tokens: 147
+Total tokens: 675
+Label: no
+Prompt tokens: 530
+Completion tokens: 91
+Total tokens: 621
+Label: no
+Prompt tokens: 534
+Completion tokens: 133
+Total tokens: 667
+Label: no
+Prompt tokens: 537
+Completion tokens: 133
+Total tokens: 670
+Label: no
+Prompt tokens: 531
+Completion tokens: 105
+Total tokens: 636
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 459
+Completion tokens: 113
+Total tokens: 572
+Label: no
+Prompt tokens: 448
+Completion tokens: 116
+Total tokens: 564
+Label: no
+Prompt tokens: 442
+Completion tokens: 123
+Total tokens: 565
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 535
+Completion tokens: 124
+Total tokens: 659
+Label: no
+Prompt tokens: 532
+Completion tokens: 118
+Total tokens: 650
+Label: no
+Prompt tokens: 529
+Completion tokens: 84
+Total tokens: 613
+Label: no
+Prompt tokens: 535
+Completion tokens: 106
+Total tokens: 641
+Label: no
+Prompt tokens: 538
+Completion tokens: 133
+Total tokens: 671
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 606
+Completion tokens: 111
+Total tokens: 717
+Label: no
+Prompt tokens: 603
+Completion tokens: 130
+Total tokens: 733
+Label: no
+Prompt tokens: 596
+Completion tokens: 83
+Total tokens: 679
+Label: no
+Prompt tokens: 607
+Completion tokens: 105
+Total tokens: 712
+Label: no
+Prompt tokens: 599
+Completion tokens: 125
+Total tokens: 724
+Label: no
+Prompt tokens: 599
+Completion tokens: 115
+Total tokens: 714
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 576
+Completion tokens: 107
+Total tokens: 683
+Label: no
+Prompt tokens: 571
+Completion tokens: 141
+Total tokens: 712
+Label: no
+Prompt tokens: 572
+Completion tokens: 123
+Total tokens: 695
+Label: yes
+Prompt tokens: 574
+Completion tokens: 108
+Total tokens: 682
+Label: no
+Prompt tokens: 578
+Completion tokens: 143
+Total tokens: 721
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 475
+Completion tokens: 143
+Total tokens: 618
+Label: no
+Prompt tokens: 473
+Completion tokens: 111
+Total tokens: 584
+Label: no
+Prompt tokens: 476
+Completion tokens: 105
+Total tokens: 581
+Label: no
+Prompt tokens: 479
+Completion tokens: 133
+Total tokens: 612
+Label: no
+Prompt tokens: 472
+Completion tokens: 145
+Total tokens: 617
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 362
+Completion tokens: 86
+Total tokens: 448
+Label: no
+Prompt tokens: 365
+Completion tokens: 107
+Total tokens: 472
+Label: no
+Prompt tokens: 360
+Completion tokens: 96
+Total tokens: 456
+Label: no
+Prompt tokens: 362
+Completion tokens: 111
+Total tokens: 473
+Label: no
+Prompt tokens: 373
+Completion tokens: 118
+Total tokens: 491
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 594
+Completion tokens: 49
+Total tokens: 643
+Label: yes
+Prompt tokens: 596
+Completion tokens: 124
+Total tokens: 720
+Label: yes
+Prompt tokens: 595
+Completion tokens: 200
+Total tokens: 795
+Label: no
+Prompt tokens: 593
+Completion tokens: 97
+Total tokens: 690
+Label: no
+Prompt tokens: 594
+Completion tokens: 123
+Total tokens: 717
+Label: no
+Prompt tokens: 601
+Completion tokens: 170
+Total tokens: 771
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 600
+Completion tokens: 176
+Total tokens: 776
+Label: no
+Prompt tokens: 584
+Completion tokens: 132
+Total tokens: 716
+Label: no
+Prompt tokens: 581
+Completion tokens: 144
+Total tokens: 725
+Label: no
+Prompt tokens: 581
+Completion tokens: 222
+Total tokens: 803
+Label: no
+Prompt tokens: 584
+Completion tokens: 157
+Total tokens: 741
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 494
+Completion tokens: 125
+Total tokens: 619
+Label: no
+Prompt tokens: 500
+Completion tokens: 127
+Total tokens: 627
+Label: no
+Prompt tokens: 497
+Completion tokens: 116
+Total tokens: 613
+Label: yes
+Prompt tokens: 503
+Completion tokens: 101
+Total tokens: 604
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 609
+Completion tokens: 147
+Total tokens: 756
+Label: no
+Prompt tokens: 614
+Completion tokens: 164
+Total tokens: 778
+Label: yes
+Prompt tokens: 611
+Completion tokens: 98
+Total tokens: 709
+Label: no
+Prompt tokens: 609
+Completion tokens: 123
+Total tokens: 732
+Label: no
+load_subquestions called
+60it [41:49, 35.62s/it]61it [42:40, 40.48s/it]62it [43:03, 35.03s/it]63it [43:39, 35.46s/it]64it [44:14, 35.36s/it]65it [44:45, 33.97s/it]66it [45:16, 32.99s/it]67it [46:00, 36.28s/it]68it [47:06, 45.30s/it]69it [47:50, 44.92s/it]70it [48:20, 40.38s/it]71it [48:53, 38.10s/it]72it [49:23, 35.80s/it]73it [50:00, 36.24s/it]74it [51:27, 51.45s/it]75it [52:06, 47.55s/it]76it [52:28, 39.84s/it]77it [53:15, 42.24s/it]78it [53:59, 42.73s/it]Subquestions found
+Prompt tokens: 522
+Completion tokens: 68
+Total tokens: 590
+Label: no
+Prompt tokens: 520
+Completion tokens: 127
+Total tokens: 647
+Label: no
+Prompt tokens: 522
+Completion tokens: 82
+Total tokens: 604
+Label: yes
+Prompt tokens: 522
+Completion tokens: 121
+Total tokens: 643
+Label: yes
+Prompt tokens: 523
+Completion tokens: 149
+Total tokens: 672
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 519
+Completion tokens: 130
+Total tokens: 649
+Label: no
+Prompt tokens: 521
+Completion tokens: 95
+Total tokens: 616
+Label: no
+Prompt tokens: 519
+Completion tokens: 117
+Total tokens: 636
+Label: yes
+Prompt tokens: 518
+Completion tokens: 136
+Total tokens: 654
+Label: no
+Prompt tokens: 518
+Completion tokens: 121
+Total tokens: 639
+Label: no
+Prompt tokens: 523
+Completion tokens: 107
+Total tokens: 630
+Label: no
+Prompt tokens: 519
+Completion tokens: 128
+Total tokens: 647
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 597
+Completion tokens: 98
+Total tokens: 695
+Label: no
+Prompt tokens: 599
+Completion tokens: 80
+Total tokens: 679
+Label: no
+Prompt tokens: 579
+Completion tokens: 91
+Total tokens: 670
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 509
+Completion tokens: 106
+Total tokens: 615
+Label: yes
+Prompt tokens: 511
+Completion tokens: 61
+Total tokens: 572
+Label: no
+Prompt tokens: 507
+Completion tokens: 156
+Total tokens: 663
+Label: no
+Prompt tokens: 511
+Completion tokens: 83
+Total tokens: 594
+Label: no
+Prompt tokens: 518
+Completion tokens: 142
+Total tokens: 660
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 433
+Completion tokens: 113
+Total tokens: 546
+Label: no
+Prompt tokens: 430
+Completion tokens: 83
+Total tokens: 513
+Label: no
+Prompt tokens: 432
+Completion tokens: 77
+Total tokens: 509
+Label: no
+Prompt tokens: 429
+Completion tokens: 90
+Total tokens: 519
+Label: no
+Prompt tokens: 438
+Completion tokens: 103
+Total tokens: 541
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 440
+Completion tokens: 104
+Total tokens: 544
+Label: no
+Prompt tokens: 431
+Completion tokens: 156
+Total tokens: 587
+Label: no
+Prompt tokens: 424
+Completion tokens: 105
+Total tokens: 529
+Label: no
+Prompt tokens: 434
+Completion tokens: 146
+Total tokens: 580
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 370
+Completion tokens: 123
+Total tokens: 493
+Label: no
+Prompt tokens: 375
+Completion tokens: 156
+Total tokens: 531
+Label: no
+Prompt tokens: 360
+Completion tokens: 111
+Total tokens: 471
+Label: no
+Prompt tokens: 362
+Completion tokens: 101
+Total tokens: 463
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 438
+Completion tokens: 91
+Total tokens: 529
+Label: no
+Prompt tokens: 442
+Completion tokens: 76
+Total tokens: 518
+Label: no
+Prompt tokens: 434
+Completion tokens: 86
+Total tokens: 520
+Label: no
+Prompt tokens: 440
+Completion tokens: 124
+Total tokens: 564
+Label: no
+Prompt tokens: 437
+Completion tokens: 89
+Total tokens: 526
+Label: no
+Prompt tokens: 438
+Completion tokens: 103
+Total tokens: 541
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 568
+Completion tokens: 193
+Total tokens: 761
+Label: no
+Prompt tokens: 549
+Completion tokens: 136
+Total tokens: 685
+Label: no
+Prompt tokens: 550
+Completion tokens: 220
+Total tokens: 770
+Label: no
+Prompt tokens: 545
+Completion tokens: 151
+Total tokens: 696
+Label: no
+Prompt tokens: 542
+Completion tokens: 128
+Total tokens: 670
+Label: no
+Prompt tokens: 573
+Completion tokens: 200
+Total tokens: 773
+Label: no
+Prompt tokens: 574
+Completion tokens: 175
+Total tokens: 749
+Label: no
+Prompt tokens: 557
+Completion tokens: 152
+Total tokens: 709
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 527
+Completion tokens: 167
+Total tokens: 694
+Label: no
+Prompt tokens: 523
+Completion tokens: 111
+Total tokens: 634
+Label: no
+Prompt tokens: 531
+Completion tokens: 62
+Total tokens: 593
+Label: yes
+Prompt tokens: 527
+Completion tokens: 83
+Total tokens: 610
+Label: yes
+Prompt tokens: 527
+Completion tokens: 133
+Total tokens: 660
+Label: no
+Prompt tokens: 523
+Completion tokens: 86
+Total tokens: 609
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 534
+Completion tokens: 107
+Total tokens: 641
+Label: no
+Prompt tokens: 548
+Completion tokens: 139
+Total tokens: 687
+Label: no
+Prompt tokens: 534
+Completion tokens: 137
+Total tokens: 671
+Label: no
+Prompt tokens: 534
+Completion tokens: 85
+Total tokens: 619
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 526
+Completion tokens: 198
+Total tokens: 724
+Label: no
+Prompt tokens: 522
+Completion tokens: 158
+Total tokens: 680
+Label: no
+Prompt tokens: 526
+Completion tokens: 145
+Total tokens: 671
+Label: no
+Prompt tokens: 524
+Completion tokens: 131
+Total tokens: 655
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 567
+Completion tokens: 112
+Total tokens: 679
+Label: no
+Prompt tokens: 572
+Completion tokens: 114
+Total tokens: 686
+Label: no
+Prompt tokens: 572
+Completion tokens: 138
+Total tokens: 710
+Label: no
+Prompt tokens: 568
+Completion tokens: 107
+Total tokens: 675
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 533
+Completion tokens: 127
+Total tokens: 660
+Label: no
+Prompt tokens: 530
+Completion tokens: 154
+Total tokens: 684
+Label: no
+Prompt tokens: 551
+Completion tokens: 150
+Total tokens: 701
+Label: no
+Prompt tokens: 520
+Completion tokens: 117
+Total tokens: 637
+Label: no
+Prompt tokens: 526
+Completion tokens: 152
+Total tokens: 678
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 510
+Completion tokens: 193
+Total tokens: 703
+Label: no
+Prompt tokens: 510
+Completion tokens: 218
+Total tokens: 728
+Label: no
+Prompt tokens: 519
+Completion tokens: 126
+Total tokens: 645
+Label: no
+Prompt tokens: 523
+Completion tokens: 179
+Total tokens: 702
+Label: no
+Prompt tokens: 515
+Completion tokens: 177
+Total tokens: 692
+Label: no
+Prompt tokens: 519
+Completion tokens: 82
+Total tokens: 601
+Label: no
+Prompt tokens: 517
+Completion tokens: 136
+Total tokens: 653
+Label: no
+Prompt tokens: 528
+Completion tokens: 188
+Total tokens: 716
+Label: no
+Prompt tokens: 527
+Completion tokens: 134
+Total tokens: 661
+Label: no
+Prompt tokens: 524
+Completion tokens: 100
+Total tokens: 624
+Label: no
+Prompt tokens: 523
+Completion tokens: 147
+Total tokens: 670
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 527
+Completion tokens: 162
+Total tokens: 689
+Label: no
+Prompt tokens: 544
+Completion tokens: 121
+Total tokens: 665
+Label: no
+Prompt tokens: 544
+Completion tokens: 125
+Total tokens: 669
+Label: no
+Prompt tokens: 533
+Completion tokens: 204
+Total tokens: 737
+Label: no
+Prompt tokens: 530
+Completion tokens: 167
+Total tokens: 697
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 539
+Completion tokens: 79
+Total tokens: 618
+Label: no
+Prompt tokens: 547
+Completion tokens: 128
+Total tokens: 675
+Label: no
+Prompt tokens: 543
+Completion tokens: 95
+Total tokens: 638
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 571
+Completion tokens: 196
+Total tokens: 767
+Label: no
+Prompt tokens: 577
+Completion tokens: 241
+Total tokens: 818
+Label: no
+Prompt tokens: 573
+Completion tokens: 148
+Total tokens: 721
+Label: no
+Prompt tokens: 571
+Completion tokens: 200
+Total tokens: 771
+Label: no
+Prompt tokens: 582
+Completion tokens: 170
+Total tokens: 752
+Label: no
+Prompt tokens: 578
+Completion tokens: 126
+Total tokens: 704
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 500
+Completion tokens: 81
+Total tokens: 581
+Label: no
+Prompt tokens: 505
+Completion tokens: 106
+Total tokens: 611
+Label: no
+Prompt tokens: 496
+Completion tokens: 63
+Total tokens: 559
+Label: no
+Prompt tokens: 497
+Completion tokens: 82
+Total tokens: 579
+Label: no
+Prompt tokens: 507
+Completion tokens: 96
+Total tokens: 603
+Label: no
+Prompt tokens: 497
+Completion tokens: 88
+Total tokens: 585
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 549
+Completion tokens: 160
+Total tokens: 709
+Label: no
+Prompt tokens: 539
+Completion tokens: 165
+Total tokens: 704
+Label: no
+Prompt tokens: 550
+Completion tokens: 162
+Total tokens: 712
+Label: yes
+Prompt tokens: 548
+Completion tokens: 77
+Total tokens: 625
+Label: yes
+79it [54:45, 43.53s/it]80it [55:09, 37.80s/it]81it [55:57, 40.79s/it]82it [56:28, 37.98s/it]83it [57:18, 41.58s/it]84it [58:04, 42.76s/it]85it [58:49, 43.63s/it]86it [59:28, 42.21s/it]87it [1:00:06, 40.82s/it]88it [1:01:01, 44.95s/it]89it [1:02:02, 50.00s/it]90it [1:02:47, 48.39s/it]91it [1:03:27, 45.84s/it]92it [1:04:20, 48.11s/it]93it [1:05:06, 47.45s/it]94it [1:05:46, 45.24s/it]95it [1:06:09, 38.58s/it]96it [1:06:48, 38.73s/it]97it [1:07:57, 47.56s/it]Prompt tokens: 546
+Completion tokens: 164
+Total tokens: 710
+Label: no
+Prompt tokens: 550
+Completion tokens: 148
+Total tokens: 698
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 396
+Completion tokens: 188
+Total tokens: 584
+Label: yes
+Prompt tokens: 400
+Completion tokens: 123
+Total tokens: 523
+Label: no
+Prompt tokens: 400
+Completion tokens: 148
+Total tokens: 548
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 584
+Completion tokens: 160
+Total tokens: 744
+Label: no
+Prompt tokens: 585
+Completion tokens: 173
+Total tokens: 758
+Label: no
+Prompt tokens: 583
+Completion tokens: 184
+Total tokens: 767
+Label: no
+Prompt tokens: 582
+Completion tokens: 98
+Total tokens: 680
+Label: no
+Prompt tokens: 585
+Completion tokens: 204
+Total tokens: 789
+Label: no
+Prompt tokens: 586
+Completion tokens: 168
+Total tokens: 754
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 465
+Completion tokens: 147
+Total tokens: 612
+Label: no
+Prompt tokens: 463
+Completion tokens: 154
+Total tokens: 617
+Label: no
+Prompt tokens: 462
+Completion tokens: 133
+Total tokens: 595
+Label: no
+Prompt tokens: 464
+Completion tokens: 121
+Total tokens: 585
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 525
+Completion tokens: 95
+Total tokens: 620
+Label: yes
+Prompt tokens: 527
+Completion tokens: 167
+Total tokens: 694
+Label: no
+Prompt tokens: 531
+Completion tokens: 188
+Total tokens: 719
+Label: yes
+Prompt tokens: 540
+Completion tokens: 195
+Total tokens: 735
+Label: no
+Prompt tokens: 532
+Completion tokens: 277
+Total tokens: 809
+Label: no
+Prompt tokens: 524
+Completion tokens: 294
+Total tokens: 818
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 413
+Completion tokens: 101
+Total tokens: 514
+Label: no
+Prompt tokens: 417
+Completion tokens: 111
+Total tokens: 528
+Label: no
+Prompt tokens: 416
+Completion tokens: 100
+Total tokens: 516
+Label: no
+Prompt tokens: 410
+Completion tokens: 130
+Total tokens: 540
+Label: no
+Prompt tokens: 409
+Completion tokens: 128
+Total tokens: 537
+Label: no
+Prompt tokens: 411
+Completion tokens: 94
+Total tokens: 505
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 570
+Completion tokens: 165
+Total tokens: 735
+Label: no
+Prompt tokens: 563
+Completion tokens: 158
+Total tokens: 721
+Label: no
+Prompt tokens: 578
+Completion tokens: 135
+Total tokens: 713
+Label: no
+Prompt tokens: 566
+Completion tokens: 133
+Total tokens: 699
+Label: yes
+Prompt tokens: 573
+Completion tokens: 156
+Total tokens: 729
+Label: yes
+Prompt tokens: 575
+Completion tokens: 108
+Total tokens: 683
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 445
+Completion tokens: 123
+Total tokens: 568
+Label: no
+Prompt tokens: 447
+Completion tokens: 100
+Total tokens: 547
+Label: no
+Prompt tokens: 450
+Completion tokens: 76
+Total tokens: 526
+Label: no
+Prompt tokens: 449
+Completion tokens: 65
+Total tokens: 514
+Label: no
+Prompt tokens: 446
+Completion tokens: 83
+Total tokens: 529
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 552
+Completion tokens: 47
+Total tokens: 599
+Label: no
+Prompt tokens: 549
+Completion tokens: 119
+Total tokens: 668
+Label: no
+Prompt tokens: 551
+Completion tokens: 135
+Total tokens: 686
+Label: no
+Prompt tokens: 551
+Completion tokens: 56
+Total tokens: 607
+Label: yes
+Prompt tokens: 553
+Completion tokens: 115
+Total tokens: 668
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 401
+Completion tokens: 71
+Total tokens: 472
+Label: yes
+Prompt tokens: 403
+Completion tokens: 134
+Total tokens: 537
+Label: no
+Prompt tokens: 402
+Completion tokens: 178
+Total tokens: 580
+Label: no
+Prompt tokens: 396
+Completion tokens: 176
+Total tokens: 572
+Label: no
+Prompt tokens: 399
+Completion tokens: 78
+Total tokens: 477
+Label: yes
+Prompt tokens: 396
+Completion tokens: 150
+Total tokens: 546
+Label: no
+Prompt tokens: 399
+Completion tokens: 149
+Total tokens: 548
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 476
+Completion tokens: 154
+Total tokens: 630
+Label: no
+Prompt tokens: 475
+Completion tokens: 108
+Total tokens: 583
+Label: yes
+Prompt tokens: 476
+Completion tokens: 138
+Total tokens: 614
+Label: no
+Prompt tokens: 477
+Completion tokens: 121
+Total tokens: 598
+Label: yes
+Prompt tokens: 473
+Completion tokens: 184
+Total tokens: 657
+Label: no
+Prompt tokens: 478
+Completion tokens: 123
+Total tokens: 601
+Label: no
+Prompt tokens: 474
+Completion tokens: 187
+Total tokens: 661
+Label: no
+Prompt tokens: 474
+Completion tokens: 106
+Total tokens: 580
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 430
+Completion tokens: 102
+Total tokens: 532
+Label: yes
+Prompt tokens: 427
+Completion tokens: 84
+Total tokens: 511
+Label: yes
+Prompt tokens: 426
+Completion tokens: 116
+Total tokens: 542
+Label: no
+Prompt tokens: 428
+Completion tokens: 131
+Total tokens: 559
+Label: no
+Prompt tokens: 430
+Completion tokens: 120
+Total tokens: 550
+Label: yes
+Prompt tokens: 427
+Completion tokens: 122
+Total tokens: 549
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 498
+Completion tokens: 99
+Total tokens: 597
+Label: no
+Prompt tokens: 489
+Completion tokens: 89
+Total tokens: 578
+Label: no
+Prompt tokens: 497
+Completion tokens: 86
+Total tokens: 583
+Label: no
+Prompt tokens: 490
+Completion tokens: 83
+Total tokens: 573
+Label: no
+Prompt tokens: 495
+Completion tokens: 117
+Total tokens: 612
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 568
+Completion tokens: 73
+Total tokens: 641
+Label: no
+Prompt tokens: 565
+Completion tokens: 93
+Total tokens: 658
+Label: no
+Prompt tokens: 558
+Completion tokens: 186
+Total tokens: 744
+Label: yes
+Prompt tokens: 560
+Completion tokens: 162
+Total tokens: 722
+Label: no
+Prompt tokens: 560
+Completion tokens: 147
+Total tokens: 707
+Label: no
+Prompt tokens: 561
+Completion tokens: 184
+Total tokens: 745
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 717
+Completion tokens: 107
+Total tokens: 824
+Label: no
+Prompt tokens: 722
+Completion tokens: 94
+Total tokens: 816
+Label: no
+Prompt tokens: 722
+Completion tokens: 72
+Total tokens: 794
+Label: no
+Prompt tokens: 724
+Completion tokens: 97
+Total tokens: 821
+Label: no
+Prompt tokens: 722
+Completion tokens: 108
+Total tokens: 830
+Label: no
+Prompt tokens: 723
+Completion tokens: 96
+Total tokens: 819
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 419
+Completion tokens: 140
+Total tokens: 559
+Label: no
+Prompt tokens: 424
+Completion tokens: 138
+Total tokens: 562
+Label: no
+Prompt tokens: 425
+Completion tokens: 114
+Total tokens: 539
+Label: no
+Prompt tokens: 419
+Completion tokens: 91
+Total tokens: 510
+Label: no
+Prompt tokens: 420
+Completion tokens: 132
+Total tokens: 552
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 509
+Completion tokens: 146
+Total tokens: 655
+Label: no
+Prompt tokens: 515
+Completion tokens: 112
+Total tokens: 627
+Label: no
+Prompt tokens: 516
+Completion tokens: 121
+Total tokens: 637
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 674
+Completion tokens: 125
+Total tokens: 799
+Label: no
+Prompt tokens: 672
+Completion tokens: 113
+Total tokens: 785
+Label: no
+Prompt tokens: 670
+Completion tokens: 150
+Total tokens: 820
+Label: no
+Prompt tokens: 673
+Completion tokens: 126
+Total tokens: 799
+Label: no
+Prompt tokens: 675
+Completion tokens: 177
+Total tokens: 852
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 510
+Completion tokens: 133
+Total tokens: 643
+Label: yes
+Prompt tokens: 514
+Completion tokens: 156
+Total tokens: 670
+Label: yes
+Prompt tokens: 506
+Completion tokens: 54
+Total tokens: 560
+Label: no
+Prompt tokens: 503
+Completion tokens: 153
+Total tokens: 656
+Label: no
+Prompt tokens: 520
+Completion tokens: 129
+Total tokens: 649
+Label: yes
+Prompt tokens: 501
+Completion tokens: 111
+Total tokens: 612
+Label: no
+Prompt tokens: 513
+Completion tokens: 86
+Total tokens: 599
+Label: no
+Prompt tokens: 507
+Completion tokens: 136
+Total tokens: 643
+Label: no
+Prompt tokens: 519
+Completion tokens: 145
+Total tokens: 664
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 558
+Completion tokens: 275
+Total tokens: 833
+Label: no
+Prompt tokens: 540
+Completion tokens: 182
+Total tokens: 722
+Label: no
+98it [1:08:30, 43.36s/it]99it [1:09:14, 43.45s/it]100it [1:09:57, 43.35s/it]101it [1:10:45, 44.72s/it]102it [1:11:21, 42.28s/it]103it [1:11:50, 38.28s/it]104it [1:12:38, 41.11s/it]105it [1:13:16, 40.20s/it]106it [1:14:00, 41.40s/it]107it [1:14:46, 42.59s/it]108it [1:15:15, 38.65s/it]109it [1:15:38, 33.78s/it]110it [1:16:17, 35.47s/it]111it [1:17:00, 37.65s/it]112it [1:17:44, 39.51s/it]113it [1:18:29, 41.20s/it]114it [1:19:08, 40.76s/it]115it [1:19:56, 42.75s/it]116it [1:20:44, 44.24s/it]117it [1:21:20, 41.89s/it]Prompt tokens: 546
+Completion tokens: 81
+Total tokens: 627
+Label: no
+Prompt tokens: 543
+Completion tokens: 227
+Total tokens: 770
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 470
+Completion tokens: 69
+Total tokens: 539
+Label: no
+Prompt tokens: 470
+Completion tokens: 71
+Total tokens: 541
+Label: no
+Prompt tokens: 469
+Completion tokens: 157
+Total tokens: 626
+Label: no
+Prompt tokens: 469
+Completion tokens: 120
+Total tokens: 589
+Label: no
+Prompt tokens: 468
+Completion tokens: 102
+Total tokens: 570
+Label: no
+Prompt tokens: 470
+Completion tokens: 47
+Total tokens: 517
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 365
+Completion tokens: 114
+Total tokens: 479
+Label: no
+Prompt tokens: 366
+Completion tokens: 101
+Total tokens: 467
+Label: no
+Prompt tokens: 369
+Completion tokens: 89
+Total tokens: 458
+Label: no
+Prompt tokens: 367
+Completion tokens: 124
+Total tokens: 491
+Label: no
+Prompt tokens: 370
+Completion tokens: 99
+Total tokens: 469
+Label: no
+Prompt tokens: 370
+Completion tokens: 110
+Total tokens: 480
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 451
+Completion tokens: 114
+Total tokens: 565
+Label: yes
+Prompt tokens: 456
+Completion tokens: 186
+Total tokens: 642
+Label: no
+Prompt tokens: 449
+Completion tokens: 115
+Total tokens: 564
+Label: yes
+Prompt tokens: 451
+Completion tokens: 152
+Total tokens: 603
+Label: yes
+Prompt tokens: 443
+Completion tokens: 152
+Total tokens: 595
+Label: yes
+Prompt tokens: 451
+Completion tokens: 267
+Total tokens: 718
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 508
+Completion tokens: 73
+Total tokens: 581
+Label: no
+Prompt tokens: 506
+Completion tokens: 72
+Total tokens: 578
+Label: yes
+Prompt tokens: 517
+Completion tokens: 120
+Total tokens: 637
+Label: no
+Prompt tokens: 507
+Completion tokens: 71
+Total tokens: 578
+Label: no
+Prompt tokens: 506
+Completion tokens: 163
+Total tokens: 669
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 461
+Completion tokens: 105
+Total tokens: 566
+Label: no
+Prompt tokens: 468
+Completion tokens: 90
+Total tokens: 558
+Label: yes
+Prompt tokens: 455
+Completion tokens: 101
+Total tokens: 556
+Label: no
+Prompt tokens: 468
+Completion tokens: 90
+Total tokens: 558
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 644
+Completion tokens: 186
+Total tokens: 830
+Label: no
+Prompt tokens: 645
+Completion tokens: 172
+Total tokens: 817
+Label: no
+Prompt tokens: 643
+Completion tokens: 166
+Total tokens: 809
+Label: yes
+Prompt tokens: 629
+Completion tokens: 151
+Total tokens: 780
+Label: no
+Prompt tokens: 633
+Completion tokens: 175
+Total tokens: 808
+Label: no
+Prompt tokens: 635
+Completion tokens: 171
+Total tokens: 806
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 435
+Completion tokens: 143
+Total tokens: 578
+Label: no
+Prompt tokens: 433
+Completion tokens: 95
+Total tokens: 528
+Label: no
+Prompt tokens: 428
+Completion tokens: 173
+Total tokens: 601
+Label: no
+Prompt tokens: 433
+Completion tokens: 123
+Total tokens: 556
+Label: no
+Prompt tokens: 427
+Completion tokens: 117
+Total tokens: 544
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 529
+Completion tokens: 119
+Total tokens: 648
+Label: no
+Prompt tokens: 543
+Completion tokens: 87
+Total tokens: 630
+Label: no
+Prompt tokens: 541
+Completion tokens: 112
+Total tokens: 653
+Label: no
+Prompt tokens: 538
+Completion tokens: 76
+Total tokens: 614
+Label: no
+Prompt tokens: 546
+Completion tokens: 110
+Total tokens: 656
+Label: no
+Prompt tokens: 546
+Completion tokens: 118
+Total tokens: 664
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 515
+Completion tokens: 123
+Total tokens: 638
+Label: no
+Prompt tokens: 507
+Completion tokens: 167
+Total tokens: 674
+Label: no
+Prompt tokens: 506
+Completion tokens: 96
+Total tokens: 602
+Label: no
+Prompt tokens: 510
+Completion tokens: 164
+Total tokens: 674
+Label: no
+Prompt tokens: 510
+Completion tokens: 68
+Total tokens: 578
+Label: yes
+Prompt tokens: 510
+Completion tokens: 196
+Total tokens: 706
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 435
+Completion tokens: 91
+Total tokens: 526
+Label: no
+Prompt tokens: 435
+Completion tokens: 188
+Total tokens: 623
+Label: no
+Prompt tokens: 435
+Completion tokens: 128
+Total tokens: 563
+Label: yes
+Prompt tokens: 435
+Completion tokens: 122
+Total tokens: 557
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 600
+Completion tokens: 141
+Total tokens: 741
+Label: no
+Prompt tokens: 590
+Completion tokens: 116
+Total tokens: 706
+Label: no
+Prompt tokens: 588
+Completion tokens: 117
+Total tokens: 705
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 664
+Completion tokens: 174
+Total tokens: 838
+Label: yes
+Prompt tokens: 658
+Completion tokens: 147
+Total tokens: 805
+Label: no
+Prompt tokens: 657
+Completion tokens: 181
+Total tokens: 838
+Label: no
+Prompt tokens: 651
+Completion tokens: 162
+Total tokens: 813
+Label: yes
+Prompt tokens: 651
+Completion tokens: 218
+Total tokens: 869
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 338
+Completion tokens: 81
+Total tokens: 419
+Label: no
+Prompt tokens: 339
+Completion tokens: 100
+Total tokens: 439
+Label: no
+Prompt tokens: 340
+Completion tokens: 50
+Total tokens: 390
+Label: no
+Prompt tokens: 338
+Completion tokens: 64
+Total tokens: 402
+Label: no
+Prompt tokens: 343
+Completion tokens: 64
+Total tokens: 407
+Label: no
+Prompt tokens: 340
+Completion tokens: 67
+Total tokens: 407
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 518
+Completion tokens: 95
+Total tokens: 613
+Label: no
+Prompt tokens: 523
+Completion tokens: 135
+Total tokens: 658
+Label: no
+Prompt tokens: 527
+Completion tokens: 154
+Total tokens: 681
+Label: no
+Prompt tokens: 529
+Completion tokens: 116
+Total tokens: 645
+Label: no
+Prompt tokens: 530
+Completion tokens: 79
+Total tokens: 609
+Label: no
+Prompt tokens: 527
+Completion tokens: 124
+Total tokens: 651
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 439
+Completion tokens: 86
+Total tokens: 525
+Label: yes
+Prompt tokens: 441
+Completion tokens: 117
+Total tokens: 558
+Label: no
+Prompt tokens: 444
+Completion tokens: 122
+Total tokens: 566
+Label: no
+Prompt tokens: 442
+Completion tokens: 95
+Total tokens: 537
+Label: yes
+Prompt tokens: 441
+Completion tokens: 111
+Total tokens: 552
+Label: yes
+Prompt tokens: 442
+Completion tokens: 189
+Total tokens: 631
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 550
+Completion tokens: 146
+Total tokens: 696
+Label: no
+Prompt tokens: 552
+Completion tokens: 160
+Total tokens: 712
+Label: no
+Prompt tokens: 552
+Completion tokens: 181
+Total tokens: 733
+Label: no
+Prompt tokens: 548
+Completion tokens: 181
+Total tokens: 729
+Label: no
+Prompt tokens: 548
+Completion tokens: 160
+Total tokens: 708
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 511
+Completion tokens: 118
+Total tokens: 629
+Label: no
+Prompt tokens: 507
+Completion tokens: 193
+Total tokens: 700
+Label: no
+Prompt tokens: 509
+Completion tokens: 123
+Total tokens: 632
+Label: no
+Prompt tokens: 511
+Completion tokens: 275
+Total tokens: 786
+Label: yes
+Prompt tokens: 506
+Completion tokens: 200
+Total tokens: 706
+Label: yes
+Prompt tokens: 509
+Completion tokens: 125
+Total tokens: 634
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 517
+Completion tokens: 132
+Total tokens: 649
+Label: no
+Prompt tokens: 521
+Completion tokens: 139
+Total tokens: 660
+Label: no
+Prompt tokens: 525
+Completion tokens: 184
+Total tokens: 709
+Label: no
+Prompt tokens: 522
+Completion tokens: 144
+Total tokens: 666
+Label: no
+Prompt tokens: 524
+Completion tokens: 117
+Total tokens: 641
+Label: no
+Prompt tokens: 519
+Completion tokens: 106
+Total tokens: 625
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 488
+Completion tokens: 74
+Total tokens: 562
+Label: no
+Prompt tokens: 489
+Completion tokens: 111
+Total tokens: 600
+Label: no
+Prompt tokens: 490
+Completion tokens: 134
+Total tokens: 624
+Label: no
+Prompt tokens: 491
+Completion tokens: 125
+Total tokens: 616
+Label: no
+Prompt tokens: 492
+Completion tokens: 70
+Total tokens: 562
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 503
+118it [1:21:49, 38.12s/it]119it [1:22:41, 42.12s/it]120it [1:23:11, 38.62s/it]121it [1:24:02, 42.38s/it]122it [1:24:59, 46.77s/it]123it [1:25:38, 44.30s/it]124it [1:26:16, 42.44s/it]125it [1:26:49, 39.61s/it]126it [1:27:30, 39.93s/it]127it [1:28:12, 40.71s/it]128it [1:28:55, 41.39s/it]129it [1:29:32, 40.12s/it]130it [1:30:03, 37.34s/it]131it [1:30:26, 32.89s/it]132it [1:30:57, 32.40s/it]133it [1:31:26, 31.46s/it]134it [1:31:56, 30.93s/it]135it [1:32:57, 40.07s/it]136it [1:33:37, 39.86s/it]137it [1:34:19, 40.69s/it]138it [1:34:43, 35.62s/it]Completion tokens: 104
+Total tokens: 607
+Label: no
+Prompt tokens: 515
+Completion tokens: 124
+Total tokens: 639
+Label: no
+Prompt tokens: 508
+Completion tokens: 106
+Total tokens: 614
+Label: no
+Prompt tokens: 511
+Completion tokens: 107
+Total tokens: 618
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 372
+Completion tokens: 94
+Total tokens: 466
+Label: no
+Prompt tokens: 365
+Completion tokens: 66
+Total tokens: 431
+Label: no
+Prompt tokens: 370
+Completion tokens: 115
+Total tokens: 485
+Label: no
+Prompt tokens: 365
+Completion tokens: 84
+Total tokens: 449
+Label: no
+Prompt tokens: 363
+Completion tokens: 124
+Total tokens: 487
+Label: yes
+Prompt tokens: 367
+Completion tokens: 117
+Total tokens: 484
+Label: yes
+Prompt tokens: 363
+Completion tokens: 122
+Total tokens: 485
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 491
+Completion tokens: 147
+Total tokens: 638
+Label: no
+Prompt tokens: 487
+Completion tokens: 117
+Total tokens: 604
+Label: no
+Prompt tokens: 498
+Completion tokens: 175
+Total tokens: 673
+Label: no
+Prompt tokens: 498
+Completion tokens: 149
+Total tokens: 647
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 453
+Completion tokens: 124
+Total tokens: 577
+Label: no
+Prompt tokens: 464
+Completion tokens: 140
+Total tokens: 604
+Label: no
+Prompt tokens: 464
+Completion tokens: 119
+Total tokens: 583
+Label: no
+Prompt tokens: 460
+Completion tokens: 148
+Total tokens: 608
+Label: no
+Prompt tokens: 458
+Completion tokens: 62
+Total tokens: 520
+Label: no
+Prompt tokens: 457
+Completion tokens: 58
+Total tokens: 515
+Label: yes
+Prompt tokens: 461
+Completion tokens: 107
+Total tokens: 568
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 625
+Completion tokens: 186
+Total tokens: 811
+Label: no
+Prompt tokens: 619
+Completion tokens: 207
+Total tokens: 826
+Label: no
+Prompt tokens: 629
+Completion tokens: 258
+Total tokens: 887
+Label: no
+Prompt tokens: 618
+Completion tokens: 232
+Total tokens: 850
+Label: no
+Prompt tokens: 619
+Completion tokens: 174
+Total tokens: 793
+Label: no
+Prompt tokens: 623
+Completion tokens: 134
+Total tokens: 757
+Label: no
+Prompt tokens: 627
+Completion tokens: 168
+Total tokens: 795
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 492
+Completion tokens: 126
+Total tokens: 618
+Label: yes
+Prompt tokens: 493
+Completion tokens: 142
+Total tokens: 635
+Label: yes
+Prompt tokens: 496
+Completion tokens: 169
+Total tokens: 665
+Label: yes
+Prompt tokens: 488
+Completion tokens: 111
+Total tokens: 599
+Label: no
+Prompt tokens: 490
+Completion tokens: 133
+Total tokens: 623
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 426
+Completion tokens: 126
+Total tokens: 552
+Label: yes
+Prompt tokens: 430
+Completion tokens: 134
+Total tokens: 564
+Label: yes
+Prompt tokens: 426
+Completion tokens: 129
+Total tokens: 555
+Label: no
+Prompt tokens: 428
+Completion tokens: 121
+Total tokens: 549
+Label: yes
+Prompt tokens: 422
+Completion tokens: 164
+Total tokens: 586
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 491
+Completion tokens: 158
+Total tokens: 649
+Label: no
+Prompt tokens: 491
+Completion tokens: 156
+Total tokens: 647
+Label: no
+Prompt tokens: 489
+Completion tokens: 185
+Total tokens: 674
+Label: no
+Prompt tokens: 489
+Completion tokens: 224
+Total tokens: 713
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 570
+Completion tokens: 163
+Total tokens: 733
+Label: yes
+Prompt tokens: 570
+Completion tokens: 158
+Total tokens: 728
+Label: no
+Prompt tokens: 564
+Completion tokens: 127
+Total tokens: 691
+Label: yes
+Prompt tokens: 569
+Completion tokens: 127
+Total tokens: 696
+Label: no
+Prompt tokens: 562
+Completion tokens: 155
+Total tokens: 717
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 399
+Completion tokens: 228
+Total tokens: 627
+Label: no
+Prompt tokens: 395
+Completion tokens: 95
+Total tokens: 490
+Label: yes
+Prompt tokens: 396
+Completion tokens: 101
+Total tokens: 497
+Label: no
+Prompt tokens: 395
+Completion tokens: 133
+Total tokens: 528
+Label: no
+Prompt tokens: 400
+Completion tokens: 174
+Total tokens: 574
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 429
+Completion tokens: 122
+Total tokens: 551
+Label: no
+Prompt tokens: 429
+Completion tokens: 181
+Total tokens: 610
+Label: no
+Prompt tokens: 427
+Completion tokens: 149
+Total tokens: 576
+Label: no
+Prompt tokens: 429
+Completion tokens: 139
+Total tokens: 568
+Label: no
+Prompt tokens: 436
+Completion tokens: 128
+Total tokens: 564
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 559
+Completion tokens: 123
+Total tokens: 682
+Label: no
+Prompt tokens: 564
+Completion tokens: 141
+Total tokens: 705
+Label: no
+Prompt tokens: 560
+Completion tokens: 75
+Total tokens: 635
+Label: no
+Prompt tokens: 562
+Completion tokens: 103
+Total tokens: 665
+Label: yes
+Prompt tokens: 564
+Completion tokens: 119
+Total tokens: 683
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 430
+Completion tokens: 176
+Total tokens: 606
+Label: no
+Prompt tokens: 426
+Completion tokens: 120
+Total tokens: 546
+Label: no
+Prompt tokens: 417
+Completion tokens: 128
+Total tokens: 545
+Label: no
+Prompt tokens: 428
+Completion tokens: 135
+Total tokens: 563
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 446
+Completion tokens: 118
+Total tokens: 564
+Label: no
+Prompt tokens: 442
+Completion tokens: 125
+Total tokens: 567
+Label: no
+Prompt tokens: 442
+Completion tokens: 97
+Total tokens: 539
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 516
+Completion tokens: 124
+Total tokens: 640
+Label: no
+Prompt tokens: 507
+Completion tokens: 121
+Total tokens: 628
+Label: no
+Prompt tokens: 510
+Completion tokens: 123
+Total tokens: 633
+Label: yes
+Prompt tokens: 508
+Completion tokens: 143
+Total tokens: 651
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 426
+Completion tokens: 68
+Total tokens: 494
+Label: yes
+Prompt tokens: 434
+Completion tokens: 114
+Total tokens: 548
+Label: yes
+Prompt tokens: 434
+Completion tokens: 65
+Total tokens: 499
+Label: no
+Prompt tokens: 449
+Completion tokens: 119
+Total tokens: 568
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 385
+Completion tokens: 117
+Total tokens: 502
+Label: no
+Prompt tokens: 399
+Completion tokens: 82
+Total tokens: 481
+Label: no
+Prompt tokens: 387
+Completion tokens: 144
+Total tokens: 531
+Label: no
+Prompt tokens: 398
+Completion tokens: 111
+Total tokens: 509
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 531
+Completion tokens: 90
+Total tokens: 621
+Label: no
+Prompt tokens: 522
+Completion tokens: 160
+Total tokens: 682
+Label: no
+Prompt tokens: 527
+Completion tokens: 109
+Total tokens: 636
+Label: no
+Prompt tokens: 526
+Completion tokens: 149
+Total tokens: 675
+Label: no
+Prompt tokens: 550
+Completion tokens: 135
+Total tokens: 685
+Label: no
+Prompt tokens: 533
+Completion tokens: 158
+Total tokens: 691
+Label: no
+Prompt tokens: 531
+Completion tokens: 181
+Total tokens: 712
+Label: no
+Prompt tokens: 544
+Completion tokens: 98
+Total tokens: 642
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 474
+Completion tokens: 120
+Total tokens: 594
+Label: no
+Prompt tokens: 483
+Completion tokens: 119
+Total tokens: 602
+Label: no
+Prompt tokens: 500
+Completion tokens: 138
+Total tokens: 638
+Label: no
+Prompt tokens: 474
+Completion tokens: 115
+Total tokens: 589
+Label: yes
+Prompt tokens: 481
+Completion tokens: 130
+Total tokens: 611
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 353
+Completion tokens: 107
+Total tokens: 460
+Label: no
+Prompt tokens: 354
+Completion tokens: 105
+Total tokens: 459
+Label: no
+Prompt tokens: 353
+Completion tokens: 70
+Total tokens: 423
+Label: no
+Prompt tokens: 356
+Completion tokens: 118
+Total tokens: 474
+Label: no
+Prompt tokens: 358
+Completion tokens: 110
+Total tokens: 468
+Label: no
+Prompt tokens: 357
+Completion tokens: 74
+Total tokens: 431
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 552
+Completion tokens: 208
+Total tokens: 760
+Label: no
+Prompt tokens: 549
+Completion tokens: 190
+Total tokens: 739
+Label: no
+Prompt tokens: 546
+Completion tokens: 100
+Total tokens: 646
+Label: no
+load_subquestions called
+Subquestions found
+139it [1:35:19, 35.82s/it]140it [1:35:56, 35.98s/it]141it [1:36:45, 39.90s/it]142it [1:37:23, 39.36s/it]143it [1:37:59, 38.34s/it]144it [1:38:38, 38.48s/it]145it [1:39:16, 38.42s/it]146it [1:39:55, 38.72s/it]147it [1:40:40, 40.38s/it]148it [1:41:39, 46.02s/it]149it [1:42:09, 41.27s/it]150it [1:42:46, 39.95s/it]151it [1:43:33, 42.07s/it]152it [1:44:10, 40.66s/it]153it [1:45:12, 47.02s/it]154it [1:46:13, 51.24s/it]155it [1:46:45, 45.37s/it]156it [1:47:15, 40.72s/it]157it [1:48:07, 44.14s/it]Prompt tokens: 526
+Completion tokens: 72
+Total tokens: 598
+Label: yes
+Prompt tokens: 521
+Completion tokens: 86
+Total tokens: 607
+Label: no
+Prompt tokens: 529
+Completion tokens: 88
+Total tokens: 617
+Label: no
+Prompt tokens: 523
+Completion tokens: 131
+Total tokens: 654
+Label: no
+Prompt tokens: 521
+Completion tokens: 73
+Total tokens: 594
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 419
+Completion tokens: 146
+Total tokens: 565
+Label: yes
+Prompt tokens: 417
+Completion tokens: 101
+Total tokens: 518
+Label: no
+Prompt tokens: 420
+Completion tokens: 148
+Total tokens: 568
+Label: no
+Prompt tokens: 420
+Completion tokens: 111
+Total tokens: 531
+Label: no
+Prompt tokens: 419
+Completion tokens: 75
+Total tokens: 494
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 508
+Completion tokens: 230
+Total tokens: 738
+Label: no
+Prompt tokens: 507
+Completion tokens: 192
+Total tokens: 699
+Label: no
+Prompt tokens: 506
+Completion tokens: 225
+Total tokens: 731
+Label: yes
+Prompt tokens: 507
+Completion tokens: 119
+Total tokens: 626
+Label: yes
+Prompt tokens: 508
+Completion tokens: 127
+Total tokens: 635
+Label: no
+Prompt tokens: 509
+Completion tokens: 186
+Total tokens: 695
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 480
+Completion tokens: 131
+Total tokens: 611
+Label: no
+Prompt tokens: 484
+Completion tokens: 108
+Total tokens: 592
+Label: no
+Prompt tokens: 493
+Completion tokens: 130
+Total tokens: 623
+Label: no
+Prompt tokens: 489
+Completion tokens: 138
+Total tokens: 627
+Label: no
+Prompt tokens: 492
+Completion tokens: 126
+Total tokens: 618
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 570
+Completion tokens: 97
+Total tokens: 667
+Label: yes
+Prompt tokens: 572
+Completion tokens: 85
+Total tokens: 657
+Label: yes
+Prompt tokens: 576
+Completion tokens: 97
+Total tokens: 673
+Label: yes
+Prompt tokens: 579
+Completion tokens: 106
+Total tokens: 685
+Label: yes
+Prompt tokens: 580
+Completion tokens: 100
+Total tokens: 680
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 453
+Completion tokens: 89
+Total tokens: 542
+Label: no
+Prompt tokens: 458
+Completion tokens: 127
+Total tokens: 585
+Label: no
+Prompt tokens: 454
+Completion tokens: 97
+Total tokens: 551
+Label: no
+Prompt tokens: 460
+Completion tokens: 156
+Total tokens: 616
+Label: no
+Prompt tokens: 458
+Completion tokens: 256
+Total tokens: 714
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 522
+Completion tokens: 96
+Total tokens: 618
+Label: no
+Prompt tokens: 525
+Completion tokens: 107
+Total tokens: 632
+Label: no
+Prompt tokens: 508
+Completion tokens: 197
+Total tokens: 705
+Label: no
+Prompt tokens: 522
+Completion tokens: 145
+Total tokens: 667
+Label: no
+Prompt tokens: 510
+Completion tokens: 49
+Total tokens: 559
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 540
+Completion tokens: 127
+Total tokens: 667
+Label: no
+Prompt tokens: 539
+Completion tokens: 211
+Total tokens: 750
+Label: no
+Prompt tokens: 539
+Completion tokens: 236
+Total tokens: 775
+Label: no
+Prompt tokens: 548
+Completion tokens: 185
+Total tokens: 733
+Label: no
+Prompt tokens: 546
+Completion tokens: 98
+Total tokens: 644
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 428
+Completion tokens: 100
+Total tokens: 528
+Label: no
+Prompt tokens: 431
+Completion tokens: 68
+Total tokens: 499
+Label: no
+Prompt tokens: 422
+Completion tokens: 117
+Total tokens: 539
+Label: no
+Prompt tokens: 429
+Completion tokens: 92
+Total tokens: 521
+Label: no
+Prompt tokens: 434
+Completion tokens: 100
+Total tokens: 534
+Label: no
+Prompt tokens: 424
+Completion tokens: 96
+Total tokens: 520
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 557
+Completion tokens: 145
+Total tokens: 702
+Label: no
+Prompt tokens: 557
+Completion tokens: 62
+Total tokens: 619
+Label: no
+Prompt tokens: 554
+Completion tokens: 98
+Total tokens: 652
+Label: no
+Prompt tokens: 550
+Completion tokens: 99
+Total tokens: 649
+Label: no
+Prompt tokens: 555
+Completion tokens: 135
+Total tokens: 690
+Label: no
+Prompt tokens: 550
+Completion tokens: 99
+Total tokens: 649
+Label: no
+Prompt tokens: 555
+Completion tokens: 92
+Total tokens: 647
+Label: no
+Prompt tokens: 555
+Completion tokens: 137
+Total tokens: 692
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 575
+Completion tokens: 92
+Total tokens: 667
+Label: no
+Prompt tokens: 551
+Completion tokens: 141
+Total tokens: 692
+Label: no
+Prompt tokens: 549
+Completion tokens: 88
+Total tokens: 637
+Label: no
+Prompt tokens: 547
+Completion tokens: 101
+Total tokens: 648
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 586
+Completion tokens: 99
+Total tokens: 685
+Label: no
+Prompt tokens: 578
+Completion tokens: 68
+Total tokens: 646
+Label: yes
+Prompt tokens: 577
+Completion tokens: 107
+Total tokens: 684
+Label: no
+Prompt tokens: 578
+Completion tokens: 96
+Total tokens: 674
+Label: no
+Prompt tokens: 587
+Completion tokens: 203
+Total tokens: 790
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 358
+Completion tokens: 85
+Total tokens: 443
+Label: no
+Prompt tokens: 357
+Completion tokens: 84
+Total tokens: 441
+Label: no
+Prompt tokens: 358
+Completion tokens: 114
+Total tokens: 472
+Label: no
+Prompt tokens: 361
+Completion tokens: 86
+Total tokens: 447
+Label: no
+Prompt tokens: 358
+Completion tokens: 135
+Total tokens: 493
+Label: no
+Prompt tokens: 358
+Completion tokens: 110
+Total tokens: 468
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 468
+Completion tokens: 87
+Total tokens: 555
+Label: no
+Prompt tokens: 473
+Completion tokens: 160
+Total tokens: 633
+Label: no
+Prompt tokens: 467
+Completion tokens: 89
+Total tokens: 556
+Label: no
+Prompt tokens: 470
+Completion tokens: 95
+Total tokens: 565
+Label: no
+Prompt tokens: 466
+Completion tokens: 145
+Total tokens: 611
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 409
+Completion tokens: 71
+Total tokens: 480
+Label: no
+Prompt tokens: 394
+Completion tokens: 96
+Total tokens: 490
+Label: no
+Prompt tokens: 398
+Completion tokens: 130
+Total tokens: 528
+Label: no
+Prompt tokens: 408
+Completion tokens: 83
+Total tokens: 491
+Label: no
+Prompt tokens: 394
+Completion tokens: 120
+Total tokens: 514
+Label: no
+Prompt tokens: 398
+Completion tokens: 118
+Total tokens: 516
+Label: no
+Prompt tokens: 411
+Completion tokens: 140
+Total tokens: 551
+Label: yes
+Prompt tokens: 412
+Completion tokens: 174
+Total tokens: 586
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 537
+Completion tokens: 131
+Total tokens: 668
+Label: no
+Prompt tokens: 540
+Completion tokens: 136
+Total tokens: 676
+Label: no
+Prompt tokens: 540
+Completion tokens: 195
+Total tokens: 735
+Label: no
+Prompt tokens: 533
+Completion tokens: 115
+Total tokens: 648
+Label: no
+Prompt tokens: 526
+Completion tokens: 74
+Total tokens: 600
+Label: no
+Prompt tokens: 520
+Completion tokens: 112
+Total tokens: 632
+Label: no
+Prompt tokens: 528
+Completion tokens: 171
+Total tokens: 699
+Label: no
+Prompt tokens: 533
+Completion tokens: 160
+Total tokens: 693
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 491
+Completion tokens: 113
+Total tokens: 604
+Label: no
+Prompt tokens: 488
+Completion tokens: 151
+Total tokens: 639
+Label: yes
+Prompt tokens: 487
+Completion tokens: 158
+Total tokens: 645
+Label: no
+Prompt tokens: 489
+Completion tokens: 142
+Total tokens: 631
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 440
+Completion tokens: 142
+Total tokens: 582
+Label: no
+Prompt tokens: 428
+Completion tokens: 148
+Total tokens: 576
+Label: no
+Prompt tokens: 433
+Completion tokens: 115
+Total tokens: 548
+Label: no
+Prompt tokens: 433
+Completion tokens: 81
+Total tokens: 514
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 493
+Completion tokens: 149
+Total tokens: 642
+Label: no
+Prompt tokens: 499
+Completion tokens: 118
+Total tokens: 617
+Label: yes
+Prompt tokens: 492
+Completion tokens: 72
+Total tokens: 564
+Label: yes
+Prompt tokens: 493
+Completion tokens: 91
+Total tokens: 584
+Label: no
+Prompt tokens: 493
+Completion tokens: 87
+Total tokens: 580
+Label: yes
+Prompt tokens: 491
+Completion tokens: 87
+Total tokens: 578
+Label: yes
+Prompt tokens: 491
+Completion tokens: 113
+Total tokens: 604
+Label: no
+158it [1:48:47, 42.95s/it]159it [1:49:24, 41.27s/it]160it [1:49:56, 38.45s/it]161it [1:50:44, 41.19s/it]162it [1:51:22, 40.26s/it]163it [1:52:06, 41.46s/it]164it [1:52:37, 38.23s/it]165it [1:53:32, 43.35s/it]166it [1:54:26, 46.38s/it]167it [1:55:35, 53.14s/it]168it [1:56:19, 50.53s/it]169it [1:56:59, 47.50s/it]170it [1:58:05, 52.95s/it]171it [1:58:49, 50.20s/it]172it [1:59:28, 46.89s/it]173it [2:00:07, 44.44s/it]174it [2:00:40, 41.22s/it]175it [2:01:33, 44.48s/it]load_subquestions called
+Subquestions found
+Prompt tokens: 591
+Completion tokens: 103
+Total tokens: 694
+Label: no
+Prompt tokens: 593
+Completion tokens: 186
+Total tokens: 779
+Label: no
+Prompt tokens: 582
+Completion tokens: 265
+Total tokens: 847
+Label: yes
+Prompt tokens: 584
+Completion tokens: 177
+Total tokens: 761
+Label: no
+Prompt tokens: 583
+Completion tokens: 135
+Total tokens: 718
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 522
+Completion tokens: 58
+Total tokens: 580
+Label: no
+Prompt tokens: 522
+Completion tokens: 128
+Total tokens: 650
+Label: no
+Prompt tokens: 522
+Completion tokens: 103
+Total tokens: 625
+Label: no
+Prompt tokens: 524
+Completion tokens: 85
+Total tokens: 609
+Label: no
+Prompt tokens: 527
+Completion tokens: 148
+Total tokens: 675
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 359
+Completion tokens: 129
+Total tokens: 488
+Label: yes
+Prompt tokens: 354
+Completion tokens: 162
+Total tokens: 516
+Label: no
+Prompt tokens: 357
+Completion tokens: 127
+Total tokens: 484
+Label: no
+Prompt tokens: 357
+Completion tokens: 118
+Total tokens: 475
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 476
+Completion tokens: 192
+Total tokens: 668
+Label: yes
+Prompt tokens: 463
+Completion tokens: 120
+Total tokens: 583
+Label: yes
+Prompt tokens: 464
+Completion tokens: 154
+Total tokens: 618
+Label: yes
+Prompt tokens: 467
+Completion tokens: 167
+Total tokens: 634
+Label: yes
+Prompt tokens: 461
+Completion tokens: 122
+Total tokens: 583
+Label: yes
+Prompt tokens: 463
+Completion tokens: 139
+Total tokens: 602
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 571
+Completion tokens: 162
+Total tokens: 733
+Label: no
+Prompt tokens: 575
+Completion tokens: 91
+Total tokens: 666
+Label: no
+Prompt tokens: 572
+Completion tokens: 136
+Total tokens: 708
+Label: no
+Prompt tokens: 569
+Completion tokens: 107
+Total tokens: 676
+Label: no
+Prompt tokens: 573
+Completion tokens: 93
+Total tokens: 666
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 435
+Completion tokens: 94
+Total tokens: 529
+Label: no
+Prompt tokens: 429
+Completion tokens: 111
+Total tokens: 540
+Label: no
+Prompt tokens: 430
+Completion tokens: 92
+Total tokens: 522
+Label: no
+Prompt tokens: 435
+Completion tokens: 110
+Total tokens: 545
+Label: no
+Prompt tokens: 429
+Completion tokens: 97
+Total tokens: 526
+Label: no
+Prompt tokens: 430
+Completion tokens: 100
+Total tokens: 530
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 481
+Completion tokens: 143
+Total tokens: 624
+Label: no
+Prompt tokens: 480
+Completion tokens: 135
+Total tokens: 615
+Label: no
+Prompt tokens: 481
+Completion tokens: 100
+Total tokens: 581
+Label: no
+Prompt tokens: 475
+Completion tokens: 125
+Total tokens: 600
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 591
+Completion tokens: 128
+Total tokens: 719
+Label: no
+Prompt tokens: 591
+Completion tokens: 104
+Total tokens: 695
+Label: no
+Prompt tokens: 587
+Completion tokens: 101
+Total tokens: 688
+Label: no
+Prompt tokens: 591
+Completion tokens: 132
+Total tokens: 723
+Label: no
+Prompt tokens: 590
+Completion tokens: 115
+Total tokens: 705
+Label: yes
+Prompt tokens: 591
+Completion tokens: 133
+Total tokens: 724
+Label: no
+Prompt tokens: 602
+Completion tokens: 115
+Total tokens: 717
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 340
+Completion tokens: 132
+Total tokens: 472
+Label: no
+Prompt tokens: 332
+Completion tokens: 133
+Total tokens: 465
+Label: no
+Prompt tokens: 345
+Completion tokens: 76
+Total tokens: 421
+Label: no
+Prompt tokens: 338
+Completion tokens: 119
+Total tokens: 457
+Label: no
+Prompt tokens: 341
+Completion tokens: 98
+Total tokens: 439
+Label: no
+Prompt tokens: 339
+Completion tokens: 117
+Total tokens: 456
+Label: no
+Prompt tokens: 336
+Completion tokens: 73
+Total tokens: 409
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 369
+Completion tokens: 99
+Total tokens: 468
+Label: no
+Prompt tokens: 372
+Completion tokens: 143
+Total tokens: 515
+Label: no
+Prompt tokens: 379
+Completion tokens: 112
+Total tokens: 491
+Label: no
+Prompt tokens: 369
+Completion tokens: 101
+Total tokens: 470
+Label: no
+Prompt tokens: 368
+Completion tokens: 88
+Total tokens: 456
+Label: no
+Prompt tokens: 370
+Completion tokens: 151
+Total tokens: 521
+Label: no
+Prompt tokens: 367
+Completion tokens: 156
+Total tokens: 523
+Label: no
+Prompt tokens: 356
+Completion tokens: 124
+Total tokens: 480
+Label: no
+Prompt tokens: 370
+Completion tokens: 101
+Total tokens: 471
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 436
+Completion tokens: 93
+Total tokens: 529
+Label: no
+Prompt tokens: 438
+Completion tokens: 84
+Total tokens: 522
+Label: no
+Prompt tokens: 441
+Completion tokens: 130
+Total tokens: 571
+Label: no
+Prompt tokens: 429
+Completion tokens: 99
+Total tokens: 528
+Label: no
+Prompt tokens: 439
+Completion tokens: 111
+Total tokens: 550
+Label: no
+Prompt tokens: 429
+Completion tokens: 102
+Total tokens: 531
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 564
+Completion tokens: 231
+Total tokens: 795
+Label: yes
+Prompt tokens: 562
+Completion tokens: 209
+Total tokens: 771
+Label: no
+Prompt tokens: 560
+Completion tokens: 162
+Total tokens: 722
+Label: no
+Prompt tokens: 559
+Completion tokens: 117
+Total tokens: 676
+Label: no
+Prompt tokens: 565
+Completion tokens: 118
+Total tokens: 683
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 583
+Completion tokens: 129
+Total tokens: 712
+Label: no
+Prompt tokens: 582
+Completion tokens: 128
+Total tokens: 710
+Label: no
+Prompt tokens: 589
+Completion tokens: 120
+Total tokens: 709
+Label: no
+Prompt tokens: 582
+Completion tokens: 162
+Total tokens: 744
+Label: no
+Prompt tokens: 582
+Completion tokens: 136
+Total tokens: 718
+Label: no
+Prompt tokens: 586
+Completion tokens: 205
+Total tokens: 791
+Label: no
+Prompt tokens: 577
+Completion tokens: 116
+Total tokens: 693
+Label: no
+Prompt tokens: 576
+Completion tokens: 128
+Total tokens: 704
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 519
+Completion tokens: 79
+Total tokens: 598
+Label: no
+Prompt tokens: 501
+Completion tokens: 121
+Total tokens: 622
+Label: no
+Prompt tokens: 513
+Completion tokens: 133
+Total tokens: 646
+Label: no
+Prompt tokens: 508
+Completion tokens: 97
+Total tokens: 605
+Label: no
+Prompt tokens: 511
+Completion tokens: 85
+Total tokens: 596
+Label: no
+Prompt tokens: 513
+Completion tokens: 97
+Total tokens: 610
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 613
+Completion tokens: 184
+Total tokens: 797
+Label: no
+Prompt tokens: 611
+Completion tokens: 149
+Total tokens: 760
+Label: no
+Prompt tokens: 620
+Completion tokens: 106
+Total tokens: 726
+Label: no
+Prompt tokens: 620
+Completion tokens: 120
+Total tokens: 740
+Label: no
+Prompt tokens: 616
+Completion tokens: 142
+Total tokens: 758
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 427
+Completion tokens: 124
+Total tokens: 551
+Label: no
+Prompt tokens: 428
+Completion tokens: 132
+Total tokens: 560
+Label: no
+Prompt tokens: 430
+Completion tokens: 153
+Total tokens: 583
+Label: no
+Prompt tokens: 418
+Completion tokens: 100
+Total tokens: 518
+Label: no
+Prompt tokens: 418
+Completion tokens: 109
+Total tokens: 527
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 614
+Completion tokens: 318
+Total tokens: 932
+Label: no
+Prompt tokens: 609
+Completion tokens: 169
+Total tokens: 778
+Label: no
+Prompt tokens: 603
+Completion tokens: 132
+Total tokens: 735
+Label: no
+Prompt tokens: 597
+Completion tokens: 249
+Total tokens: 846
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 615
+Completion tokens: 90
+Total tokens: 705
+Label: no
+Prompt tokens: 617
+Completion tokens: 137
+Total tokens: 754
+Label: no
+Prompt tokens: 612
+Completion tokens: 177
+Total tokens: 789
+Label: no
+Prompt tokens: 612
+Completion tokens: 100
+Total tokens: 712
+Label: no
+Prompt tokens: 608
+Completion tokens: 112
+Total tokens: 720
+Label: yes
+Prompt tokens: 611
+Completion tokens: 116
+Total tokens: 727
+Label: no
+Prompt tokens: 611
+Completion tokens: 92
+Total tokens: 703
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 522
+Completion tokens: 100
+Total tokens: 622
+Label: no
+176it [2:02:03, 40.15s/it]177it [2:02:37, 38.32s/it]178it [2:03:37, 45.02s/it]179it [2:04:14, 42.40s/it]180it [2:05:06, 45.39s/it]181it [2:05:43, 42.96s/it]182it [2:06:31, 44.41s/it]183it [2:07:17, 44.76s/it]184it [2:08:19, 50.02s/it]185it [2:08:57, 46.43s/it]186it [2:09:42, 46.14s/it]187it [2:10:37, 48.58s/it]188it [2:11:26, 48.80s/it]189it [2:12:36, 55.02s/it]190it [2:13:13, 49.69s/it]191it [2:13:34, 41.15s/it]192it [2:14:12, 40.19s/it]193it [2:14:52, 40.07s/it]Prompt tokens: 521
+Completion tokens: 87
+Total tokens: 608
+Label: no
+Prompt tokens: 526
+Completion tokens: 94
+Total tokens: 620
+Label: no
+Prompt tokens: 521
+Completion tokens: 145
+Total tokens: 666
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 451
+Completion tokens: 71
+Total tokens: 522
+Label: no
+Prompt tokens: 454
+Completion tokens: 72
+Total tokens: 526
+Label: no
+Prompt tokens: 453
+Completion tokens: 69
+Total tokens: 522
+Label: no
+Prompt tokens: 453
+Completion tokens: 86
+Total tokens: 539
+Label: yes
+Prompt tokens: 454
+Completion tokens: 72
+Total tokens: 526
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 487
+Completion tokens: 122
+Total tokens: 609
+Label: no
+Prompt tokens: 485
+Completion tokens: 124
+Total tokens: 609
+Label: no
+Prompt tokens: 491
+Completion tokens: 99
+Total tokens: 590
+Label: no
+Prompt tokens: 485
+Completion tokens: 116
+Total tokens: 601
+Label: no
+Prompt tokens: 482
+Completion tokens: 181
+Total tokens: 663
+Label: yes
+Prompt tokens: 482
+Completion tokens: 152
+Total tokens: 634
+Label: no
+Prompt tokens: 483
+Completion tokens: 139
+Total tokens: 622
+Label: no
+Prompt tokens: 490
+Completion tokens: 135
+Total tokens: 625
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 412
+Completion tokens: 94
+Total tokens: 506
+Label: yes
+Prompt tokens: 404
+Completion tokens: 96
+Total tokens: 500
+Label: yes
+Prompt tokens: 412
+Completion tokens: 94
+Total tokens: 506
+Label: yes
+Prompt tokens: 413
+Completion tokens: 103
+Total tokens: 516
+Label: yes
+Prompt tokens: 412
+Completion tokens: 111
+Total tokens: 523
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 458
+Completion tokens: 112
+Total tokens: 570
+Label: no
+Prompt tokens: 450
+Completion tokens: 89
+Total tokens: 539
+Label: no
+Prompt tokens: 455
+Completion tokens: 143
+Total tokens: 598
+Label: no
+Prompt tokens: 458
+Completion tokens: 105
+Total tokens: 563
+Label: no
+Prompt tokens: 451
+Completion tokens: 92
+Total tokens: 543
+Label: no
+Prompt tokens: 449
+Completion tokens: 120
+Total tokens: 569
+Label: no
+Prompt tokens: 457
+Completion tokens: 119
+Total tokens: 576
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 585
+Completion tokens: 134
+Total tokens: 719
+Label: no
+Prompt tokens: 572
+Completion tokens: 87
+Total tokens: 659
+Label: no
+Prompt tokens: 584
+Completion tokens: 130
+Total tokens: 714
+Label: no
+Prompt tokens: 571
+Completion tokens: 55
+Total tokens: 626
+Label: no
+Prompt tokens: 571
+Completion tokens: 97
+Total tokens: 668
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 453
+Completion tokens: 48
+Total tokens: 501
+Label: no
+Prompt tokens: 453
+Completion tokens: 145
+Total tokens: 598
+Label: no
+Prompt tokens: 449
+Completion tokens: 102
+Total tokens: 551
+Label: no
+Prompt tokens: 447
+Completion tokens: 146
+Total tokens: 593
+Label: no
+Prompt tokens: 450
+Completion tokens: 83
+Total tokens: 533
+Label: no
+Prompt tokens: 451
+Completion tokens: 98
+Total tokens: 549
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 575
+Completion tokens: 109
+Total tokens: 684
+Label: yes
+Prompt tokens: 570
+Completion tokens: 130
+Total tokens: 700
+Label: no
+Prompt tokens: 568
+Completion tokens: 126
+Total tokens: 694
+Label: no
+Prompt tokens: 570
+Completion tokens: 148
+Total tokens: 718
+Label: no
+Prompt tokens: 570
+Completion tokens: 124
+Total tokens: 694
+Label: yes
+Prompt tokens: 577
+Completion tokens: 200
+Total tokens: 777
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 581
+Completion tokens: 169
+Total tokens: 750
+Label: no
+Prompt tokens: 583
+Completion tokens: 167
+Total tokens: 750
+Label: no
+Prompt tokens: 575
+Completion tokens: 138
+Total tokens: 713
+Label: yes
+Prompt tokens: 578
+Completion tokens: 144
+Total tokens: 722
+Label: no
+Prompt tokens: 579
+Completion tokens: 157
+Total tokens: 736
+Label: no
+Prompt tokens: 574
+Completion tokens: 73
+Total tokens: 647
+Label: no
+Prompt tokens: 575
+Completion tokens: 188
+Total tokens: 763
+Label: no
+Prompt tokens: 576
+Completion tokens: 151
+Total tokens: 727
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 486
+Completion tokens: 125
+Total tokens: 611
+Label: no
+Prompt tokens: 476
+Completion tokens: 112
+Total tokens: 588
+Label: no
+Prompt tokens: 473
+Completion tokens: 120
+Total tokens: 593
+Label: no
+Prompt tokens: 471
+Completion tokens: 103
+Total tokens: 574
+Label: no
+Prompt tokens: 477
+Completion tokens: 132
+Total tokens: 609
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 581
+Completion tokens: 139
+Total tokens: 720
+Label: no
+Prompt tokens: 574
+Completion tokens: 141
+Total tokens: 715
+Label: no
+Prompt tokens: 571
+Completion tokens: 176
+Total tokens: 747
+Label: yes
+Prompt tokens: 582
+Completion tokens: 96
+Total tokens: 678
+Label: no
+Prompt tokens: 588
+Completion tokens: 134
+Total tokens: 722
+Label: no
+Prompt tokens: 571
+Completion tokens: 140
+Total tokens: 711
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 529
+Completion tokens: 162
+Total tokens: 691
+Label: no
+Prompt tokens: 529
+Completion tokens: 134
+Total tokens: 663
+Label: no
+Prompt tokens: 531
+Completion tokens: 137
+Total tokens: 668
+Label: no
+Prompt tokens: 532
+Completion tokens: 141
+Total tokens: 673
+Label: no
+Prompt tokens: 529
+Completion tokens: 146
+Total tokens: 675
+Label: no
+Prompt tokens: 532
+Completion tokens: 137
+Total tokens: 669
+Label: no
+Prompt tokens: 531
+Completion tokens: 192
+Total tokens: 723
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 447
+Completion tokens: 97
+Total tokens: 544
+Label: no
+Prompt tokens: 431
+Completion tokens: 170
+Total tokens: 601
+Label: no
+Prompt tokens: 444
+Completion tokens: 115
+Total tokens: 559
+Label: no
+Prompt tokens: 450
+Completion tokens: 127
+Total tokens: 577
+Label: no
+Prompt tokens: 442
+Completion tokens: 121
+Total tokens: 563
+Label: yes
+Prompt tokens: 442
+Completion tokens: 158
+Total tokens: 600
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 450
+Completion tokens: 114
+Total tokens: 564
+Label: yes
+Prompt tokens: 437
+Completion tokens: 93
+Total tokens: 530
+Label: no
+Prompt tokens: 441
+Completion tokens: 118
+Total tokens: 559
+Label: yes
+Prompt tokens: 438
+Completion tokens: 127
+Total tokens: 565
+Label: no
+Prompt tokens: 444
+Completion tokens: 110
+Total tokens: 554
+Label: yes
+Prompt tokens: 454
+Completion tokens: 92
+Total tokens: 546
+Label: yes
+Prompt tokens: 438
+Completion tokens: 86
+Total tokens: 524
+Label: no
+Prompt tokens: 456
+Completion tokens: 131
+Total tokens: 587
+Label: no
+Prompt tokens: 448
+Completion tokens: 134
+Total tokens: 582
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 615
+Completion tokens: 109
+Total tokens: 724
+Label: no
+Prompt tokens: 616
+Completion tokens: 137
+Total tokens: 753
+Label: no
+Prompt tokens: 619
+Completion tokens: 84
+Total tokens: 703
+Label: yes
+Prompt tokens: 620
+Completion tokens: 83
+Total tokens: 703
+Label: no
+Prompt tokens: 622
+Completion tokens: 114
+Total tokens: 736
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 335
+Completion tokens: 93
+Total tokens: 428
+Label: no
+Prompt tokens: 333
+Completion tokens: 62
+Total tokens: 395
+Label: no
+Prompt tokens: 322
+Completion tokens: 94
+Total tokens: 416
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 597
+Completion tokens: 107
+Total tokens: 704
+Label: no
+Prompt tokens: 601
+Completion tokens: 127
+Total tokens: 728
+Label: no
+Prompt tokens: 596
+Completion tokens: 127
+Total tokens: 723
+Label: no
+Prompt tokens: 596
+Completion tokens: 81
+Total tokens: 677
+Label: no
+Prompt tokens: 599
+Completion tokens: 107
+Total tokens: 706
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 432
+Completion tokens: 134
+Total tokens: 566
+Label: no
+Prompt tokens: 429
+Completion tokens: 153
+Total tokens: 582
+Label: no
+Prompt tokens: 434
+Completion tokens: 182
+Total tokens: 616
+Label: no
+Prompt tokens: 429
+Completion tokens: 120
+Total tokens: 549
+Label: no
+Prompt tokens: 438
+Completion tokens: 123
+Total tokens: 561
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 354
+Completion tokens: 115
+Total tokens: 469
+Label: yes
+Prompt tokens: 359
+Completion tokens: 105
+Total tokens: 464
+194it [2:15:45, 43.92s/it]195it [2:16:22, 41.93s/it]196it [2:17:05, 42.28s/it]197it [2:17:34, 38.26s/it]198it [2:18:13, 38.36s/it]199it [2:18:43, 36.09s/it]200it [2:19:12, 33.97s/it]200it [2:19:12, 41.76s/it]
+Label: yes
+Prompt tokens: 353
+Completion tokens: 117
+Total tokens: 470
+Label: no
+Prompt tokens: 368
+Completion tokens: 126
+Total tokens: 494
+Label: yes
+Prompt tokens: 354
+Completion tokens: 65
+Total tokens: 419
+Label: yes
+Prompt tokens: 358
+Completion tokens: 111
+Total tokens: 469
+Label: yes
+Prompt tokens: 358
+Completion tokens: 103
+Total tokens: 461
+Label: yes
+load_subquestions called
+Subquestions found
+Prompt tokens: 451
+Completion tokens: 96
+Total tokens: 547
+Label: no
+Prompt tokens: 452
+Completion tokens: 144
+Total tokens: 596
+Label: no
+Prompt tokens: 450
+Completion tokens: 110
+Total tokens: 560
+Label: no
+Prompt tokens: 447
+Completion tokens: 140
+Total tokens: 587
+Label: no
+Prompt tokens: 451
+Completion tokens: 95
+Total tokens: 546
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 450
+Completion tokens: 99
+Total tokens: 549
+Label: no
+Prompt tokens: 450
+Completion tokens: 83
+Total tokens: 533
+Label: no
+Prompt tokens: 445
+Completion tokens: 75
+Total tokens: 520
+Label: no
+Prompt tokens: 443
+Completion tokens: 56
+Total tokens: 499
+Label: no
+Prompt tokens: 453
+Completion tokens: 100
+Total tokens: 553
+Label: no
+Prompt tokens: 451
+Completion tokens: 81
+Total tokens: 532
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 563
+Completion tokens: 88
+Total tokens: 651
+Label: no
+Prompt tokens: 550
+Completion tokens: 104
+Total tokens: 654
+Label: no
+Prompt tokens: 562
+Completion tokens: 87
+Total tokens: 649
+Label: no
+Prompt tokens: 555
+Completion tokens: 88
+Total tokens: 643
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 572
+Completion tokens: 123
+Total tokens: 695
+Label: no
+Prompt tokens: 565
+Completion tokens: 75
+Total tokens: 640
+Label: no
+Prompt tokens: 570
+Completion tokens: 120
+Total tokens: 690
+Label: no
+Prompt tokens: 567
+Completion tokens: 124
+Total tokens: 691
+Label: yes
+Prompt tokens: 565
+Completion tokens: 169
+Total tokens: 734
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 401
+Completion tokens: 132
+Total tokens: 533
+Label: no
+Prompt tokens: 395
+Completion tokens: 105
+Total tokens: 500
+Label: no
+Prompt tokens: 405
+Completion tokens: 141
+Total tokens: 546
+Label: no
+Prompt tokens: 407
+Completion tokens: 105
+Total tokens: 512
+Label: no
+load_subquestions called
+Subquestions found
+Prompt tokens: 439
+Completion tokens: 88
+Total tokens: 527
+Label: no
+Prompt tokens: 440
+Completion tokens: 92
+Total tokens: 532
+Label: no
+Prompt tokens: 433
+Completion tokens: 115
+Total tokens: 548
+Label: yes
+Prompt tokens: 444
+Completion tokens: 117
+Total tokens: 561
+Label: no
+Total prompt tokens: 537195
+Total completion tokens: 134969
+Total tokens: 672164

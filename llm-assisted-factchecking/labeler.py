@@ -28,7 +28,7 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
             for subquestion in subqs:
                 
                 prompt = label_prompt
-                prompt += f"Answer the following question with one of these two options: yes/no. Your first sentence should be either yes or no followed by a dot (.). Afterwards give justification for your answer.\nDO ONLY use the following information when making the judgment: {all_summaries}\nQuestion: {subquestion}\nAnswer:"
+                prompt += f"Answer the following question with one of these two options: yes/no. Your first sentence should be either yes or no followed by a dot (.). Afterwards give how confident you are in your answer with one of these options: High, Medium, Low. Finally give justification for your answer.\nDO ONLY use the following information when making the judgment: {all_summaries}\nQuestion: {subquestion}\nAnswer:"
                 time.sleep(5) # Sleep for 5 seconds to avoid exceeding the quota
                 answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model_name, system_message='You are a helpful assistant that is helping with fact checking a claim using only the given information', user_message=prompt)
                 predicted_label, _, justification = answer.partition('.')

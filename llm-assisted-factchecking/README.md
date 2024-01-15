@@ -100,5 +100,10 @@ python3 -m evidence.summarize \
 Here the summaries are given to the LLM with the subquestion to answer it with yes or no.
 
 ```bash
-python3 veracity_classifier.py 
+python3 -m labeler \
+    --corpus_path 'DataProcessed/summaries_final.jsonl' \
+    --test_path 'ClaimDecomp/test.jsonl' \
+    --subquestions_path 'ClaimDecomp/subquestions_finetuned.jsonl' \
+    --output_path 'DataProcessed/labels.jsonl' \
+    --model_name 'meta-llama/Llama-2-70b-chat-hf' 
 ```
