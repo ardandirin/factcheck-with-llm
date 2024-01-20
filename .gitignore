@@ -4,5 +4,5 @@ __pycache__/
 .DS_Store
 code-archive/
 .vscode/launch.json
-llm-assisted-factchecking/DataProcessed/answers.jsonl
+/DataProcessed/answers.jsonl
 ```
