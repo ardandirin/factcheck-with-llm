@@ -40,7 +40,7 @@ def main(labels_path, gold_labels, predictions):
     report = classification_report(gold_labels, predictions, labels=labels, output_dict=True)
     matrix = confusion_matrix(gold_labels, predictions, labels=labels)
 
-    pd.set_option('display.precision', 4)
+    pd.set_option('display.precision', 2)
     report_df = pd.DataFrame(report).transpose()
     print(report_df)
 

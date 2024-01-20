@@ -16,6 +16,21 @@ def convert_date_to_ymd(date_string):
     date_obj = parse(date_string)
     return date_obj.strftime('%Y%m%d')
 
+def extract_date_string(string):
+    #Extracts a date from a string return the string format
+    # Regex pattern for "stated on [month] dd, yyyy"
+    pattern = r'stated on (\b\w+\b) (\d{1,2}), (\d{4})'
+    
+    match = re.search(pattern, string)
+
+    if match:
+        date_string = f"{match.group(1)} {match.group(2)}, {match.group(3)}"
+        # Parse the date string into a datetime object
+        return date_string
+    
+    else:
+        return None
+
 def extract_date(string):
     '''Extracts a date from a string using regex
     Args:
