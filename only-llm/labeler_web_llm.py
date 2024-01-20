@@ -21,7 +21,8 @@ def pick_model(model_name):
     elif model_name == "mixtral":
         model = "mistralai/Mixtral-8x7B-Instruct-v0.1"
     else:
-        print("Unknown model")
+        print("Unknown model, loading given full model name")
+        model = model_name
     return model
 
 # def dissect_answer(answer):
@@ -53,6 +54,11 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
     model = pick_model(model_name)
     total_prompt_token = 0
     total_completion_token = 0
+
+    total_prompt_token_num_second = 0
+    total_completion_token_num_second = 0
+    not_confident = 0 # How many times the confidence was not high
+    answer_changed = 0 # How many times the answer was changed with the LLM's internal knowledge
     with open(corpus_path, 'r', encoding='utf8') as corpus, open(output_path, 'w', encoding='utf8') as outfile:
         subq_data = JsonLoader.json_loader(subquestions_path)
         
@@ -70,9 +76,9 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
             for subquestion in subqs:
                 
                 prompt = label_prompt_with_date
-                # prompt += f"Answer the following question with one of these two options: yes/no. Your first sentence should be either yes or no followed by a dot (.). Afterwards give how confident you are in your answer with one of these options: High, Medium, Low. Finally give justification for your answer.\nDO ONLY use the following information when making the judgment: {all_summaries}\nQuestion: {subquestion}\nAnswer:"
+                prompt += f"\nDO ONLY use the following information when making the judgment: {all_summaries}\nQuestion: {subquestion}\nAnswer:"
                 # prompt += f"Date: {date}\nQuestion: {subquestion}\nAnswer:"
-                system_mes = "I will give you a question. Please answer the question with either yes, no, or not enough info. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
+                system_mes = "I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
                 prompt += f"Question:{subquestion}\nDate:{date}"
                 time.sleep(1) # Sleep for 1 seconds to avoid exceeding the quota and almost concurrent requests.
                 # answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model_name, system_message='You are a helpful assistant that is helping with fact checking a claim using only the given information', user_message=prompt)
@@ -82,41 +88,45 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
                 # Split the text by newline
                 lines = answer.split('\n')
 
-
-
-
-                # predicted_label = extract_value_regex(answer, "Answer: ").strip().lower()
-
-                # confidence = extract_value_regex(answer, "Confidence: ")
-                # justification = extract_value_regex(answer, "Justification: ")
-                # predicted_label = lines[0].split(": ")[1].strip().lower() if len(lines) > 0 else None
-                # confidence = lines[1].split(": ")[1].strip().lower() if len(lines) > 1 else None
-                # justification = lines[2].split(": ", 1)[1] if len(lines) > 2 else None
+                ##### !!! This part is not always splitting correctly, need a more robust way.
+                ##### Spesifcally ask for label, confidence, justification then post process those parts
+                ##### Split each part with /n (expected from LLM)
 
                 splited_answer = answer.split('\n')
                 predicted_label = splited_answer[0].strip().lower()
                 confidence = splited_answer[1].strip().lower()
                 justification = splited_answer[2]
 
-                second_system_message = "I will give you a question and provide some information. Please answer the question with either yes, no, or not enough info. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Then give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
-                second_prompt = label_prompt_with_date
-                second_prompt += f"Question:{subquestion}\nDate:{date}\nInformation:{all_summaries}"
-                if predicted_label == "not enough info":
-                    print(f"Querying again with the web evidece since the label was {predicted_label}.")
-                    time.sleep(1) # Sleep for 1 seconds to avoid exceeding the quota and almost concurrent requests.
+                predicted_label_w_evidence = None
+                confidence_w_evidence = None
+
+                if confidence != "high":
+                    not_confident += 1
+                    # Query again with the web evidence
+                    second_system_message = "I will give you a question and provide some information. Please answer the question with either yes, no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Then give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
+                    second_prompt = label_prompt_with_date
+                    second_prompt += f"Question:{subquestion}\nDate:{date}\nInformation:{all_summaries}"
+                    print(f"Querying again with the web evidece since the confidence was {confidence}.")
+                    time.sleep(1)
                     second_answer, prompt_token_num_second, completion_token_num_second, total_token_num_second = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=second_system_message, user_message=second_prompt)
                     splited_answer_new = second_answer.split('\n')
-                    predicted_label_w_evidence = splited_answer[0].strip().lower()
-                    confidence_w_evidence = splited_answer[1].strip().lower()
-                    justification_w_evidence = splited_answer[2]
+                    predicted_label_w_evidence = splited_answer_new[0].strip().lower()
+                    confidence_w_evidence = splited_answer_new[1].strip().lower()
+                    justification_w_evidence = splited_answer_new[2]
 
                     print(f"Label with evidence: {predicted_label_w_evidence}")
                     print(f"Confidence with evidence: {confidence_w_evidence}")
                     print(f'Justification with evidence {justification_w_evidence}')
+
+                    if predicted_label_w_evidence != predicted_label:
+                        answer_changed += 1
+
                     pred_labels_list.append(predicted_label_w_evidence)
+
+                    total_completion_token_num_second += completion_token_num_second
+                    total_prompt_token_num_second += prompt_token_num_second
                 else: # it is either yes or no
                     pred_labels_list.append(predicted_label)
-        
                 
                 print(f"Label: {predicted_label}")
                 print(f"Confidence: {confidence}")
@@ -129,9 +139,9 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
                     "answer": answer,
                     "predicted_label": predicted_label,
                     "confidence_level": confidence,
-                    "confidence_level_w_evidence": confidence_w_evidence if predicted_label == "not enough info" else "N/A",
+                    "confidence_level_w_evidence": confidence_w_evidence if confidence != "high" else "N/A",
                     "justification": justification,
-                    "justification_w_evidence": justification_w_evidence if predicted_label == "not enough info" else "N/A",
+                    "justification_w_evidence": justification_w_evidence if confidence != "high" else "N/A",
                     "prompt_tokens": prompt_token_num,
                     "completion_tokens": completion_token_num,
                     "total_tokens": total_token_num,
@@ -146,6 +156,10 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
     print(f"Total prompt tokens: {total_prompt_token}")
     print(f"Total completion tokens: {total_completion_token}")
     print(f"Total tokens: {total_prompt_token + total_completion_token}")
+
+    print(f"Total prompt tokens second: {total_prompt_token_num_second}")
+    print(f"Total completion tokens second: {total_completion_token_num_second}")
+    print(f"Total tokens second: {total_prompt_token_num_second + total_completion_token_num_second}")
 
             
 def parse_args():
