@@ -96,7 +96,7 @@ def get_answer_anyscale(api_base, token, model_name, system_message, user_messag
         print(f"Total tokens: {total_token_num}")
         
         return answer, prompt_token_num, completion_token_num, total_token_num
-
+    
 
 def classify_veracity(answer_list):
     categories = {

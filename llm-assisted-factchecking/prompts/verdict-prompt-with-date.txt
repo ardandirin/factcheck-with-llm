@@ -15,3 +15,9 @@ Date: 18 April, 2012
 Answer: No
 Confidence: Low
 Justification: While green tea has been associated with certain health benefits, including improvements in heart health, it is not accurate to claim that it eliminates the risk of heart disease entirely. The risk of heart disease is influenced by a multitude of factors, including genetics, lifestyle choices, and overall health. Green tea may contribute positively to heart health, but it cannot single-handedly eliminate the risk.
+
+Question: Is the Mona Lisa painting currently located in the Louvre Museum insured for one billion dollars?
+Date: 15 March, 2020
+Answer: Not Enough Information
+Confidence: Medium
+Justification: It is challenging to confirm the current insurance value of the Mona Lisa, as the Louvre Museum does not publicly disclose such information. 
