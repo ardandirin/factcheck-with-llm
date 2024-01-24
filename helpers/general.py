@@ -119,3 +119,62 @@ def classify_veracity(answer_list):
         return "true"
 
     return "Unknown Category" # Should never happen
+
+
+def classify_veracity_three_way(answer_list):
+    categories = {
+        "false": (0, 1/3),
+        "half-true": (1/3, 2/3),
+        "true": (2/3, 1)
+    }
+
+    if not answer_list:
+        return "Unknown Category"  # Handle empty list
+
+    veracity_score = sum(1 if answer == 'yes' else 0 for answer in answer_list) / len(answer_list)
+
+    for category, (lower_bound, upper_bound) in categories.items():
+        if lower_bound <= veracity_score < upper_bound:
+            return category
+
+    # Handle edge case where score is exactly 1
+    if veracity_score == 1:
+        return "true"
+
+    return "Unknown Category"  # Should never happen but added as a safeguard
+
+
+
+def map_six_to_three_categories(six_category_label):
+    mapping = {
+        "pants-fire": "false",
+        "false": "false",
+        "barely-true": "half-true",
+        "half-true": "half-true",
+        "mostly-true": "true",
+        "true": "true"
+    }
+
+    return mapping.get(six_category_label, "Unknown Category")
+
+
+def classify_binary_veracity(answer_list):
+    yes_count = answer_list.count('yes')
+    no_count = answer_list.count('no')
+
+    if yes_count > no_count:
+        return 'yes'
+    else: 
+        return 'no'
+
+
+
+
+# def classify_threeway_veracity(answer_list):
+#     yes_count = answer_list.count('yes')
+#     no_count = answer_list.count('no')
+
+#     if yes_count > no_count:
+#         return 'yes'
+#     else: 
+#         return 'no'

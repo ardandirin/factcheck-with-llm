@@ -73,7 +73,7 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
                 prompt += f"Date: {date}\nQuestion: {subquestion}\n"
                 system_message_simple = "You are a helpful assistant"
                 # system_mes = "I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
-                time.sleep(1) # Sleep for 1 seconds to avoid exceeding the quota and almost concurrent requests.
+                time.sleep(5) # Sleep for 5 seconds to avoid exceeding the quota and almost concurrent requests.
                 answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_message_simple, user_message=prompt)
 
                 predicted_label = extract_keyword(answer, "Label:")
@@ -111,11 +111,11 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
             
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--corpus_path', default='DataProcessed/summaries_5.jsonl', type=str)
+    parser.add_argument('--corpus_path', default='DataProcessed/summaries_final.jsonl', type=str)
     parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
     parser.add_argument('--subquestions_path', default='ClaimDecomp/subquestions_finetuned.jsonl', type=str)
-    parser.add_argument('--output_path', default='DataProcessed/labels_confidence_5_mixtral.jsonl', type=str)
-    parser.add_argument('--model_name', default='mixtral', type=str)
+    parser.add_argument('--output_path', default='DataProcessed/labels_mixtral.jsonl', type=str)
+    parser.add_argument('--model_name', default='llama70b', type=str)
     
     args = parser.parse_args()
     return args
