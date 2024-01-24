@@ -76,10 +76,10 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
 
 
 
-                predicted_label = extract_value(answer, "Answer: ").strip().lower()
+                predicted_label = extract_value(answer, "Answer:").strip().lower()
 
-                confidence = extract_value(answer, "Confidence: ")
-                justification = extract_value(answer, "Justification: ")
+                confidence = extract_value(answer, "Confidence:")
+                justification = extract_value(answer, "Justification:")
                 # predicted_label = lines[0].split(": ")[1].strip().lower() if len(lines) > 0 else None
                 # confidence = lines[1].split(": ")[1].strip().lower() if len(lines) > 1 else None
                 # justification = lines[2].split(": ", 1)[1] if len(lines) > 2 else None

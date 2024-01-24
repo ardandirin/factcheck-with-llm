@@ -178,3 +178,13 @@ def classify_binary_veracity(answer_list):
 #         return 'yes'
 #     else: 
 #         return 'no'
+    
+def pick_model(model_name):
+    if model_name == "llama70b":
+        model = "meta-llama/Llama-2-70b-chat-hf"
+    elif model_name == "mixtral":
+        model = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+    else:
+        print("Unknown model, loading given full model name")
+        model = model_name
+    return model

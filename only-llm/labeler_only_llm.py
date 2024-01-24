@@ -14,15 +14,7 @@ base_url = os.environ.get('OPENAI_BASE_URL')
 api_key = os.environ.get('OPENAI_API_KEY')
 
 
-def pick_model(model_name):
-    if model_name == "llama70b":
-        model = "meta-llama/Llama-2-70b-chat-hf"
-    elif model_name == "mixtral":
-        model = "mistralai/Mixtral-8x7B-Instruct-v0.1"
-    else:
-        print("Unknown model, loading given full model name")
-        model = model_name
-    return model
+
 import re
 
 def extract_justification(text, keyword="Justification:"):
@@ -47,7 +39,7 @@ def extract_keyword(text, keyword):
 
 
 def main(corpus_path, test_path, subquestions_path, output_path, model_name):
-    model = pick_model(model_name)
+    model = General.pick_model(model_name)
     total_prompt_token = 0
     total_completion_token = 0
 

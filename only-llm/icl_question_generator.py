@@ -4,28 +4,27 @@ Given the ClaimDecomp Test set's questions and the prompt to provide few-shot-le
 Returns the generated subquestions about the claim. 
 '''
 
+from helpers import general as General
+import argparse
+import os
+import json
+import time
 
-'''Claim: Viral image stated on June 8, 2020 in post on Facebook: Cops in Norway: require 3 years of training, 4 people killed since 2002. Cops in Finland: require 2 years of training, 7 people killed since 2000. Cops in Iceland: require 2 years of training, 1 person killed since ever. Cops in the U.S.: require 21 weeks of training, 8,000+ people killed since 2001.
-
-Suppose you are a fact-checker, generate several yes or no quesons to help me answer if this claim is true or false.
-
-Quesons:
-Does Norway require 3 years of training for cops?
-Have Norwegian cops killed 4 people since the early 2000's?
-Does Finland require only 2 years of training for police?
-Have Finnish police killed 7 people since 2000?
-Does Iceland only require 2 years of training for cops?
-Have Iceland cops only killed 1 person ever?
-Does the U.S. require only 21 weeks of training for cops?
-Have U.S. cops killed more than 8,000 people since 2001?
-Do experts associate only training me with police-related shoong fatalies?
-
-Claim: Barry DuVal stated on September 25, 2015 in an interview: We're the only major oil-producing naon in the world with a self-imposed ban on exporng our crude oil to other naons.
+prompt = '''Claim: Alexandria Ocasio-Cortez stated on July 13, 2018 in an interview on PBS' "Firing Line": Unemployment is low because everyone has two jobs. Unemployment is low because people are working 60, 70, 80 hours a week and can barely feed their family.
 
 Suppose you are a fact-checker, generate several yes or no quesons to help me answer if this claim is true or false.
 
 Questions:
-Is the U.S. the only major oil-producing naon to ban exports of crude oil?
+Can low unemployment rates be attributed to everyone having 2 jobs?
+Is unemployment even currently low because of factors stated by Ocasio Cortez?
+Can low unemployment be attributed to long work hours?
+
+Claim: Barry DuVal stated on September 25, 2015 in an interview: We're the only major oil-producing nation in the world with a self-imposed ban on exporting our crude oil to other nations.
+
+Suppose you are a fact-checker, generate several yes or no quesons to help me answer if this claim is true or false.
+
+Questions:
+Is the U.S. the only major oil-producing nation to ban exports of crude oil?
 Is the self-imposed ban on crude oil export of U.S a complete ban?
 
 Claim: William Barr stated on September 2, 2020 in a CNN interview: We indicted someone in Texas, 1,700 ballots collected from people who could vote, he made them out and voted for the person he wanted to.
@@ -33,10 +32,10 @@ Claim: William Barr stated on September 2, 2020 in a CNN interview: We indicted 
 Suppose you are a fact-checker, generate several yes or no quesons to help me answer if this claim is true or false.
 
 Questions:
-Were 1700 mail-in ballots invesgated for fraud in Texas during the 2020 elecon?
+Were 1700 mail-in ballots invesgated for fraud in Texas during the 2020 election?
 Did the Justice Department indict someone in Texas for voter fraud?
-Did widespread mail-in order fraud happen in Texas during the 2020 elecon?
-Did voter disenfranchisement happen in Texas during the 2020 elecon?
+Did widespread mail-in order fraud happen in Texas during the 2020 election?
+Did voter disenfranchisement happen in Texas during the 2020 election?
 
 Claim: {}
 Suppose you are a fact-checker, generate several yes or no quesons to help me answer if this claim is true or false.
@@ -44,7 +43,47 @@ Suppose you are a fact-checker, generate several yes or no quesons to help me an
 Questions:'''
 
 
+total_prompt_token = 0
+total_completion_token = 0
 
-def main():
-    input_claim = ""
-    prompt = f"Claim: {input_claim}\nSuppose you are a fact-checker, generate several yes or no questions to help me answer if this claim is true or false.\nQuestions:"
+
+
+def main(test_path, output_path, model_name):
+    model = General.pick_model(model_name)
+    base_url = os.environ.get('OPENAI_BASE_URL')
+    api_key = os.environ.get('OPENAI_API_KEY')
+
+    with open(test_path, 'r', encoding='utf8') as test_file, open(output_path, 'w', encoding='utf8') as outfile:
+        for line in test_file:
+            data = json.loads(line)
+            id = data['example_id']
+            claim = General.get_claim(test_path, id)
+            prompt = prompt.format(claim)
+            answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(base_url, api_key, model, system_message='You are a helpful assistant.', user_message=prompt)
+            total_prompt_token += prompt_token_num
+            total_completion_token += completion_token_num
+            print(f"Total prompt tokens: {total_prompt_token}")
+            print(f"Total completion tokens: {total_completion_token}")
+            print(f"Total tokens: {total_token_num}")
+            print(f"Answer: {answer}")
+            outfile.write(json.dumps({'example_id': id, 'claim': claim, 'questions': answer}) + '\n')
+            outfile.flush()
+            time.sleep(2)
+            # break
+    
+
+            
+def parse_args():
+    parser = argparse.ArgumentParser()
+  
+    parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
+    parser.add_argument('--output_path', default='DataProcessed/subquestions_icl_llama.jsonl', type=str)
+    parser.add_argument('--model_name', default='llama70b', type=str)
+    
+    args = parser.parse_args()
+    return args
+
+if __name__ == "__main__":
+    args = parse_args()
+    main(args.test_path, args.output_path, args.model_name)
+
