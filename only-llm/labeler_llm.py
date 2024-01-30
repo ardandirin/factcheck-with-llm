@@ -7,38 +7,15 @@ import os
 import time
 from tqdm import tqdm
 import re
-# from sklearn.metrics import classification_report, confusion_matrix
 
-label_prompt = open('prompts/verdict-prompt-with-date.txt', 'r', encoding='utf-8').read()
 base_url = os.environ.get('OPENAI_BASE_URL')
 api_key = os.environ.get('OPENAI_API_KEY')
 
 
 
-import re
 
-def extract_justification(text, keyword="Justification:"):
-    pattern = re.compile(re.escape(keyword) + r"\s*(.*?)(?:\n|$)", re.DOTALL)
-    match = pattern.search(text)
-    if match:
-        return match.group(1).strip()
-    else:
-        return None
-
-
-def extract_keyword(text, keyword):
-    # Regex pattern to match the keyword, followed by a word, and capture that word
-    pattern = re.compile(re.escape(keyword) + r"\s*(\w+)")
-    match = pattern.search(text)
-    if match:
-        # The first captured group contains the word we want (e.g., 'Yes')
-        return match.group(1).strip().lower()
-    else:
-        print("Returned None from extract_keyword!")
-        return None
-
-
-def main(corpus_path, test_path, subquestions_path, output_path, model_name):
+def main(corpus_path, test_path, subquestions_path, output_path, model_name, knowledge_base):
+    label_prompt = open('prompts/verdict-prompt-with-date.txt', 'r', encoding='utf-8').read()
     model = General.pick_model(model_name)
     total_prompt_token = 0
     total_completion_token = 0
@@ -51,26 +28,29 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
             id = data['example_id']
             original_claim = data['claim']
             date = DateHelper.extract_date_string(original_claim)
-            subqs = JsonLoader.load_subquestions(subq_data, id)
+            # subqs = JsonLoader.load_subquestions(subq_data, id) # for gpt generated questions
+            subqs = JsonLoader.load_subquestions_with_question_mark(subq_data, id) # for icl generated questions
             gold_label = General.get_label(test_path, id)
-            all_summaries = " ".join(summary_dt['summary'] for summary_dt in data['summary_data'])
             all_subqs = []
+            all_summaries = " ".join(summary_dt['summary'] for summary_dt in data['summary_data'])
             pred_labels_list = [] # List of predicted labels for each subquestion
             data_to_write = {'example_id': id, 'claim': original_claim, 'gold_label': gold_label, 'pred_label': str, 'subquestion_data': []}
             for subquestion in subqs:
-                
-                
-                prompt = "I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
+                prompt = ""
+                if knowledge_base == "llm-web":
+                    prompt += f"I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date and additionally provided information here: {all_summaries}.\nAlways seperate each part with a /n"
+                else:
+                    prompt = "I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
                 prompt += label_prompt
                 prompt += f"Date: {date}\nQuestion: {subquestion}\n"
-                system_message_simple = "You are a helpful assistant"
+                system_message_simple = "You are a helpful assistant answering questions."
                 # system_mes = "I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
-                time.sleep(5) # Sleep for 5 seconds to avoid exceeding the quota and almost concurrent requests.
+                time.sleep(1) # Sleep for 5 seconds to avoid exceeding the quota and almost concurrent requests.
                 answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_message_simple, user_message=prompt)
 
-                predicted_label = extract_keyword(answer, "Label:")
-                confidence = extract_keyword(answer, "Confidence:")
-                justification = extract_justification(answer, "Justification:")
+                predicted_label = General.extract_keyword(answer, "Label:")
+                confidence = General.extract_keyword(answer, "Confidence:")
+                justification = General.extract_justification(answer, "Justification:")
                 pred_labels_list.append(predicted_label)
                 
                 print(f"Label: {predicted_label}")
@@ -105,9 +85,10 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--corpus_path', default='DataProcessed/summaries_final.jsonl', type=str)
     parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--subquestions_path', default='ClaimDecomp/subquestions_finetuned.jsonl', type=str)
-    parser.add_argument('--output_path', default='DataProcessed/labels_mixtral.jsonl', type=str)
+    parser.add_argument('--subquestions_path', default='DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
+    parser.add_argument('--output_path', default='DataProcessed/labels_mixtral_icl.jsonl', type=str)
     parser.add_argument('--model_name', default='llama70b', type=str)
+    parser.add_argument('--knowledge_base', default='llm-web', type=str) # can give llm or llm-web then summaries will be used as well.
     
     args = parser.parse_args()
     return args
@@ -115,4 +96,4 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    main(args.corpus_path, args.test_path, args.subquestions_path, args.output_path, args.model_name)
+    main(args.corpus_path, args.test_path, args.subquestions_path, args.output_path, args.model_name, args.knowledge_base)

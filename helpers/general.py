@@ -72,14 +72,15 @@ def get_label(path, example_id):
     return None
             
 
-def get_answer_anyscale(api_base, token, model_name, system_message, user_message):
+def get_answer_anyscale(api_base, token, model_name, system_message, user_message, repeat_penalty = 1, temperature = 0.7):
     s = requests.Session()
     url = f"{api_base}/chat/completions"
     body = {
     "model": model_name,
     "messages": [{"role": "system", "content": system_message}, 
                 {"role": "user", "content": user_message}],
-    "temperature": 0.7
+    "temperature": temperature,
+    "repeat_penalty": repeat_penalty,
     }
 
 
@@ -99,6 +100,8 @@ def get_answer_anyscale(api_base, token, model_name, system_message, user_messag
     
 
 def classify_veracity(answer_list):
+    if not answer_list:
+        return "No Data"
     categories = {
         "pants-fire": (0, 1/6),
         "false": (1/6, 2/6),
@@ -188,3 +191,24 @@ def pick_model(model_name):
         print("Unknown model, loading given full model name")
         model = model_name
     return model
+
+
+def extract_justification(text, keyword="Justification:"):
+    pattern = re.compile(re.escape(keyword) + r"\s*(.*?)(?:\n|$)", re.DOTALL)
+    match = pattern.search(text)
+    if match:
+        return match.group(1).strip()
+    else:
+        return None
+
+
+def extract_keyword(text, keyword):
+    # Regex pattern to match the keyword, followed by a word, and capture that word
+    pattern = re.compile(re.escape(keyword) + r"\s*(\w+)")
+    match = pattern.search(text)
+    if match:
+        # The first captured group contains the word we want (e.g., 'Yes')
+        return match.group(1).strip().lower()
+    else:
+        print("Returned None from extract_keyword!")
+        return None

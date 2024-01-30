@@ -36,7 +36,7 @@ def main(labels_path, gold_labels, predictions):
         for line in data:
             json_obj = json.loads(line.strip())
             print("Claim: ", json_obj['claim'])
-            # binary_val = classify_binary_truthfulness(json_obj['gold_label'])
+            # gold_lab = classify_binary_truthfulness(json_obj['gold_label'])
             gold_lab = General.map_six_to_three_categories(json_obj['gold_label'])
             gold_labels.append(gold_lab)
             # gold_labels.append(json_obj['gold_label'])
@@ -53,7 +53,7 @@ def main(labels_path, gold_labels, predictions):
     # Label order
     # labels = ['pants-fire', 'false', 'barely-true', 'half-true', 'mostly-true', 'true']
     
-    labels_binary = ['no', 'yes']
+    # labels_binary = ['no', 'yes']
     labels_tri = ['false', 'half-true', 'true']
 
     
@@ -73,7 +73,7 @@ def main(labels_path, gold_labels, predictions):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--labels_path', default='DataProcessed/labels_web_llama.jsonl', type=str)
+    parser.add_argument('--labels_path', default='DataProcessed/labels_mixtral_icl_web.jsonl', type=str)
     args = parser.parse_args()
     gold_labels = [] 
     predictions = []  

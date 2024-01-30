@@ -65,7 +65,7 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
                 # prompt += f"Date: {date}\nQuestion: {subquestion}\nAnswer:"
                 system_mes = "I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Then give a brief justification for your answer. DO ONLY USE information prior to the given date.\n"
                 prompt += f"Question:{subquestion}\nDate:{date}"
-                time.sleep(1) # Sleep for 1 seconds to avoid exceeding the quota and almost concurrent requests.
+                time.sleep(5) # Sleep for 1 seconds to avoid exceeding the quota and almost concurrent requests.
                 # answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model_name, system_message='You are a helpful assistant that is helping with fact checking a claim using only the given information', user_message=prompt)
                 # print(f"prompt:'{prompt}")
                 answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_mes, user_message=prompt)
@@ -73,29 +73,11 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
                 # Split the text by newline
                 lines = answer.split('\n')
 
-
-
-
                 predicted_label = extract_value(answer, "Answer:").strip().lower()
 
                 confidence = extract_value(answer, "Confidence:")
                 justification = extract_value(answer, "Justification:")
-                # predicted_label = lines[0].split(": ")[1].strip().lower() if len(lines) > 0 else None
-                # confidence = lines[1].split(": ")[1].strip().lower() if len(lines) > 1 else None
-                # justification = lines[2].split(": ", 1)[1] if len(lines) > 2 else None
-
-                # splited_answer = answer.split('\n')
-                # predicted_label = splited_answer[0].strip().lower()
-                # confidence = splited_answer[1].strip().lower()
-                # justification = splited_answer[2]
-
-                # splited_answer = answer.split('.')
-                # predicted_label = splited_answer[0].strip().lower()
-                # confidence = splited_answer[1].strip().lower()
-                # justification = splited_answer[2].strip()
-
-                # predicted_label, _, justification = answer.partition('.')
-                # predicted_label = predicted_label.strip().lower()
+             
                 pred_labels_list.append(predicted_label)
                 print(f"Label: {predicted_label}")
                 print(f"Confidence: {confidence}")

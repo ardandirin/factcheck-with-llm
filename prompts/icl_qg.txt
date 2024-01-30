@@ -1,20 +1,11 @@
-Claim: Viral image stated on June 8, 2020 in post on Facebook: Cops in Norway: require 3 years of training, 4 people killed since 2002. Cops in Finland: require 2 years of training, 7 people killed since 2000. Cops in Iceland: require 2 years of training, 1 person killed since ever. Cops in the U.S.: require 21 weeks of training, 8,000+ people killed since 2001.
-
-Suppose you are a fact-checker, generate several yes or no questions to help me answer if this claim is true or false.
+Claim: Alexandria Ocasio-Cortez stated on July 13, 2018 in an interview on PBS' "Firing Line": Unemployment is low because everyone has two jobs. Unemployment is low because people are working 60, 70, 80 hours a week and can barely feed their family.
 
 Questions:
-Does Norway require 3 years of training for cops?
-Have Norwegian cops killed 4 people since the early 2000's?
-Does Finland require only 2 years of training for police?
-Have Finnish police killed 7 people since 2000?
-Does Iceland only require 2 years of training for cops?
-Have Iceland cops only killed 1 person ever?
-Does the U.S. require only 21 weeks of training for cops?
-Have U.S. cops killed more than 8,000 people since 2001?
-Do experts associate only training time with police-related shooting fatalities?
+Can low unemployment rates be attributed to everyone having 2 jobs?
+Is unemployment even currently low because of factors stated by Ocasio Cortez?
+Can low unemployment be attributed to long work hours?
 
 Claim: Barry Duval stated on September 25, 2015 in an interview: We're the only major oil-producing nation in the world with a self-imposed ban on exporting our crude oil to other nations.
-Suppose you are a fact-checker, generate several yes or no questions to help me answer if this claim is true or false.
 
 Questions:
 Is the U.S. the only major oil-producing nation to ban exports of crude oil? 
@@ -22,11 +13,22 @@ Is the self-imposed ban on crude oil export of U.S a complete ban?
 
 Claim: William Barr stated on September 2, 2020 in a CNN interview: We indicted someone in Texas, 1,700 ballots collected from people who could vote, he made them out and voted for the person he wanted to.
 
-Suppose you are a fact-checker, generate several yes or no questions to help me answer if this claim is true or false.
-
 Questions:
 Were 1700 mail-in ballots investigated for fraud in Texas during the 2020 election?
 Did the Justice Department indict someone in Texas for voter fraud?
 Did widespread mail-in order fraud happen in Texas during the 2020 election?
 Did voter disenfranchisement happen in Texas during the 2020 election?
 
+Claim: Paul Gigot stated on December 7, 2019 in an interview: Says the impeachment of President Donald Trump would be the first in U.S. history "without a specific criminal statute or crime that the president who is impeached would have allegedly committed.
+
+Questions:
+Have any presidents who have been impeached in the past charged with violating a criminal statute?
+If Trump is impeached without being charged with violating a criminal statute, would that be the first instance of it in U.S. history?
+Were the two presidents who were impeached accused of any crimes?
+
+Claim: Hillary Clinton stated on April 21, 2016 in a town hall on ABC's 'Good Morning America': "When I withdrew in June of 2008, polls were showing that at least 40 percent of my supporters said, oh, they weren't going to support Sen. Obama."
+
+Questions:  
+When Hillary withdrew in 2008, did polls indicate 40% of her supporters wouldn't support Obama?
+Did Hillary use accurate data in her statement?
+Did Obama have the support issues Clinton claimed he would have?
