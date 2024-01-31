@@ -89,9 +89,10 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
                 prompt = label_prompt
                 prompt += f"DO ONLY use the following information when making the judgment: {all_summaries}\nQuestion: {subquestion}\n"
                 system_mes = "You should answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. Always seperate each part of the answer with a new line"
+                system_mes_with_no_info = "You should answer the question with either yes, no or nei(for not enough information). Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. Always seperate each part of the answer with a new line"
 
                 time.sleep(1) # Sleep for 1 seconds to avoid exceeding the quota and almost concurrent requests.
-                answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_mes, user_message=prompt)
+                answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_mes_with_no_info, user_message=prompt)
 
                 
 
@@ -137,7 +138,7 @@ def parse_args():
     parser.add_argument('--corpus_path', default='DataProcessed/summaries_final.jsonl', type=str)
     parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
     parser.add_argument('--subquestions_path', default='DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
-    parser.add_argument('--output_path', default='DataProcessed/labels_mixtral_icl_web.jsonl', type=str)
+    parser.add_argument('--output_path', default='Results/labels_mixtral_icl_web_withnei.jsonl', type=str)
     parser.add_argument('--model_name', default='mixtral', type=str)
     
     args = parser.parse_args()

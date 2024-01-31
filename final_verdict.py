@@ -11,12 +11,6 @@ def classify_binary_truthfulness(value):
     false_values = ['pants-fire', 'false', 'barely-true']
     return 'no' if value in false_values else 'yes'
 
-def classify_triway_truthfulness(value):
-    false_values = ['pants-fire', 'false']
-    in_between = ['barely-true', 'half-true']
-    true_values = ['mostly-true', 'true']
-    return 'no' if value in false_values else 'yes'
-
 def heat_map_repr(matrix, labels):
     # Convert matrix to DataFrame for better labeling
     matrix_df = pd.DataFrame(matrix, index=labels, columns=labels)
@@ -30,51 +24,61 @@ def heat_map_repr(matrix, labels):
     plt.show()
 
 
-def main(labels_path, gold_labels, predictions):
-    labels_list = ['pants-fire', 'false', 'barely-true', 'half-true', 'mostly-true', 'true']
+def main(labels_path, gold_labels, predictions, classifcation):
     with open(labels_path, 'r') as data:
         for line in data:
             json_obj = json.loads(line.strip())
+            pred_labels = [item['predicted_label'] for item in json_obj['subquestion_data'] if item['confidence_level'] == 'high' or 'medium']
             print("Claim: ", json_obj['claim'])
-            # gold_lab = classify_binary_truthfulness(json_obj['gold_label'])
-            gold_lab = General.map_six_to_three_categories(json_obj['gold_label'])
+            if classifcation == 'six-way':
+                gold_lab = json_obj['gold_label']
+                predicted_veracity = General.classify_veracity(pred_labels)
+            elif classifcation == 'three-way':
+                gold_lab = General.map_six_to_three_categories(json_obj['gold_label'])
+                predicted_veracity = General.classify_veracity_three_way(pred_labels)
+            elif classifcation == 'binary':
+                gold_lab = classify_binary_truthfulness(json_obj['gold_label'])
+                predicted_veracity = General.classify_binary_veracity(pred_labels)
+            else:
+                print("Please provide a predefined classification type.")
+            
             gold_labels.append(gold_lab)
-            # gold_labels.append(json_obj['gold_label'])
-            pred_labels = [item['predicted_label'] for item in json_obj['subquestion_data']]
-            print(pred_labels)
-            # predicted_veracity = General.classify_veracity(pred_labels)
-            # predicted_veracity = General.classify_binary_veracity(pred_labels)
-            predicted_veracity = General.classify_veracity_three_way(pred_labels)
-            print("Predicted veracity: ", predicted_veracity)
             predictions.append(predicted_veracity)
+
+            # pred_labels = [item['predicted_label'] for item in json_obj['subquestion_data'] if item['confidence_level'] == 'high']
+            print(pred_labels)
+
             print("Predicted veracity: ", predicted_veracity)
+            # print("Predicted veracity:", predictions)
             print("Gold label: ", json_obj['gold_label'])
 
-    # Label order
-    # labels = ['pants-fire', 'false', 'barely-true', 'half-true', 'mostly-true', 'true']
-    
-    # labels_binary = ['no', 'yes']
-    labels_tri = ['false', 'half-true', 'true']
+    if classifcation == 'six-way':
+        labels_list = ['pants-fire', 'false', 'barely-true', 'half-true', 'mostly-true', 'true']
+    elif classifcation == 'three-way':
+        labels_list = ['false', 'half-true', 'true']
+    elif classifcation == 'binary':
+        labels_list = ['no', 'yes']
 
     
     # Generate classification report and confusion matrix
-    print("Gold labels: ", gold_labels)
-    print("Predictions: ", predictions) 
-    report = classification_report(gold_labels, predictions, labels=labels_tri, output_dict=True)
-    matrix = confusion_matrix(gold_labels, predictions, labels=labels_tri)
+    # print("Gold labels: ", gold_labels)
+    # print("Predictions: ", predictions) 
+    report = classification_report(gold_labels, predictions, labels=labels_list, output_dict=True)
+    matrix = confusion_matrix(gold_labels, predictions, labels=labels_list)
 
     pd.set_option('display.precision', 2)
     report_df = pd.DataFrame(report).transpose()
     print(report_df)
 
-    heat_map_repr(matrix, labels_tri)
+    heat_map_repr(matrix, labels_list)
 
             
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--labels_path', default='DataProcessed/labels_mixtral_icl_web.jsonl', type=str)
+    parser.add_argument('--labels_path', default='DataProcessed/labels_mixtral_icl_full_llm.jsonl', type=str)
+    parser.add_argument('--classification', default='six-way', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
     args = parser.parse_args()
     gold_labels = [] 
     predictions = []  
-    main(args.labels_path, gold_labels, predictions)
+    main(args.labels_path, gold_labels, predictions, args.classification)

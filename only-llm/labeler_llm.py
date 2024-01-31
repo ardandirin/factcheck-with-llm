@@ -38,7 +38,7 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, kno
             for subquestion in subqs:
                 prompt = ""
                 if knowledge_base == "llm-web":
-                    prompt += f"I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date and additionally provided information here: {all_summaries}.\nAlways seperate each part with a /n"
+                    prompt += f"I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date and you can refer to supplemantary information here: {all_summaries}.\nAlways seperate each part with a /n"
                 else:
                     prompt = "I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
                 prompt += label_prompt
@@ -83,10 +83,10 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, kno
             
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--corpus_path', default='DataProcessed/summaries_final.jsonl', type=str)
+    parser.add_argument('--corpus_path', default='DataProcessed/summaries_5.jsonl', type=str)
     parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--subquestions_path', default='DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
-    parser.add_argument('--output_path', default='DataProcessed/labels_mixtral_icl.jsonl', type=str)
+    parser.add_argument('--subquestions_path', default='DataProcessed/subquestions_icl_mixtral_5.jsonl', type=str)
+    parser.add_argument('--output_path', default='DataProcessed/labels_llama_icl_5_llm.jsonl', type=str)
     parser.add_argument('--model_name', default='llama70b', type=str)
     parser.add_argument('--knowledge_base', default='llm-web', type=str) # can give llm or llm-web then summaries will be used as well.
     
