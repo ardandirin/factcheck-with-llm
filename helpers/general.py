@@ -124,6 +124,73 @@ def classify_veracity(answer_list):
     return "Unknown Category" # Should never happen
 
 
+def classify_veracity_new_6way(answer_list):
+    if not answer_list:
+        print("No data found")
+        return "No Data"
+
+    # Define categories and their bounds
+    categories = [
+        "pants-fire", "false", "barely-true",
+        "half-true", "mostly-true", "true"
+    ]
+
+    # Filter the list to only include 'yes' and 'no' answers
+    filtered_answers = [answer for answer in answer_list if answer in ['yes', 'no']]
+
+    # Return "No Data" if there are no 'yes' or 'no' answers
+    if not filtered_answers:
+        return "No Data"
+
+    # Calculate veracity score based only on 'yes' and 'no' answers
+    veracity_score = sum(1 if answer == 'yes' else 0 for answer in filtered_answers) / len(filtered_answers)
+
+    # Determine the category based on the veracity score
+    index = int(veracity_score * len(categories))  # Convert score to index
+    if index == len(categories):  # Handle edge case where score is exactly 1
+        index -= 1  # Adjust index to last category
+
+    return categories[index]
+
+
+def classify_veracity_new_6way_with_conf(answer_list, confidence_list):
+    if not answer_list or len(answer_list) != len(confidence_list):
+        print("Invalid or mismatched input data")
+        return "No Data"
+
+    categories = [
+        "pants-fire", "false", "barely-true",
+        "half-true", "mostly-true", "true"
+    ]
+
+    # Mapping confidence levels to weights
+    confidence_weights = {"high": 1, "medium": 0.5, "low": 0}
+
+    weighted_yes_count = 0
+    total_weight = 0
+
+    for answer, confidence in zip(answer_list, confidence_list):
+        weight = confidence_weights.get(confidence, 0)  # Default to 0 if confidence level is not recognized
+        if answer in ['yes', 'no']:
+            total_weight += weight
+            if answer == 'yes':
+                weighted_yes_count += weight
+
+    if total_weight == 0:  # Avoid division by zero and handle cases with no applicable responses
+        print("No applicable 'yes' or 'no' answers with sufficient confidence found")
+        return "No Data"
+
+    veracity_score = weighted_yes_count / total_weight
+
+    # Determine the category based on the veracity score
+    index = int(veracity_score * len(categories))
+    if index == len(categories):  # Handle edge case where score is exactly 1
+        index -= 1  # Adjust index to the last category
+
+    return categories[index]
+
+
+
 def classify_veracity_three_way(answer_list):
     categories = {
         "false": (0, 1/3),
@@ -132,9 +199,19 @@ def classify_veracity_three_way(answer_list):
     }
 
     if not answer_list:
+        print("No data found")
         return "Unknown Category"  # Handle empty list
+    
+    # Filter the list to only include 'yes' and 'no' answers
+    filtered_answers = [answer for answer in answer_list if answer in ['yes', 'no']]
 
-    veracity_score = sum(1 if answer == 'yes' else 0 for answer in answer_list) / len(answer_list)
+    # Check if the filtered list is not empty to avoid division by zero
+    if not filtered_answers:
+        print("No 'yes' or 'no' answers found")
+        return "Unknown Category"  # Handle case with no 'yes' or 'no' answers
+
+
+    veracity_score = sum(1 if answer == 'yes' else 0 for answer in filtered_answers) / len(filtered_answers)
 
     for category, (lower_bound, upper_bound) in categories.items():
         if lower_bound <= veracity_score < upper_bound:
@@ -145,6 +222,49 @@ def classify_veracity_three_way(answer_list):
         return "true"
 
     return "Unknown Category"  # Should never happen but added as a safeguard
+
+
+def classify_veracity_three_way_with_conf(answer_list, confidence_list):
+    if not answer_list or len(answer_list) != len(confidence_list):
+        print("Invalid or mismatched input data")
+        return "Unknown Category"
+
+    categories = {
+        "false": (0, 1/3),
+        "half-true": (1/3, 2/3),
+        "true": (2/3, 1)
+    }
+
+    # Mapping confidence levels to weights
+    confidence_weights = {"high": 1, "medium": 0.5, "low": 0}
+
+    # Initialize variables for calculating the weighted score
+    weighted_yes_no_counts = 0
+    total_weight = 0
+
+    for answer, confidence in zip(answer_list, confidence_list):
+        if confidence in confidence_weights and answer in ['yes', 'no']:
+            weight = confidence_weights[confidence]
+            answer_value = 1 if answer == 'yes' else 0
+            weighted_yes_no_counts += weight * answer_value
+            total_weight += weight
+
+    if total_weight == 0:  # Avoid division by zero if all answers are of low confidence or 'nei'
+        print("No 'yes' or 'no' answers with sufficient confidence found")
+        return "Unknown Category"
+
+    veracity_score = weighted_yes_no_counts / total_weight
+
+    for category, (lower_bound, upper_bound) in categories.items():
+        if lower_bound <= veracity_score < upper_bound:
+            return category
+
+    # Handle edge case where score is exactly 1
+    if veracity_score == 1:
+        return "true"
+
+    return "Unknown Category"
+
 
 
 
@@ -165,10 +285,38 @@ def classify_binary_veracity(answer_list):
     yes_count = answer_list.count('yes')
     no_count = answer_list.count('no')
 
-    if yes_count > no_count:
+    if yes_count >= no_count:
         return 'yes'
     else: 
         return 'no'
+    
+def classify_binary_veracity_with_conf(answer_list, confidence_list):
+# Verify that the lists are of equal length
+    if not answer_list or len(answer_list) != len(confidence_list):
+        print("Invalid or mismatched input data")
+        return "Unknown"
+
+    # Mapping confidence levels to weights
+    confidence_weights = {"high": 1, "medium": 0.5, "low": 0}
+
+    # Initialize weighted counts
+    weighted_yes_count = 0
+    weighted_no_count = 0
+
+    # Apply weights based on confidence levels
+    for answer, confidence in zip(answer_list, confidence_list):
+        weight = confidence_weights.get(confidence, 0)  # Default to 0 if confidence level is unknown
+        if answer == 'yes':
+            weighted_yes_count += weight
+        elif answer == 'no':
+            weighted_no_count += weight
+
+    # Decide based on weighted counts
+    if weighted_yes_count >= weighted_no_count:
+        return 'yes'
+    else:
+        return 'no'
+
 
 
 

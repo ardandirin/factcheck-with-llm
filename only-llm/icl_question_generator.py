@@ -57,8 +57,7 @@ def main(test_path, output_path, model_name):
             print(f"Answer: {answer}")
             outfile.write(json.dumps({'example_id': id, 'claim': claim, 'questions': answer}) + '\n')
             outfile.flush()
-            time.sleep(10)
-            # break
+            time.sleep(2)
     print(f"Total prompt tokens: {total_prompt_token}")
     print(f"Total completion tokens: {total_completion_token}")
     print(f"Total tokens: {total_prompt_token + total_completion_token}")
