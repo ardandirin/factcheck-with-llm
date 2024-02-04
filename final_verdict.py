@@ -26,31 +26,46 @@ def heat_map_repr(matrix, labels):
 
 def main(labels_path, gold_labels, predictions, classifcation):
     with open(labels_path, 'r') as data:
+        unknown_count = 0
         for line in data:
             json_obj = json.loads(line.strip())
-            pred_labels = [item['predicted_label'] for item in json_obj['subquestion_data'] if item['confidence_level'] == 'high' or 'medium']
-            print("Claim: ", json_obj['claim'])
+            # pred_labels = [item['predicted_label'] for item in json_obj['subquestion_data'] if item['confidence_level'] == 'high']]
+            pred_labels = [item['predicted_label'] for item in json_obj['subquestion_data']]
+            conf_levels = [item['confidence_level'] for item in json_obj['subquestion_data']]
+            # print("Claim: ", json_obj['claim'])
             if classifcation == 'six-way':
                 gold_lab = json_obj['gold_label']
-                predicted_veracity = General.classify_veracity(pred_labels)
+                predicted_veracity = General.classify_veracity_new_6way(pred_labels)
+                # predicted_veracity = General.classify_veracity_new_6way_with_conf(pred_labels, conf_levels)
             elif classifcation == 'three-way':
                 gold_lab = General.map_six_to_three_categories(json_obj['gold_label'])
                 predicted_veracity = General.classify_veracity_three_way(pred_labels)
+                # predicted_veracity = General.classify_veracity_three_way_with_conf(pred_labels, conf_levels)
             elif classifcation == 'binary':
                 gold_lab = classify_binary_truthfulness(json_obj['gold_label'])
                 predicted_veracity = General.classify_binary_veracity(pred_labels)
+                # predicted_veracity = General.classify_binary_veracity_with_conf(pred_labels, conf_levels)
+
+                
             else:
                 print("Please provide a predefined classification type.")
             
+            if predicted_veracity == 'Unknown':
+                    unknown_count += 1
+            
+            if predicted_veracity == 'Unknown':
+                continue
             gold_labels.append(gold_lab)
             predictions.append(predicted_veracity)
+            
 
             # pred_labels = [item['predicted_label'] for item in json_obj['subquestion_data'] if item['confidence_level'] == 'high']
-            print(pred_labels)
+            # print(pred_labels)
 
-            print("Predicted veracity: ", predicted_veracity)
+            # print("Predicted veracity: ", predicted_veracity)
             # print("Predicted veracity:", predictions)
-            print("Gold label: ", json_obj['gold_label'])
+            # print("Gold label: ", json_obj['gold_label'])
+        print("Unknown count: ", unknown_count)
 
     if classifcation == 'six-way':
         labels_list = ['pants-fire', 'false', 'barely-true', 'half-true', 'mostly-true', 'true']
@@ -76,8 +91,8 @@ def main(labels_path, gold_labels, predictions, classifcation):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--labels_path', default='DataProcessed/labels_mixtral_icl_full_llm.jsonl', type=str)
-    parser.add_argument('--classification', default='six-way', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
+    parser.add_argument('--labels_path', default='Results/labels_mixtral_icl_full_llm.jsonl', type=str)
+    parser.add_argument('--classification', default='binary', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
     args = parser.parse_args()
     gold_labels = [] 
     predictions = []  

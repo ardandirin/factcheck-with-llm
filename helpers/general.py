@@ -127,7 +127,7 @@ def classify_veracity(answer_list):
 def classify_veracity_new_6way(answer_list):
     if not answer_list:
         print("No data found")
-        return "No Data"
+        return "Unknown"  # Handle empty list
 
     # Define categories and their bounds
     categories = [
@@ -140,7 +140,7 @@ def classify_veracity_new_6way(answer_list):
 
     # Return "No Data" if there are no 'yes' or 'no' answers
     if not filtered_answers:
-        return "No Data"
+        return "Unknown"
 
     # Calculate veracity score based only on 'yes' and 'no' answers
     veracity_score = sum(1 if answer == 'yes' else 0 for answer in filtered_answers) / len(filtered_answers)
@@ -156,7 +156,7 @@ def classify_veracity_new_6way(answer_list):
 def classify_veracity_new_6way_with_conf(answer_list, confidence_list):
     if not answer_list or len(answer_list) != len(confidence_list):
         print("Invalid or mismatched input data")
-        return "No Data"
+        return "Unknown"
 
     categories = [
         "pants-fire", "false", "barely-true",
@@ -178,7 +178,7 @@ def classify_veracity_new_6way_with_conf(answer_list, confidence_list):
 
     if total_weight == 0:  # Avoid division by zero and handle cases with no applicable responses
         print("No applicable 'yes' or 'no' answers with sufficient confidence found")
-        return "No Data"
+        return "Unknown"
 
     veracity_score = weighted_yes_count / total_weight
 
@@ -200,7 +200,7 @@ def classify_veracity_three_way(answer_list):
 
     if not answer_list:
         print("No data found")
-        return "Unknown Category"  # Handle empty list
+        return "Unknown"  # Handle empty list
     
     # Filter the list to only include 'yes' and 'no' answers
     filtered_answers = [answer for answer in answer_list if answer in ['yes', 'no']]
@@ -208,7 +208,7 @@ def classify_veracity_three_way(answer_list):
     # Check if the filtered list is not empty to avoid division by zero
     if not filtered_answers:
         print("No 'yes' or 'no' answers found")
-        return "Unknown Category"  # Handle case with no 'yes' or 'no' answers
+        return "Unknown"  # Handle case with no 'yes' or 'no' answers
 
 
     veracity_score = sum(1 if answer == 'yes' else 0 for answer in filtered_answers) / len(filtered_answers)
@@ -221,13 +221,13 @@ def classify_veracity_three_way(answer_list):
     if veracity_score == 1:
         return "true"
 
-    return "Unknown Category"  # Should never happen but added as a safeguard
+    return "Unknown"  # Should never happen but added as a safeguard
 
 
 def classify_veracity_three_way_with_conf(answer_list, confidence_list):
     if not answer_list or len(answer_list) != len(confidence_list):
         print("Invalid or mismatched input data")
-        return "Unknown Category"
+        return "Unknown"
 
     categories = {
         "false": (0, 1/3),
@@ -251,7 +251,7 @@ def classify_veracity_three_way_with_conf(answer_list, confidence_list):
 
     if total_weight == 0:  # Avoid division by zero if all answers are of low confidence or 'nei'
         print("No 'yes' or 'no' answers with sufficient confidence found")
-        return "Unknown Category"
+        return "Unknown"
 
     veracity_score = weighted_yes_no_counts / total_weight
 
@@ -263,7 +263,7 @@ def classify_veracity_three_way_with_conf(answer_list, confidence_list):
     if veracity_score == 1:
         return "true"
 
-    return "Unknown Category"
+    return "Unknown"
 
 
 
@@ -284,6 +284,12 @@ def map_six_to_three_categories(six_category_label):
 def classify_binary_veracity(answer_list):
     yes_count = answer_list.count('yes')
     no_count = answer_list.count('no')
+
+
+    if yes_count == 0 and no_count == 0:
+        print(answer_list)
+        print("No answer data found")
+        return "Unknown"
 
     if yes_count >= no_count:
         return 'yes'
