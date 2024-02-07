@@ -2,10 +2,12 @@ import json
 import os
 import evaluate
 import matplotlib.pyplot as plt
+from helpers import json_loader as Jsonloader
 
 
 generated_questions_path = '../ClaimDecomp/subquestions_finetuned.jsonl'
-annotated_questions_path = '../ClaimDecomp/test.jsonl'
+generated_questions_path = './DataProcessed/subquestions_icl_mixtral.jsonl'
+annotated_questions_path = './ClaimDecomp/test.jsonl'
 
 
 
@@ -34,12 +36,15 @@ with open(annotated_questions_path, 'r') as file:
 
 examples = []
 for i in range(len(data)):
-    subquestions = data[i]['subquestions'][0].split(', ')
+    # subquestions = data[i]['subquestions'][0].split(', ')
+    # subquestions = data[i]['questions'].strip().split('\n')
+    subquestions = Jsonloader.list_returner_q_mark(data[i])
     reference_questions = question_aggregator(annotated[i])
     examples.append({'subquestions': subquestions, 'reference_questions': reference_questions})
 
 
 bleu = evaluate.load("bleu")
+
 
 print(examples[1]['subquestions'])
 
@@ -47,9 +52,13 @@ print(examples[1]['subquestions'])
 def compute_bleu_scores(examples):
     scores = []
     for ex in examples:
+        print(ex['subquestions'])
         preds = ex['subquestions']
         list_of_refs = [ex['reference_questions'] for _ in range(len(preds))]
-        score = bleu.compute(predictions=preds, references=list_of_refs)
+        try:
+            score = bleu.compute(predictions=preds, references=list_of_refs)
+        except:
+            continue
         # print(score)
         scores.append(score)
     return scores
@@ -61,9 +70,8 @@ def calc_average_bleu_score(scores):
         sum_scores += i['bleu']
     return sum_scores / len(scores)
 
-# Assuming examples are defined
 bleu_scores = compute_bleu_scores(examples)
-output_file_path = 'bleu_scores.json'
+output_file_path = 'bleu_scores_new.json'
 
 # print(len(bleu_scores))
 average_bleu = calc_average_bleu_score(bleu_scores)
@@ -92,4 +100,4 @@ plt.ylabel('Frequency')
 # Save the plot
 # plt.savefig('dne.png', dpi=300)  # Saves the plot as a PNG file
 
-# plt.show()
+plt.show()

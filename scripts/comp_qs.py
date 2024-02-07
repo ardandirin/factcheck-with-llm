@@ -1,4 +1,4 @@
-import helper_functions as helpers
+# import helper_functions as helpers
 from evaluate import load
 import json
 from bert_score import score
@@ -10,6 +10,7 @@ from tqdm import tqdm
 import statistics
 from transformers import logging
 import matplotlib.pyplot as plt
+from helpers import json_loader as Jsonloader
 
 # Set the logging level to error to suppress warnings (but still show errors)
 logging.set_verbosity_error()
@@ -22,8 +23,9 @@ tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 # Load pre-trained model (weights)
 model = BertModel.from_pretrained('bert-base-uncased', output_hidden_states=True)
 
-generated_questions_path = '../ClaimDecomp/subquestions_finetuned.jsonl'
-annotated_questions_path = '../ClaimDecomp/test.jsonl'
+generated_questions_path = './ClaimDecomp/subquestions_finetuned.jsonl'
+generated_questions_path = './DataProcessed/subquestions_icl_mixtral.jsonl'
+annotated_questions_path = './ClaimDecomp/test.jsonl'
 recall_threshold = 0.9
 
 
@@ -51,7 +53,8 @@ with open(annotated_questions_path, 'r') as file:
 # Preprocessing step, prepare examples for processing
 examples = []
 for i in range(len(data)):
-    subquestions = data[i]['subquestions'][0].split(', ')
+    # subquestions = data[i]['subquestions'][0].split(', ')
+    subquestions = Jsonloader.list_returner_q_mark(data[i])
     reference_questions = question_aggregator(annotated[i])
     examples.append({'subquestions': subquestions, 'reference_questions': reference_questions})
 
