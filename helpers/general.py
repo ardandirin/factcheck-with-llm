@@ -2,7 +2,8 @@ import requests
 import re
 import re
 import json
-
+from openai import OpenAI
+import os
 
 
 def postprocess_text(text):
@@ -72,7 +73,7 @@ def get_label(path, example_id):
     return None
             
 
-def get_answer_anyscale(api_base, token, model_name, system_message, user_message, repeat_penalty = 1, temperature = 0.7):
+def get_answer_anyscale(api_base, token, model_name, system_message, user_message, repeat_penalty = 1, temperature = 1):
     s = requests.Session()
     url = f"{api_base}/chat/completions"
     body = {
@@ -80,7 +81,7 @@ def get_answer_anyscale(api_base, token, model_name, system_message, user_messag
     "messages": [{"role": "system", "content": system_message}, 
                 {"role": "user", "content": user_message}],
     "temperature": temperature,
-    "repeat_penalty": repeat_penalty,
+    # "repeat_penalty": repeat_penalty,
     }
 
 
@@ -97,6 +98,35 @@ def get_answer_anyscale(api_base, token, model_name, system_message, user_messag
         print(f"Total tokens: {total_token_num}")
         
         return answer, prompt_token_num, completion_token_num, total_token_num
+    
+
+def get_chat_completion_gpt(prompt, system_message, model, api_key):
+    print(f"Model is {model}")
+    OpenAI.api_key = os.environ['OPENAI_API_KEY']
+    client = OpenAI()
+   # Creating a message as required by the API
+    messages=[
+    {"role": "system", "content": system_message},
+    {"role": "user", "content": prompt}]
+  
+   # Calling the ChatCompletion API
+    completion = client.chat.completions.create(
+        model=model,
+        messages=messages,
+        temperature=0.7,
+   )
+
+   # Returning the extracted response
+    answer = completion.choices[0].message["content"]
+    prompt_token_num = completion['usage']['prompt_tokens']
+    completion_token_num = completion['usage']['completion_tokens']
+    total_token_num = completion['usage']['total_tokens']
+    
+    print(f"Prompt tokens: {prompt_token_num}")
+    print(f"Completion tokens: {completion_token_num}")
+    print(f"Total tokens: {total_token_num}")
+    
+    return answer, prompt_token_num, completion_token_num, total_token_num
     
 
 def classify_veracity(answer_list):

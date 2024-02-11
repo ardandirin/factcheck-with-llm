@@ -10,6 +10,8 @@ import re
 # from sklearn.metrics import classification_report, confusion_matrix
 
 label_prompt = open('prompts/verdict-prompt.txt', 'r', encoding='utf-8').read()
+
+# label_prompt = open('prompts/verdict-prompt-nei-with-summaries.txt', 'r', encoding='utf-8').read()
 # label_prompt_with_date = open('prompts/verdict-prompt-with-date.txt', 'r', encoding='utf-8').read()
 base_url = os.environ.get('OPENAI_BASE_URL')
 api_key = os.environ.get('OPENAI_API_KEY')
@@ -75,6 +77,7 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
             id = data['example_id']
             original_claim = data['claim']
             date = DateHelper.extract_date_string(original_claim)
+            # subqs = JsonLoader.load_subquestions_with_question_mark_gpt(subq_data, id) 
             # subqs = JsonLoader.load_subquestions(subq_data, id) # For GPT generated subquestions
             # subqs = JsonLoader.load_subquestions_with_newline(subq_data, id) # For mixtral generated subquestions
             subqs = JsonLoader.load_subquestions_with_question_mark(subq_data, id) # For mixtral generated subquestions
@@ -88,8 +91,10 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
                 
                 prompt = label_prompt
                 prompt += f"DO ONLY use the following information when making the judgment: {all_summaries}\nQuestion: {subquestion}\n"
+                # prompt += f"\nQuestion: {subquestion}\nInformation:{all_summaries}\n"
+
                 system_mes = "You should answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. Always seperate each part of the answer with a new line"
-                system_mes_with_no_info = "You should answer the question with either yes, no or nei(for not enough information). Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. Always seperate each part of the answer with a new line"
+                system_mes_with_no_info = "You should answer the question with either yes, no or nei(for not enough information). Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY use the information provided. Always seperate each part of the answer with a new line. In your answers always follow this format:Label:\nConfidence:\nJustification:"
 
                 time.sleep(1) # Sleep for 1 seconds to avoid exceeding the quota and almost concurrent requests.
                 answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_mes_with_no_info, user_message=prompt)
@@ -119,7 +124,7 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name):
                 all_subqs.append(output_data)
 
             print(f"len(pred_labels_list): {len(pred_labels_list)}")
-            veracity = General.classify_veracity(pred_labels_list)
+            veracity = General.classify_veracity_new_6way(pred_labels_list)
             data_to_write['pred_label'] = veracity
             data_to_write['subquestion_data'] = all_subqs
             json.dump(data_to_write, outfile)
@@ -138,7 +143,7 @@ def parse_args():
     parser.add_argument('--corpus_path', default='DataProcessed/summaries_final.jsonl', type=str)
     parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
     parser.add_argument('--subquestions_path', default='DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
-    parser.add_argument('--output_path', default='Results/labels_mixtral_icl_web_withnei.jsonl', type=str)
+    parser.add_argument('--output_path', default='Results/labels_mixtral_web_updated_questions.jsonl', type=str)
     parser.add_argument('--model_name', default='mixtral', type=str)
     
     args = parser.parse_args()

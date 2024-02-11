@@ -8,12 +8,14 @@ from tqdm import tqdm
 base_url = os.environ.get('OPENAI_BASE_URL')
 api_key = os.environ.get('OPENAI_API_KEY')
 
-print(f"Base url: {base_url}")
-print(f"Api key: {api_key}")
 
-def main(corpus_path, test_path, model_name, output_path):
+# print(f"Base url: {base_url}")
+# print(f"Api key: {api_key}")
+
+def main(corpus_path, test_path, model_name, output_path, llm_type):
     total_prompt_token = 0
     total_completion_token = 0
+    model_name = General.pick_model(model_name)
     one_shot_prompt = open('./prompts/one-shot-summary-prompt.txt', 'r', encoding='utf-8').read()
     with open(corpus_path, 'r', encoding='utf8') as corpus, open(output_path, 'w', encoding='utf8') as output_file:
         for line in tqdm(corpus):
@@ -33,10 +35,18 @@ def main(corpus_path, test_path, model_name, output_path):
                 prompt = one_shot_prompt + '\n'
                 prompt = f"Document: {document}\n"
                 prompt += f"Content: {content}\n"
-                prompt += f'Summarize the relevant information from the document in 1-2 sentences. Your response should provide a clear and concise summary of the relevant information contained in the document.'
+                # prompt += f'Summarize the relevant information from the document in 1-2 sentences. Your response should provide a clear and concise summary of the relevant information contained in the document.'
+                system_message = 'Summarize the relevant information from the document in 1-2 sentences. Your response should provide a clear and concise summary of the relevant information contained in the document.'
+
                 # print(f'The final prompt: {prompt}')
-                time.sleep(5) # Sleep for 5 seconds to avoid exceeding the quota
-                answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model_name, system_message='You are a helpful assistant', user_message=prompt)
+                time.sleep(1) # Sleep for 5 seconds to avoid exceeding the quota
+                if llm_type == 'anyscale':
+                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model_name, system_message=system_message, user_message=prompt)
+                elif llm_type == 'gpt':
+                    print("GPT type selected")
+                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_chat_completion_gpt(prompt=prompt, system_message=system_message, model=model_name, api_key=api_key)
+                else:
+                    print('Plese select a valid LLM')
                 summaries['summary'].append(answer)
                 print(f"Prompt tokens: {prompt_token_num}")
                 total_prompt_token += prompt_token_num
@@ -73,11 +83,12 @@ def parse_args():
     parser.add_argument('--test_path', default='./ClaimDecomp/test.jsonl', type=str)
     parser.add_argument('--output_path', default='./DataProcessed/summaries_final.jsonl', type=str)
     parser.add_argument('--model_name', default='meta-llama/Llama-2-70b-chat-hf', type=str)
+    parser.add_argument('--llm_type', default='anyscale', type=str)
     
     args = parser.parse_args()
     return args
                     
 if __name__ == '__main__':
     args = parse_args()
-    main(args.corpus_path, args.test_path, model_name=args.model_name, output_path=args.output_path)
+    main(args.corpus_path, args.test_path, model_name=args.model_name, output_path=args.output_path, llm_type=args.llm_type)
                 

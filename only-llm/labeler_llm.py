@@ -45,9 +45,10 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, kno
                 prompt += f"Date: {date}\nQuestion: {subquestion}\n"
                 system_message_simple = "You are a helpful assistant answering questions."
                 system_message_no_info = "You should answer the question with either yes, no or nei(for not enough information). Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date. Always seperate each part of the answer with a new line"
+                system_message_lmm_web = f"You should answer the question with either yes, no or nei(for not enough information). Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date and you can also use the supplemantary information here: {all_summaries}.\nAlways seperate each part with a /n"
                 # system_mes = "I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
                 time.sleep(1) # Sleep for 5 seconds to avoid exceeding the quota and almost concurrent requests.
-                answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_message_no_info, user_message=prompt)
+                answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_message_lmm_web, user_message=prompt)
 
                 predicted_label = General.extract_keyword(answer, "Label:")
                 confidence = General.extract_keyword(answer, "Confidence:")
@@ -87,9 +88,9 @@ def parse_args():
     parser.add_argument('--corpus_path', default='DataProcessed/summaries_final.jsonl', type=str)
     parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
     parser.add_argument('--subquestions_path', default='DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
-    parser.add_argument('--output_path', default='Results/labels_mixtral_icl_llm_withnei.jsonl', type=str)
+    parser.add_argument('--output_path', default='Results/labels_mixtral_icl_llmweb_withnei.jsonl', type=str)
     parser.add_argument('--model_name', default='mixtral', type=str)
-    parser.add_argument('--knowledge_base', default='llm', type=str) # can give llm or llm-web then summaries will be used as well.
+    parser.add_argument('--knowledge_base', default='llm-web', type=str) # can give llm or llm-web then summaries will be used as well.
     
     args = parser.parse_args()
     return args

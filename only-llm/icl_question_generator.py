@@ -39,6 +39,7 @@ def main(test_path, output_path, model_name):
     
 
     system_message = "Assume you are a fact-checker, generate a few, unique yes or no questions to help me answer if this claim is true or false. You should ask questions regarding both implicit and explicit facets of the claim. ONLY OUTPUT THE QUESTIONS. Seperate each question with a new line."
+    # system_message = "Assume you are a fact-checker, generate 10, unique yes or no questions to help me answer if this claim is true or false. You should ask questions regarding both implicit and explicit facets of the claim. DO ONLY OUTPUT THE QUESTIONS. Seperate each question with a new line."
 
     # system_message = "You are a helpful assistant."
     with open(test_path, 'r', encoding='utf8') as test_file, open(output_path, 'w', encoding='utf8') as outfile:
@@ -48,7 +49,7 @@ def main(test_path, output_path, model_name):
             claim = General.get_claim(test_path, id)
             # prompt = format_prompt(claim)
             prompt = format_prompt_with_txt('prompts/icl_qg.txt', claim)
-            answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(base_url, api_key, model, system_message=system_message, user_message=prompt, repeat_penalty=1, temperature=0.7)
+            answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(base_url, api_key, model, system_message=system_message, user_message=prompt, repeat_penalty=1, temperature=0.9)
             total_prompt_token += prompt_token_num
             total_completion_token += completion_token_num
             print(f"Total prompt tokens: {total_prompt_token}")
@@ -57,7 +58,7 @@ def main(test_path, output_path, model_name):
             print(f"Answer: {answer}")
             outfile.write(json.dumps({'example_id': id, 'claim': claim, 'questions': answer}) + '\n')
             outfile.flush()
-            time.sleep(2)
+            time.sleep(1)
     print(f"Total prompt tokens: {total_prompt_token}")
     print(f"Total completion tokens: {total_completion_token}")
     print(f"Total tokens: {total_prompt_token + total_completion_token}")
@@ -67,8 +68,8 @@ def main(test_path, output_path, model_name):
 def parse_args():
     parser = argparse.ArgumentParser()
   
-    parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--output_path', default='DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
+    parser.add_argument('--test_path', default='ClaimDecomp/empty_qs_test.jsonl', type=str)
+    parser.add_argument('--output_path', default='DataProcessed/subquestions_icl_mixtral_5_emptii.jsonl', type=str)
     parser.add_argument('--model_name', default='mixtral', type=str)
     
     args = parser.parse_args()

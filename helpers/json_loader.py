@@ -24,7 +24,7 @@ def list_returner(json_obj):
 
 def list_returner_q_mark(json_obj):
     '''Given a list data, returns a list of subquestions where each object within the list is a subquestion string'''
-    print("load_subquestions called")
+    # print("load_subquestions called")
     # Use regex to split the string and include '?' at the end of each split part
     questions = re.findall(r'.*?\?', json_obj['questions'].strip())
     return questions
@@ -52,6 +52,17 @@ def load_subquestions_with_newline(subquestions_obj, example_id):
     print("No such id found")
     return None 
 
+def load_subquestions_with_question_mark_gpt(subquestions_obj, example_id):
+    '''Given python object of subquestions, returns a list of subquestions for the given claim (id)'''
+    print("load_subquestions called")
+    for entry in subquestions_obj:
+        if entry['example_id'] == example_id:
+            print("Subquestions found")
+            # Use regex to split the string and include '?' at the end of each split part
+            questions = re.findall(r'.*?\?', entry['subquestions'][0].strip())
+            return questions
+    print("No such id found")
+    return None
 
 def load_subquestions_with_question_mark(subquestions_obj, example_id):
     '''Given python object of subquestions, returns a list of subquestions for the given claim (id)'''
