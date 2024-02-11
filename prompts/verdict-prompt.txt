@@ -1,14 +1,14 @@
 Question: Can low unemployment rates be attributed to everyone having 2 jobs?
-Answer: No
+Label: No
 Confidence: High
 Justification: Low unemployment rates cannot be solely attributed to everyone having two jobs. Unemployment rates are calculated based on the number of people who are actively seeking work but are unable to find it. Having multiple jobs does not influence this rate directly.
 
 Question: Do hospitals receive money for COVID patients?
-Answer: Yes
+Label: Yes
 Confidence: Medium
 Justification: Hospitals do receive funding for treating COVID-19 patients, primarily from government sources. This funding is designed to offset the significant costs associated with the treatment of COVID-19, including expenses for specialized equipment, medications, additional staffing, and extended patient care.
 
 Question: Does drinking green tea daily eliminate the risk of heart disease?
-Answer: No
+Label: No
 Confidence: Low
 Justification: While green tea has been associated with certain health benefits, including improvements in heart health, it is not accurate to claim that it eliminates the risk of heart disease entirely. The risk of heart disease is influenced by a multitude of factors, including genetics, lifestyle choices, and overall health. Green tea may contribute positively to heart health, but it cannot single-handedly eliminate the risk.

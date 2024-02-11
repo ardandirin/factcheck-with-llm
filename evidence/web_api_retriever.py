@@ -52,8 +52,11 @@ class WebRetriever:
         :param line: a line from the input file
         :return: a list of search results
         '''
-        questions_list = JsonLoader.list_returner(line)
-        end_date = DateHelper.extract_date(line['prompt'])
+        # questions_list = JsonLoader.list_returner(line) # For GPT3.5 finetuned
+        questions_list = JsonLoader.list_returner_q_mark(line) # For Mixtral
+        # end_date = DateHelper.extract_date(line['prompt'])
+        end_date = DateHelper.extract_date(line['claim'])
+
         search_results = []
         for q in questions_list:
             params = self.update_params(q, end_date)
@@ -114,8 +117,8 @@ class WebRetriever:
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--subquestion_path', default='./ClaimDecomp/subquestions_finetuned.jsonl', type=str)
-    parser.add_argument('--websites_path', default='./ClaimDecomp/websites.jsonl', type=str)
+    parser.add_argument('--subquestion_path', default='./DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
+    parser.add_argument('--websites_path', default='./DataProcessed/websites_mixtral.jsonl', type=str)
     parser.add_argument('--web_api_key', default=os.getenv('WEB_API_KEY'), type=str)
     parser.add_argument('--search_engine_id', default=os.getenv('SEARCH_ENGINE_ID'), type=str)
     args = parser.parse_args()
@@ -126,4 +129,4 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
     webRetriever = WebRetriever(args)
-    webRetriever.write_to_file(num_lines_to_process=200)
+    webRetriever.write_to_file(num_lines_to_process=123)

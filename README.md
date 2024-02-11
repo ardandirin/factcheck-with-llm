@@ -21,7 +21,16 @@ Create subquestions via:
 python3 question_generation.py
 ```
 
-## Anyscales Endpoints are used in the following parts
+Or you can use in-context-learning to generate the subquestion:
+
+```bash
+python3 -m only-llm.icl_question_generator \
+    --test_path "ClaimDecomp/test.jsonl" \
+    --output_path "DataProcessed/subquestions_icl_mixtral.jsonl" \
+    --model_name "mixtral"
+```
+
+## Anyscales Endpoints are used in the following parts to use LLMs
 
 So need to set api key and base url. It can be done by registering in their [website](https://www.anyscale.com)
 

@@ -13,11 +13,11 @@ def question_aggregator(json_line):
     combined_questions = [str(question) for question in combined_questions]
 
     # Join the list into a string
-    questions_string = ', '.join(combined_questions)
+    questions_string = '\n'.join(combined_questions)
     return questions_string
 
 # Open the input and output files
-with open('../ClaimDecomp/dev.jsonl', 'r') as input_file, open('../ClaimDecomp/finetune_val.jsonl', 'w') as output_file:
+with open('../ClaimDecomp/train.jsonl', 'r') as input_file, open('../ClaimDecomp/training_finetune_form.jsonl', 'w') as output_file:
     # Loop through each line in the input file to read necessary data
     # question_aggregator(json.loads(input_file.readline()))
     for line in input_file:
