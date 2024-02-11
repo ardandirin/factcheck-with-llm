@@ -4,15 +4,25 @@ import argparse
 import time
 import os
 from tqdm import tqdm
+from openai import OpenAI
+from dotenv import load_dotenv
 
-base_url = os.environ.get('OPENAI_BASE_URL')
-api_key = os.environ.get('OPENAI_API_KEY')
+load_dotenv()
 
 
+
+
+
+    
 # print(f"Base url: {base_url}")
 # print(f"Api key: {api_key}")
 
 def main(corpus_path, test_path, model_name, output_path, llm_type):
+    if llm_type == 'anyscale':
+        base_url = os.environ.get('OPENAI_BASE_URL')
+        api_key = os.environ.get('OPENAI_API_KEY')
+    else:
+        OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
     total_prompt_token = 0
     total_completion_token = 0
     model_name = General.pick_model(model_name)
@@ -44,9 +54,10 @@ def main(corpus_path, test_path, model_name, output_path, llm_type):
                     answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model_name, system_message=system_message, user_message=prompt)
                 elif llm_type == 'gpt':
                     print("GPT type selected")
-                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_chat_completion_gpt(prompt=prompt, system_message=system_message, model=model_name, api_key=api_key)
+                    client = OpenAI(api_key=OPENAI_API_KEY)
+                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_chat_completion_gpt(prompt=prompt, system_message=system_message, model=model_name, client=client)
                 else:
-                    print('Plese select a valid LLM')
+                    print('Please select a valid LLM')
                 summaries['summary'].append(answer)
                 print(f"Prompt tokens: {prompt_token_num}")
                 total_prompt_token += prompt_token_num

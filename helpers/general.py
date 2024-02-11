@@ -98,35 +98,53 @@ def get_answer_anyscale(api_base, token, model_name, system_message, user_messag
         print(f"Total tokens: {total_token_num}")
         
         return answer, prompt_token_num, completion_token_num, total_token_num
-    
 
-def get_chat_completion_gpt(prompt, system_message, model, api_key):
-    print(f"Model is {model}")
-    OpenAI.api_key = os.environ['OPENAI_API_KEY']
-    client = OpenAI()
-   # Creating a message as required by the API
-    messages=[
-    {"role": "system", "content": system_message},
-    {"role": "user", "content": prompt}]
-  
-   # Calling the ChatCompletion API
+def get_chat_completion_gpt(prompt, system_message, client, model):
+
+
     completion = client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=0.7,
-   )
+    model="gpt-3.5-turbo-0125",
+    messages=[
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": prompt}
+    ]
+    )
+    answer = completion.choices[0].message.content
+    prompt_token_num = completion.usage.prompt_tokens
+    completion_token_num = completion.usage.completion_tokens
+    total_token_num = completion.usage.total_tokens 
 
-   # Returning the extracted response
-    answer = completion.choices[0].message["content"]
-    prompt_token_num = completion['usage']['prompt_tokens']
-    completion_token_num = completion['usage']['completion_tokens']
-    total_token_num = completion['usage']['total_tokens']
-    
-    print(f"Prompt tokens: {prompt_token_num}")
-    print(f"Completion tokens: {completion_token_num}")
-    print(f"Total tokens: {total_token_num}")
-    
     return answer, prompt_token_num, completion_token_num, total_token_num
+
+    
+
+# def get_chat_completion_gpt(prompt, system_message, model, api_key):
+#     print(f"Model is {model}")
+#     OpenAI.api_key = os.environ['OPENAI_API_KEY']
+#     client = OpenAI()
+#    # Creating a message as required by the API
+#     messages=[
+#     {"role": "system", "content": system_message},
+#     {"role": "user", "content": prompt}]
+  
+#    # Calling the ChatCompletion API
+#     completion = client.chat.completions.create(
+#         model=model,
+#         messages=messages,
+#         temperature=0.7,
+#    )
+
+#    # Returning the extracted response
+#     answer = completion.choices[0].message["content"]
+#     prompt_token_num = completion['usage']['prompt_tokens']
+#     completion_token_num = completion['usage']['completion_tokens']
+#     total_token_num = completion['usage']['total_tokens']
+    
+#     print(f"Prompt tokens: {prompt_token_num}")
+#     print(f"Completion tokens: {completion_token_num}")
+#     print(f"Total tokens: {total_token_num}")
+    
+#     return answer, prompt_token_num, completion_token_num, total_token_num
     
 
 def classify_veracity(answer_list):
