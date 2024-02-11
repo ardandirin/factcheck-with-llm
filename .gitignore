@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+code-archive/
+.vscode/launch.json
+/DataProcessed/answers.jsonl
+/logs
+/small_datas/
+requirements_old.txt
+```
