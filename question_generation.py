@@ -22,7 +22,7 @@ def get_chat_completion(prompt, model="gpt-3.5-turbo"):
     return response.choices[0].message["content"]
 
 
-model = "ft:gpt-3.5-turbo-0613:personal::8HsRtakR"
+model = "ft:gpt-3.5-turbo-0613:personal::8HsRtakR" # Fine-tuned model
 results = []
 
 with open('ClaimDecomp/test.jsonl', 'r') as input_file:

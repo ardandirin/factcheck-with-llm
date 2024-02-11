@@ -112,12 +112,13 @@ python3 -m evidence.summarize \
 Here the summaries are given to the LLM with the subquestion to answer it with yes or no.
 
 ```bash
-python3 -m labeler \
-    --corpus_path 'DataProcessed/summaries_final.jsonl' \
+python3 -m only-llm.labeler_web \
+    --corpus_path 'Path_to_summaries' \
     --test_path 'ClaimDecomp/test.jsonl' \
-    --subquestions_path 'ClaimDecomp/subquestions_finetuned.jsonl' \
-    --output_path 'DataProcessed/labels.jsonl' \
-    --model_name 'meta-llama/Llama-2-70b-chat-hf' 
+    --subquestions_path 'path-to-generated-subquestions' \
+    --output_path 'output-path-labels' \
+    --model_name 'meta-llama/Llama-2-70b-chat-hf for Anyscale, gpt-3.5-turbo-0125 for GPT' \
+    --llm_type 'anyscale or gpt'
 ```
 
 ## Final Verdict
@@ -126,5 +127,6 @@ Creates confusion matrix and final classification
 
 ```bash
 python3 -m final_verdict \
-    --labels_path 'DataProcessed/labels.jsonl'
+    --labels_path 'Path-to-the labels add web, gpt, icl etc. to distinguish' \
+    --classification  'Choose one ['six-way', 'three-way', 'binary']'
 ```
