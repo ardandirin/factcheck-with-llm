@@ -48,9 +48,9 @@ def main(labels_path, gold_labels, predictions, classifcation):
             # print("Claim: ", json_obj['claim'])
             if classifcation == 'six-way':
                 gold_lab = json_obj['gold_label']
-                flan_t5_answer = answer_with_flant5(json_obj['claim'], subqs, pred_labels)
-                print(flan_t5_answer)
-                # predicted_veracity = General.classify_veracity_new_6way(pred_labels)
+                # flan_t5_answer = answer_with_flant5(json_obj['claim'], subqs, pred_labels)
+                # print(flan_t5_answer)
+                predicted_veracity = General.classify_veracity_new_6way(pred_labels)
                 # predicted_veracity = General.classify_veracity_new_6way_with_conf(pred_labels, conf_levels)
             elif classifcation == 'three-way':
                 gold_lab = General.map_six_to_three_categories(json_obj['gold_label'])
@@ -106,8 +106,8 @@ def main(labels_path, gold_labels, predictions, classifcation):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--labels_path', default='Results/labels_mixtral_web_updated_questions.jsonl', type=str)
-    parser.add_argument('--classification', default='six-way', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
+    parser.add_argument('--labels_path', default='Results/labels_gpt_nei_web.jsonl', type=str)
+    parser.add_argument('--classification', default='binary', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
     args = parser.parse_args()
     gold_labels = [] 
     predictions = []  
