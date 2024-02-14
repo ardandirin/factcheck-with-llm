@@ -129,4 +129,4 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
     webRetriever = WebRetriever(args)
-    webRetriever.write_to_file(num_lines_to_process=123)
+    webRetriever.write_to_file(num_lines_to_process=200)
