@@ -136,59 +136,108 @@ import json
 
 # print(f'others: {others}')
 
+# import matplotlib.pyplot as plt
+
+# def create_histogram(data, bins=10, title="Histogram", xlabel="Value", ylabel="Frequency"):
+#     plt.hist(data, bins=bins)
+#     plt.title(title)
+#     plt.xlabel(xlabel)
+#     plt.ylabel(ylabel)
+#     plt.show()
+
+# def remove_after_claim(text):
+#     # Find the index of "Claim:"
+#     index = text.find("Claim:")
+#     # If "Claim:" is found, return the substring up to its starting index
+#     if index != -1:
+#         return text[:index]
+#     # If "Claim:" is not found, return the original text
+#     return text
+
+# import re
+
+# mixtral_questions = './DataProcessed/subquestions_icl_mixtral_fixed.jsonl'
+# mixtral_final = './DataProcessed/subquestions_icl_mixtral_finalized.jsonl'
+
+
+# from helpers import json_loader as Jsonloader
+# num_questions = []
+# extremes = 0
+# with open(mixtral_final, 'r') as file:
+#     for line in file:
+#         json_obj = json.loads(line.strip())
+#         qs = []
+#         questions = Jsonloader.list_returner_q_mark(json_obj)
+#         # Jsonloader.load_subquestions_with_question_mark(json_obj, id)
+#         # questions = re.findall(r'.*?\?', json_obj['questions'].strip())
+        
+#         if "Claim:" in json_obj['questions']:
+#             # cleaned_qs = remove_after_claim(json_obj['questions'])
+#             # json_obj['questions'] = cleaned_qs
+
+#             print(len(questions))
+#             print(questions)
+
+#         if len(questions) == 0:
+#             print(json_obj['example_id'])
+#         num_questions.append(len(questions))
+
+#         # json_obj_to_write = {'example_id': json_obj['example_id'], 'claim': json_obj['claim'], 'questions': json_obj['questions']}
+#         # json.dump(json_obj_to_write, out_file)
+#         # out_file.write('\n')
+    
+
+#     create_histogram(num_questions, bins=5, title="Sample Histogram")
+    
+#     print(num_questions)
+#     print(extremes)
+
+
+
+
+
+# import json
+
+# def validate_jsonl_file(file_path):
+#     with open(file_path, 'r') as file:
+#         line_number = 1
+#         for line in file:
+#             try:
+#                 # Attempt to decode the line as JSON
+#                 json.loads(line)
+#                 # print(f"Line {line_number}: Valid JSON")
+#             except json.JSONDecodeError as e:
+#                 # If an error occurs, print the error message and line number
+#                 print(f"Line {line_number}: Invalid JSON - {e}")
+#             line_number += 1
+
+# # Replace 'your_file.jsonl' with the path to your .jsonl file
+# file_path = '/Users/ardaandirin/code/factcheck-with-llm/DataProcessed/websites_mixtral_icl.jsonl'
+# validate_jsonl_file(file_path)
+
+
 import matplotlib.pyplot as plt
 
-def create_histogram(data, bins=10, title="Histogram", xlabel="Value", ylabel="Frequency"):
-    plt.hist(data, bins=bins)
-    plt.title(title)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
+import json
+import matplotlib.pyplot as plt
+
+def read_data_from_json(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+        return data
+
+
+def plot_histogram(data):
+    plt.figure(figsize=(10, 6))  # Optional: Adjusts the size of the plot
+    plt.hist(data, bins=10, alpha=0.7, color='blue', edgecolor='black', log=True)
+    plt.title('Histogram of Given Data')
+    plt.xlabel('Value')
+    plt.ylabel('Frequency')
+    plt.grid(True)  # Optional: Shows a grid for easier readability
     plt.show()
 
-def remove_after_claim(text):
-    # Find the index of "Claim:"
-    index = text.find("Claim:")
-    # If "Claim:" is found, return the substring up to its starting index
-    if index != -1:
-        return text[:index]
-    # If "Claim:" is not found, return the original text
-    return text
-
-import re
-
-mixtral_questions = './DataProcessed/subquestions_icl_mixtral_fixed.jsonl'
-mixtral_final = './DataProcessed/subquestions_icl_mixtral_finalized.jsonl'
-
-
-from helpers import json_loader as Jsonloader
-num_questions = []
-extremes = 0
-with open(mixtral_final, 'r') as file:
-    for line in file:
-        json_obj = json.loads(line.strip())
-        qs = []
-        questions = Jsonloader.list_returner_q_mark(json_obj)
-        # Jsonloader.load_subquestions_with_question_mark(json_obj, id)
-        # questions = re.findall(r'.*?\?', json_obj['questions'].strip())
-        
-        if "Claim:" in json_obj['questions']:
-            # cleaned_qs = remove_after_claim(json_obj['questions'])
-            # json_obj['questions'] = cleaned_qs
-
-            print(len(questions))
-            print(questions)
-
-        if len(questions) == 0:
-            print(json_obj['example_id'])
-        num_questions.append(len(questions))
-
-        # json_obj_to_write = {'example_id': json_obj['example_id'], 'claim': json_obj['claim'], 'questions': json_obj['questions']}
-        # json.dump(json_obj_to_write, out_file)
-        # out_file.write('\n')
-    
-
-    create_histogram(num_questions, bins=5, title="Sample Histogram")
-    
-    print(num_questions)
-    print(extremes)
-
+# Replace 'your_data_file.json' with the path to your JSON file
+file_path = '/Users/ardaandirin/code/factcheck-with-llm/Extras/word_counts_mixtral_icl.json'
+data = read_data_from_json(file_path)
+print(data)
+plot_histogram(data)
