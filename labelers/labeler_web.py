@@ -11,7 +11,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 # from sklearn.metrics import classification_report, confusion_matrix
 load_dotenv()
-label_prompt = open('prompts/verdict-prompt-nei-with-summaries.txt', 'r', encoding='utf-8').read()
+label_prompt = open('prompts/verdict-prompt.txt', 'r', encoding='utf-8').read()
 
 # label_prompt = open('prompts/verdict-prompt-nei-with-summaries.txt', 'r', encoding='utf-8').read()
 # label_prompt_with_date = open('prompts/verdict-prompt-with-date.txt', 'r', encoding='utf-8').read()
@@ -79,10 +79,13 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, llm
             id = data['example_id']
             original_claim = data['claim']
             date = DateHelper.extract_date_string(original_claim)
-            subqs = JsonLoader.load_subquestions_with_question_mark_gpt(subq_data, id) # also for gpt but with question marks?
+            if llm_type == 'gpt':
+                subqs = JsonLoader.load_subquestions_with_question_mark_gpt(subq_data, id) # also for gpt but with question marks?
+            elif llm_type == 'anyscale':
+                subqs = JsonLoader.load_subquestions_with_question_mark(subq_data, id) # For mixtral generated subquestions
             # subqs = JsonLoader.load_subquestions(subq_data, id) # For GPT generated subquestions
             # subqs = JsonLoader.load_subquestions_with_newline(subq_data, id) # For mixtral generated subquestions
-            # subqs = JsonLoader.load_subquestions_with_question_mark(subq_data, id) # For mixtral generated subquestions
+            
             
             gold_label = General.get_label(test_path, id)
             all_summaries = " ".join(summary_dt['summary'] for summary_dt in data['summary_data'])
@@ -149,12 +152,12 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, llm
             
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--corpus_path', default='DataProcessed/summaries_final.jsonl', type=str)
+    parser.add_argument('--corpus_path', default='Data/5_Summaries/summaries_mixtral_icl.jsonl', type=str)
     parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--subquestions_path', default='DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
-    parser.add_argument('--output_path', default='Results/labels_mixtral_web_updated_questions.jsonl', type=str)
+    parser.add_argument('--subquestions_path', default='Data/1_Subquestions/subquestions_icl_mixtral.jsonl', type=str)
+    parser.add_argument('--output_path', default='Data/6_Results/labels_mixtral_icl_web_final.jsonl', type=str)
     parser.add_argument('--model_name', default='mixtral', type=str)
-    parser.add_argument('--llm_type', default='', type=str)
+    parser.add_argument('--llm_type', default='anyscale', type=str)
 
     
     args = parser.parse_args()

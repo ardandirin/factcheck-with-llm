@@ -90,11 +90,11 @@ def main(corpus_path, test_path, model_name, output_path, llm_type):
               
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--corpus_path', default='./DataProcessed/top_docs_final.jsonl', type=str)
+    parser.add_argument('--corpus_path', default='./Data/4_TopDocs/top_docs_mixtral_icl.jsonl', type=str)
     parser.add_argument('--test_path', default='./ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--output_path', default='./DataProcessed/summaries_final.jsonl', type=str)
-    parser.add_argument('--model_name', default='meta-llama/Llama-2-70b-chat-hf', type=str)
-    parser.add_argument('--llm_type', default='anyscale', type=str)
+    parser.add_argument('--output_path', default='./Data/5_Summaries/summaries_mixtral_icl.jsonl', type=str)
+    parser.add_argument('--model_name', default='mixtral', type=str) # mixtral, gptturbo
+    parser.add_argument('--llm_type', default='anyscale', type=str) # gpt or anyscale
     
     args = parser.parse_args()
     return args

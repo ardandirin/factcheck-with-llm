@@ -106,7 +106,7 @@ def main(labels_path, gold_labels, predictions, classifcation):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--labels_path', default='Results/labels_gpt_nei_web.jsonl', type=str)
+    parser.add_argument('--labels_path', default='Data/6_Results/labels_mixtral_icl_web_final.jsonl', type=str)
     parser.add_argument('--classification', default='binary', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
     args = parser.parse_args()
     gold_labels = [] 
