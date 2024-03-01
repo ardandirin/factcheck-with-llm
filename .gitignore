@@ -9,5 +9,5 @@ code-archive/
 /small_datas/
 requirements_old.txt
 /Data/3_Answers/*.jsonl
-
+/ResultLogs
 ```

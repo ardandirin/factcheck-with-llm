@@ -9,10 +9,9 @@ from tqdm import tqdm
 import re
 from openai import OpenAI
 from dotenv import load_dotenv
-# from sklearn.metrics import classification_report, confusion_matrix
-load_dotenv()
-label_prompt = open('prompts/verdict-prompt.txt', 'r', encoding='utf-8').read()
+from itertools import islice
 
+label_prompt = open('prompts/verdict-prompt.txt', 'r', encoding='utf-8').read()
 # label_prompt = open('prompts/verdict-prompt-nei-with-summaries.txt', 'r', encoding='utf-8').read()
 # label_prompt_with_date = open('prompts/verdict-prompt-with-date.txt', 'r', encoding='utf-8').read()
 base_url = os.environ.get('OPENAI_BASE_URL')
@@ -29,7 +28,6 @@ def extract_keyword(text, keyword):
         print("Returned None from extract_keyword!")
         return None
     
-import re
 
 def extract_justification(text, keyword="Justification:"):
     pattern = re.compile(re.escape(keyword) + r"\s*(.*?)(?:\n|$)", re.DOTALL)
@@ -66,22 +64,22 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, llm
     model = General.pick_model(model_name)
     total_prompt_token = 0
     total_completion_token = 0
-
+    load_dotenv()
     total_prompt_token_num_second = 0
     total_completion_token_num_second = 0
     not_confident = 0 # How many times the confidence was not high
     answer_changed = 0 # How many times the answer was changed with the LLM's internal knowledge
     with open(corpus_path, 'r', encoding='utf8') as corpus, open(output_path, 'w', encoding='utf8') as outfile:
         subq_data = JsonLoader.json_loader(subquestions_path)
-        
-        for line in tqdm(corpus):
+        num_lines_to_skip = 0
+        for line in tqdm(islice(corpus, num_lines_to_skip, None)):
             data = json.loads(line)
             id = data['example_id']
             original_claim = data['claim']
             date = DateHelper.extract_date_string(original_claim)
             if llm_type == 'gpt':
                 subqs = JsonLoader.load_subquestions_with_question_mark_gpt(subq_data, id) # also for gpt but with question marks?
-            elif llm_type == 'anyscale':
+            elif llm_type == 'anyscale' or llm_type == 'gpt-icl':
                 subqs = JsonLoader.load_subquestions_with_question_mark(subq_data, id) # For mixtral generated subquestions
             # subqs = JsonLoader.load_subquestions(subq_data, id) # For GPT generated subquestions
             # subqs = JsonLoader.load_subquestions_with_newline(subq_data, id) # For mixtral generated subquestions
@@ -104,11 +102,11 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, llm
                 time.sleep(1) # Sleep for 1 seconds to avoid exceeding the quota and almost concurrent requests.
                 if llm_type == 'anyscale':
                     answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_mes_with_no_info, user_message=prompt)
-                elif llm_type == 'gpt':
+                elif llm_type == 'gpt' or llm_type == 'gpt-icl':
                     print("GPT type selected")
                     openai_api_key = os.getenv('OPENAI_API_KEY')
                     client = OpenAI(api_key=openai_api_key)
-                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_chat_completion_gpt(prompt=prompt, system_message=system_mes_with_no_info, model=model_name, client=client)
+                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_chat_completion_gpt(prompt=prompt, system_message=system_mes_with_no_info, model=model, client=client)
                 else:
                     print('Please select a valid LLM')
                 
@@ -152,12 +150,12 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, llm
             
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--corpus_path', default='Data/5_Summaries/summaries_mixtral_icl.jsonl', type=str)
+    parser.add_argument('--corpus_path', default='Data/5_Summaries/summaries_gpt_icl.jsonl', type=str)
     parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--subquestions_path', default='Data/1_Subquestions/subquestions_icl_mixtral.jsonl', type=str)
-    parser.add_argument('--output_path', default='Data/6_Results/labels_mixtral_icl_web_final.jsonl', type=str)
-    parser.add_argument('--model_name', default='mixtral', type=str)
-    parser.add_argument('--llm_type', default='anyscale', type=str)
+    parser.add_argument('--subquestions_path', default='Data/1_Subquestions/subquestions_icl_gpt.jsonl', type=str)
+    parser.add_argument('--output_path', default='Data/6_Results/GPT/labels_gpt_icl_web.jsonl', type=str)
+    parser.add_argument('--model_name', default='gpt-3.5-turbo', type=str)
+    parser.add_argument('--llm_type', default='gpt-icl', type=str)
 
     
     args = parser.parse_args()

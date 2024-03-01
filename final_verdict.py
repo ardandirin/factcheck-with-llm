@@ -21,7 +21,7 @@ def answer_with_flant5(claim, subquestions, answer_list):
 
 def classify_binary_truthfulness(value):
     false_values = ['pants-fire', 'false', 'barely-true']
-    return 'no' if value in false_values else 'yes'
+    return 'false' if value in false_values else 'true'
 
 def heat_map_repr(matrix, labels):
     # Convert matrix to DataFrame for better labeling
@@ -87,7 +87,7 @@ def main(labels_path, gold_labels, predictions, classifcation):
     elif classifcation == 'three-way':
         labels_list = ['false', 'half-true', 'true']
     elif classifcation == 'binary':
-        labels_list = ['no', 'yes']
+        labels_list = ['false', 'true']
 
     
     # Generate classification report and confusion matrix
@@ -106,7 +106,7 @@ def main(labels_path, gold_labels, predictions, classifcation):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--labels_path', default='Data/6_Results/labels_mixtral_icl_web_final.jsonl', type=str)
+    parser.add_argument('--labels_path', default='Data/6_Results/GPT/labels_gpt_finetune_llmweb.jsonl', type=str)
     parser.add_argument('--classification', default='binary', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
     args = parser.parse_args()
     gold_labels = [] 
