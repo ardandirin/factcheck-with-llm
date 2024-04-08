@@ -118,7 +118,7 @@ class WebRetriever:
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--subquestion_path', default='./DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
-    parser.add_argument('--websites_path', default='./DataProcessed/websites_mixtral.jsonl', type=str)
+    parser.add_argument('--websites_path', default='./DataProcessed/mixtral_wb_33.jsonl', type=str)
     parser.add_argument('--web_api_key', default=os.getenv('WEB_API_KEY'), type=str)
     parser.add_argument('--search_engine_id', default=os.getenv('SEARCH_ENGINE_ID'), type=str)
     args = parser.parse_args()
@@ -129,4 +129,4 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
     webRetriever = WebRetriever(args)
-    webRetriever.write_to_file(num_lines_to_process=123)
+    webRetriever.write_to_file(num_lines_to_process=96)

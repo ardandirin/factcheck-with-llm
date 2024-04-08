@@ -21,7 +21,7 @@ def answer_with_flant5(claim, subquestions, answer_list):
 
 def classify_binary_truthfulness(value):
     false_values = ['pants-fire', 'false', 'barely-true']
-    return 'no' if value in false_values else 'yes'
+    return 'false' if value in false_values else 'true'
 
 def heat_map_repr(matrix, labels):
     # Convert matrix to DataFrame for better labeling
@@ -48,9 +48,9 @@ def main(labels_path, gold_labels, predictions, classifcation):
             # print("Claim: ", json_obj['claim'])
             if classifcation == 'six-way':
                 gold_lab = json_obj['gold_label']
-                flan_t5_answer = answer_with_flant5(json_obj['claim'], subqs, pred_labels)
-                print(flan_t5_answer)
-                # predicted_veracity = General.classify_veracity_new_6way(pred_labels)
+                # flan_t5_answer = answer_with_flant5(json_obj['claim'], subqs, pred_labels)
+                # print(flan_t5_answer)
+                predicted_veracity = General.classify_veracity_new_6way(pred_labels)
                 # predicted_veracity = General.classify_veracity_new_6way_with_conf(pred_labels, conf_levels)
             elif classifcation == 'three-way':
                 gold_lab = General.map_six_to_three_categories(json_obj['gold_label'])
@@ -87,7 +87,7 @@ def main(labels_path, gold_labels, predictions, classifcation):
     elif classifcation == 'three-way':
         labels_list = ['false', 'half-true', 'true']
     elif classifcation == 'binary':
-        labels_list = ['no', 'yes']
+        labels_list = ['false', 'true']
 
     
     # Generate classification report and confusion matrix
@@ -106,8 +106,8 @@ def main(labels_path, gold_labels, predictions, classifcation):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--labels_path', default='Results/labels_mixtral_web_updated_questions.jsonl', type=str)
-    parser.add_argument('--classification', default='six-way', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
+    parser.add_argument('--labels_path', default='Data/6_Results/GPT/labels_gpt_finetune_llmweb.jsonl', type=str)
+    parser.add_argument('--classification', default='binary', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
     args = parser.parse_args()
     gold_labels = [] 
     predictions = []  

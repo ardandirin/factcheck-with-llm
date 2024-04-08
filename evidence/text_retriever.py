@@ -128,8 +128,8 @@ def save_word_counts(word_counts, output_path):
 def parse_args():
     parser = argparse.ArgumentParser(description='Process a jsonl file and aggregate the results for each question in each line')
     parser.add_argument('--test_path', default='./ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--websites_path', default='./ClaimDecomp/websites.jsonl', type=str)
-    parser.add_argument('--output_path', default='./ClaimDecomp/answers.jsonl', type=str)
+    parser.add_argument('--websites_path', default='./DataProcessed/websites_mixtral_icl.jsonl', type=str)
+    parser.add_argument('--output_path', default='./DataProcessed/answers_mixtral_icl.jsonl', type=str)
     args = parser.parse_args()
     return args
 
@@ -137,5 +137,5 @@ if __name__ == "__main__":
     args = parse_args()
    
     word_counts = process_jsonl_file(args.websites_path, args.output_path, args.test_path)
-    save_word_counts(word_counts, './ClaimDecomp/word_counts.json')
+    save_word_counts(word_counts, './Extras/word_counts_mixtral_icl.json')
 
