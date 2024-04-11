@@ -27,6 +27,7 @@ def main(corpus_path, test_path, model_name, output_path, llm_type):
     total_completion_token = 0
     model_name = General.pick_model(model_name)
     one_shot_prompt = open('./prompts/one-shot-summary-prompt.txt', 'r', encoding='utf-8').read()
+    # one_shot_prompt = open('./prompts/few-shot-prompt.txt', 'r', encoding='utf-8').read()
     with open(corpus_path, 'r', encoding='utf8') as corpus, open(output_path, 'w', encoding='utf8') as output_file:
         for line in tqdm(corpus):
             print('New claim')
@@ -92,7 +93,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--corpus_path', default='./Data/4_TopDocs/top_docs_mixtral_icl.jsonl', type=str)
     parser.add_argument('--test_path', default='./ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--output_path', default='./Data/5_Summaries/summaries_mixtral_icl.jsonl', type=str)
+    parser.add_argument('--output_path', default='./Data/5_Summaries/summaries_mixtral_icl_claimfocused.jsonl', type=str)
     parser.add_argument('--model_name', default='mixtral', type=str) # mixtral, gptturbo
     parser.add_argument('--llm_type', default='anyscale', type=str) # gpt or anyscale
     

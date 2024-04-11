@@ -12,8 +12,7 @@ import time
 from tqdm import tqdm
 from openai import OpenAI
 from dotenv import load_dotenv
-load_dotenv()
-
+from itertools import islice
 # prompt = "Assume you are a fact-checker, generate unique yes or no questions to help me answer if this claim is true or false. You should ask questions regarding both implicit and explicit facets of the claim. Each question should be unique. Make the questions explicit. DO ONLY OUTPUT THE QUESTIONS."
 
 
@@ -38,6 +37,7 @@ def main(test_path, output_path, model_name, llm_type):
     api_key = os.environ.get('OPENAI_API_KEY')
     total_prompt_token = 0
     total_completion_token = 0
+    load_dotenv()
 
     
 
@@ -46,7 +46,8 @@ def main(test_path, output_path, model_name, llm_type):
 
     # system_message = "You are a helpful assistant."
     with open(test_path, 'r', encoding='utf8') as test_file, open(output_path, 'w', encoding='utf8') as outfile:
-        for line in tqdm(test_file):
+        num_lines_to_skip = 0
+        for line in tqdm(islice(test_file, num_lines_to_skip, None)):
             data = json.loads(line)
             id = data['example_id']
             claim = General.get_claim(test_path, id)
@@ -57,8 +58,9 @@ def main(test_path, output_path, model_name, llm_type):
             elif llm_type == 'gpt':
                 print("GPT type selected")
                 openai_api_key = os.getenv('OPENAI_API_KEY')
+                print("HERE")
                 client = OpenAI(api_key=openai_api_key)
-                answer, prompt_token_num, completion_token_num, total_token_num = General.get_chat_completion_gpt(prompt=prompt, system_message=system_message, model=model_name, client=client)
+                answer, prompt_token_num, completion_token_num, total_token_num = General.get_chat_completion_gpt(prompt=prompt, system_message=system_message, model=model, client=client)
             else:
                 print('Please select a valid LLM')
             total_prompt_token += prompt_token_num
@@ -79,14 +81,15 @@ def main(test_path, output_path, model_name, llm_type):
 def parse_args():
     parser = argparse.ArgumentParser()
   
-    parser.add_argument('--test_path', default='ClaimDecomp/empty_qs_test.jsonl', type=str)
-    parser.add_argument('--output_path', default='DataProcessed/subquestions_icl_mixtral_5_emptii.jsonl', type=str)
-    parser.add_argument('--model_name', default='mixtral', type=str)
+    parser.add_argument('--test_path', default='ClaimDecomp/all.jsonl', type=str)
+    parser.add_argument('--output_path', default='Data/1_Subquestions/subquestions_icl_gpt_all.jsonl', type=str)
+    parser.add_argument('--model_name', default='gpt-3.5-turbo', type=str)
+    parser.add_argument('--llm_type', default='gpt', type=str)
     
     args = parser.parse_args()
     return args
 
 if __name__ == "__main__":
     args = parse_args()
-    main(args.test_path, args.output_path, args.model_name)
+    main(args.test_path, args.output_path, args.model_name, args.llm_type)
 

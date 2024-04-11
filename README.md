@@ -1,6 +1,6 @@
 # factcheck-with-llm - Thesis
 
-![Pipeline with Web Retrieval](factcheck.png?raw=true "Pipeline")
+![Pipeline with Web Retrieval](Fact-Check.pdf)
 
 ## Prerequisties
 
@@ -24,13 +24,15 @@ python3 question_generation.py
 Or you can use in-context-learning to generate the subquestion:
 
 ```bash
-python3 -m only-llm.icl_question_generator \
+python3 -m icl_question_generator \
     --test_path "ClaimDecomp/test.jsonl" \
-    --output_path "DataProcessed/subquestions_icl_mixtral.jsonl" \
-    --model_name "mixtral"
+    --output_path "Data/1_Subquestions/subquestions_icl_gpt.jsonl" \
+    --model_name "gpt-3.5-turbo" \
+    --llm_type "gpt"
+
 ```
 
-## Anyscales Endpoints are used in the following parts to use LLMs
+## Anyscales Endpoints are used in the following parts to use Mixtral LLMs
 
 So need to set api key and base url. It can be done by registering in their [website](https://www.anyscale.com)
 
@@ -55,12 +57,12 @@ The final version can be accessed under websites.jsonl
 Does Web queries using Google custom search API:
 And creates websites jsonl file as output.
 Google Custom Search API is used and following websites are excluded from the search, as well as in the code
-there is time constraints (the searches are before the claim was made). Moreover, Google Custom Search API allows only 100 free queries per day, therefore the data for the whole test set (200 claims wiht multiple subquestions in each) are created in about a span of a week.
+there is time constraints (the searches are before the claim was made). Moreover, Google Custom Search API allows only 100 free queries per day, therefore the data for the whole test set (200 claims with multiple subquestions in each) are created in about a span of a week.
 
 ```bash
 python3 -m evidence.web_api_retriever \
-    --subquestion_path "./ClaimDecomp/subquestions_finetuned.jsonl" \
-    --websites_path "./DataProcessed/websites.jsonl" \
+    --subquestion_path "./Data/1_Subquestions/subquestions_icl_gpt.jsonl" \
+    --websites_path "./Data/2_Websites/websites_gpt_icl.jsonl" \
     --web_api_key "Your web API goes here" \
     --search_engine_id "search engine id goes here" \
 ```
@@ -71,8 +73,9 @@ text_retriever.py uses BeautifulSoup to retrieve text from those websites. To ru
 
 ```bash
 python3 -m evidence.text_retriever \
-    --websites_path "./DataProcessed/websites.jsonl" \
-    --output_path  "./DataProcessed/answers.jsonl"
+    --test_path "./ClaimDecomp/test.jsonl"
+    --websites_path "./Data/2_Websites/websites_gpt_icl.jsonl" \
+    --output_path  "./Data/3_Answers/answers_gpt_icl.jsonl"
 ```
 
 The answers can be downloaded directly via [answers.jsonl](https://drive.google.com/file/d/1hyPoPh_fHpX23tH09O2w_uDrkz3GL79A/view?usp=share_link) (1GB)
@@ -89,10 +92,10 @@ nltk.download('punkt')
 Here we segment each answer to some number of segments (with token length 1500) and retrieve the most relavent parts of the text using BM25 ranker. If segments are the same they are removed and if there is a significant overlap, they are merged, you can see the detail in the log file -> bm25.out at the very end. Initially we have 4 segments for each claim.
 
 ```bash
-python3 -m evidence.bm25_retriever.py \
-    --corpus_path './DataProcessed/answers.jsonl' \
-    --original_test_path "./ClaimDecomp/test.jsonl" \
-    --top_docs_path "./DataProcessed/top_docs_final.jsonl"
+python -m evidence.bm25_retriever.py \
+    --corpus_path "../Data/3_Answers/answers_gpt_icl"
+    --original_test_path "./ClaimDecomp/test.jsonl"
+    --top_docs_path "./Data/4_TopDocs/top_docs_gpt_icl.jsonl'"
 ```
 
 ## Summarize
@@ -101,10 +104,11 @@ Summarazies the relavent parts retrieved from BM25 and stores them in summaries_
 
 ```bash
 python3 -m evidence.summarize \
-    --corpus_path "./DataProcessed/top_docs_final.jsonl" \
+    --corpus_path "./Data/4_TopDocs/top_docs_gpt_icl.jsonl" \
     --test_path "./ClaimDecomp/test.jsonl" \
-    --output_path "./DataProcessed/summaries_final.jsonl" \
-    --model_name "meta-llama/Llama-2-70b-chat-hf"
+    --output_path "./Data/5_Summaries/summaries_gpt_icl.jsonl" \
+    --model_name "gpt-3.5-turbo" \
+    --llm_type "gpt"
 ```
 
 ## Labeler
@@ -112,12 +116,13 @@ python3 -m evidence.summarize \
 Here the summaries are given to the LLM with the subquestion to answer it with yes or no.
 
 ```bash
-python3 -m only-llm.labeler_web \
-    --corpus_path 'Path_to_summaries' \
+python3 -m labelers.labeler_llm \
+    --corpus_path 'Data/5_Summaries/summaries_gpt_icl.jsonl' \
     --test_path 'ClaimDecomp/test.jsonl' \
-    --subquestions_path 'path-to-generated-subquestions' \
-    --output_path 'output-path-labels' \
-    --model_name 'meta-llama/Llama-2-70b-chat-hf for Anyscale, gpt-3.5-turbo-0125 for GPT' \
+    --subquestions_path 'Data/1_Subquestions/subquestions_icl_gpt.jsonl' \
+    --output_path 'Data/6_Results/GPT/labels_gpt_icl_llm.jsonl' \
+    --model_name 'gpt-3.5-turbo-0613' \
+    --knowledge_base 'llm' \
     --llm_type 'anyscale or gpt'
 ```
 
@@ -127,6 +132,6 @@ Creates confusion matrix and final classification
 
 ```bash
 python3 -m final_verdict \
-    --labels_path 'Path-to-the labels add web, gpt, icl etc. to distinguish' \
+    --labels_path 'Data/6_Results/GPT/labels_gpt_icl_llm.jsonl' \
     --classification  'Choose one ['six-way', 'three-way', 'binary']'
 ```
