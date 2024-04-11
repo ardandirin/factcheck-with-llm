@@ -1,6 +1,6 @@
 # factcheck-with-llm - Thesis
 
-![Pipeline with Web Retrieval](Fact-Check.pdf)
+![Pipeline with Web Retrieval](factcheck.png)
 
 ## Prerequisties
 
