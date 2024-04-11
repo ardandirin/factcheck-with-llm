@@ -73,7 +73,7 @@ def get_label(path, example_id):
     return None
             
 
-def get_answer_anyscale(api_base, token, model_name, system_message, user_message, repeat_penalty = 1, temperature = 1):
+def get_answer_anyscale(api_base, token, model_name, system_message, user_message, repeat_penalty = 1, temperature = 0.7):
     s = requests.Session()
     url = f"{api_base}/chat/completions"
     body = {
@@ -101,9 +101,8 @@ def get_answer_anyscale(api_base, token, model_name, system_message, user_messag
 
 def get_chat_completion_gpt(prompt, system_message, client, model):
 
-
     completion = client.chat.completions.create(
-    model="gpt-3.5-turbo-0125",
+    model='gpt-3.5-turbo',
     messages=[
         {"role": "system", "content": system_message},
         {"role": "user", "content": prompt}
@@ -340,9 +339,9 @@ def classify_binary_veracity(answer_list):
         return "Unknown"
 
     if yes_count >= no_count:
-        return 'yes'
+        return 'true'
     else: 
-        return 'no'
+        return 'false'
     
 def classify_binary_veracity_with_conf(answer_list, confidence_list):
 # Verify that the lists are of equal length

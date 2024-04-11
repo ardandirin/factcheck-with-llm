@@ -65,11 +65,11 @@ def main(labels_path, gold_labels, predictions, classifcation):
             else:
                 print("Please provide a predefined classification type.")
             
-            if predicted_veracity == 'Unknown':
-                    unknown_count += 1
+            # if predicted_veracity == 'Unknown':
+            #         unknown_count += 1
             
-            if predicted_veracity == 'Unknown':
-                continue
+            # if predicted_veracity == 'Unknown':
+            #     continue
             gold_labels.append(gold_lab)
             predictions.append(predicted_veracity)
             
@@ -96,7 +96,7 @@ def main(labels_path, gold_labels, predictions, classifcation):
     report = classification_report(gold_labels, predictions, labels=labels_list, output_dict=True)
     matrix = confusion_matrix(gold_labels, predictions, labels=labels_list)
 
-    pd.set_option('display.precision', 2)
+    pd.set_option('display.precision', 3)
     report_df = pd.DataFrame(report).transpose()
     print(report_df)
 
@@ -106,7 +106,7 @@ def main(labels_path, gold_labels, predictions, classifcation):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--labels_path', default='Data/6_Results/GPT/labels_gpt_finetune_llmweb.jsonl', type=str)
+    parser.add_argument('--labels_path', default='Data/6_Results/Mistral/labels_mixtral_icl_web_claimfocused.jsonl', type=str)
     parser.add_argument('--classification', default='binary', type=str, choices=['six-way', 'three-way', 'binary'] ) # other options, three-way, binary
     args = parser.parse_args()
     gold_labels = [] 

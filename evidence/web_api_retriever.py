@@ -12,7 +12,7 @@ load_dotenv()
 # Access the API key
 
 api_usage_count = 0
-api_usage_limit = 100
+api_usage_limit = 10000
 
 
 # Define the query you want to search for
@@ -53,7 +53,8 @@ class WebRetriever:
         :return: a list of search results
         '''
         # questions_list = JsonLoader.list_returner(line) # For GPT3.5 finetuned
-        questions_list = JsonLoader.list_returner_q_mark(line) # For Mixtral
+        questions_list = JsonLoader.list_returner_q_mark(line) # For Mixtral and gpt icl
+        print(questions_list)
         # end_date = DateHelper.extract_date(line['prompt'])
         end_date = DateHelper.extract_date(line['claim'])
 
@@ -117,8 +118,8 @@ class WebRetriever:
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--subquestion_path', default='./DataProcessed/subquestions_icl_mixtral.jsonl', type=str)
-    parser.add_argument('--websites_path', default='./DataProcessed/mixtral_wb_33.jsonl', type=str)
+    parser.add_argument('--subquestion_path', default='./Data/1_Subquestions/subquestions_icl_gpt_all.jsonl', type=str)
+    parser.add_argument('--websites_path', default='./Data/2_Websites/websites_gpt_all.jsonl', type=str)
     parser.add_argument('--web_api_key', default=os.getenv('WEB_API_KEY'), type=str)
     parser.add_argument('--search_engine_id', default=os.getenv('SEARCH_ENGINE_ID'), type=str)
     args = parser.parse_args()
@@ -129,4 +130,4 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
     webRetriever = WebRetriever(args)
-    webRetriever.write_to_file(num_lines_to_process=96)
+    webRetriever.write_to_file(num_lines_to_process=1200)

@@ -30,8 +30,14 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, kno
             original_claim = data['claim']
             date = DateHelper.extract_date_string(original_claim)
             # subqs = JsonLoader.load_subquestions(subq_data, id) # for gpt generated questions
-            subqs = JsonLoader.load_subquestions_with_question_mark_gpt(subq_data, id) # also for gpt but with question marks?
+            # subqs = JsonLoader.load_subquestions_with_question_mark_gpt(subq_data, id) # also for gpt but with question marks?
+            
             # subqs = JsonLoader.load_subquestions_with_question_mark(subq_data, id) # for icl generated questions
+            if llm_type == 'gpt':
+                subqs = JsonLoader.load_subquestions_with_question_mark_gpt(subq_data, id) # also for gpt but with question marks?
+            elif llm_type == 'anyscale' or llm_type == 'gpt-icl':
+                subqs = JsonLoader.load_subquestions_with_question_mark(subq_data, id) # For mixtral generated subquestions
+           
             gold_label = General.get_label(test_path, id)
             all_subqs = []
             all_summaries = " ".join(summary_dt['summary'] for summary_dt in data['summary_data'])
@@ -46,17 +52,17 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, kno
                 prompt += label_prompt
                 prompt += f"Question: {subquestion}\nDate: {date}\n"
                 # system_message_simple = "You are a helpful assistant answering questions."
-                # system_message_no_info = "You should answer the question with either yes, no or nei(for not enough information). Follow the given format. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date. Always separate each part of the answer with a new line"
-                system_message_lmm_web = f"You should answer the question with either yes, no or nei(for not enough information). Follow the given format. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. You can also use the supplementary information here: {all_summaries}.\nAlways separate each part with a new line."
+                system_message_no_info = "You should answer the question with either yes, no or nei(for not enough information). Follow the given format. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date. Always separate each part of the answer with a new line"
+                # system_message_lmm_web = f"You should answer the question with either yes, no or nei(for not enough information). Follow the given format. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. You can also use the supplementary information here: {all_summaries}.\nAlways separate each part with a new line."
                 # system_mes = "I will give you a question. Please answer the question with either yes or no. Then provide your confidence level to indicate your level of confidence in your predicted answer, choose one from High/Medium/Low. High indicates that you are very confident in your generated answer, Medium indicates average confidence, and Low indicates lack of confidence in your generated answer. Finally give a brief justification for your answer. DO ONLY USE information prior to the given date.\nAlways seperate each part with a /n"
                 time.sleep(1) # Sleep for 1 seconds to avoid exceeding the quota and also concurrent requests.
                 if llm_type == 'anyscale':
-                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_message_lmm_web, user_message=prompt)
-                elif llm_type == 'gpt':
+                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_answer_anyscale(api_base=base_url, token=api_key, model_name=model, system_message=system_message_no_info, user_message=prompt)
+                elif llm_type == 'gpt' or llm_type == 'gpt-icl':
                     print("GPT type selected")
                     openai_api_key = os.getenv('OPENAI_API_KEY')
                     client = OpenAI(api_key=openai_api_key)
-                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_chat_completion_gpt(prompt=prompt, system_message=system_message_lmm_web, model=model_name, client=client)
+                    answer, prompt_token_num, completion_token_num, total_token_num = General.get_chat_completion_gpt(prompt=prompt, system_message=system_message_no_info, model=model_name, client=client)
                 else:
                     print('Please select a valid LLM')
                 predicted_label = General.extract_keyword(answer, "Label:")
@@ -94,13 +100,13 @@ def main(corpus_path, test_path, subquestions_path, output_path, model_name, kno
             
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--corpus_path', default='Data/5_Summaries/summaries_gpt_finetune.jsonl', type=str)
+    parser.add_argument('--corpus_path', default='Data/5_Summaries/summaries_gpt_icl.jsonl', type=str)
     parser.add_argument('--test_path', default='ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--subquestions_path', default='Data/1_Subquestions/subquestions_gpt_finetune.jsonl', type=str)
-    parser.add_argument('--output_path', default='Data/6_Results/GPT/labels_gpt_finetune_llmweb.jsonl', type=str)
+    parser.add_argument('--subquestions_path', default='Data/1_Subquestions/subquestions_icl_gpt.jsonl', type=str)
+    parser.add_argument('--output_path', default='Data/6_Results/GPT/labels_gpt_icl_llm.jsonl', type=str)
     parser.add_argument('--model_name', default='gpt-3.5-turbo-0613', type=str)
     parser.add_argument('--knowledge_base', default='llm', type=str) # can give llm or llm-web then summaries will be used as well.
-    parser.add_argument('--llm_type', default='gpt') # gpt or anyscale
+    parser.add_argument('--llm_type', default='gpt-icl') # gpt or anyscale
     args = parser.parse_args()
     return args
 

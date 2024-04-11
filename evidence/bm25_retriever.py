@@ -138,9 +138,9 @@ def main(corpus_path, original_test_path, top_docs_path):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--corpus_path', default='./Data/3_Answers/answers_mixtral_icl.jsonl', type=str)
+    parser.add_argument('--corpus_path', default='./Data/3_Answers/answers_gpt_icl.jsonl', type=str)
     parser.add_argument('--original_test_path', default='./ClaimDecomp/test.jsonl', type=str)
-    parser.add_argument('--top_docs_path', default='./Data/4_TopDocs/top_docs_mixtral_icl.jsonl', type=str)
+    parser.add_argument('--top_docs_path', default='./Data/4_TopDocs/top_docs_gpt_icl.jsonl', type=str)
     # parser.add_argument('--output_path', default='./ClaimDecomp/summaries.jsonl', type=str)
     args = parser.parse_args()
     return args

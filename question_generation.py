@@ -25,7 +25,7 @@ def get_chat_completion(prompt, model="gpt-3.5-turbo"):
 model = "ft:gpt-3.5-turbo-0613:personal::8HsRtakR" # Fine-tuned model
 results = []
 
-with open('ClaimDecomp/test.jsonl', 'r') as input_file:
+with open('ClaimDecomp/all.jsonl', 'r') as input_file:
     for line in tqdm(input_file, desc="Processing"):
         # Load the JSON data from the line
         data = json.loads(line)
@@ -40,18 +40,18 @@ with open('ClaimDecomp/test.jsonl', 'r') as input_file:
         # Placeholder for subquestions
         subquestions = []
         # subquestions.append("placeholder")
-        # subquestions.append(get_chat_completion(prompt, model=model))
+        subquestions.append(get_chat_completion(prompt, model=model))
 
         # Append a new dictionary to the results list
         results.append({
             'example_id': example_id,
             'prompt': prompt,
-            'subquestions': subquestions
+            'questions': subquestions
         })
 
 
 def create_output_file(results):
-    with open('ClaimDecomp/subquestions.jsonl', 'w') as output_file:
+    with open('Data/1_Subquestions/subquestions_icl_gpt_all.jsonl', 'w') as output_file:
         for json_obj in results:
             output_file.write(json.dumps(json_obj) + '\n')
 
